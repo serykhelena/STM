@@ -9,6 +9,7 @@ GPTConfig gpt4conf = {
     .dier         = 0
 };
 */
+
 PWMConfig pwm4conf = {
     .frequency = 4411764, // частота тиков таймера
     .period    = 60000, /*1/100 s = 10 ms*/  // кол-во тиков  на 1 период шим этого таймера (с исп. frequency)
