@@ -1,4 +1,5 @@
-build/obj/hal_pwm.o: ../../chibios176/os/hal/src/hal_pwm.c \
+build/obj/hal_gpt_lld.o: \
+ ../../chibios176/os/hal/ports/STM32/LLD/TIMv1/hal_gpt_lld.c \
  ../../chibios176/os/hal/include/hal.h \
  ../../chibios176/os/hal/osal/rt/osal.h \
  d:\chibistudio_preview19\chibistudio\tools\gnu\ tools\ arm\ embedded\6.3\ 2017q1\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \

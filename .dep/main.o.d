@@ -74,6 +74,7 @@ build/obj/main.o: main.c ../../chibios176/os/rt/include/ch.h \
  ../../chibios176/os/hal/include/hal_dac.h \
  ../../chibios176/os/hal/include/hal_ext.h \
  ../../chibios176/os/hal/include/hal_gpt.h \
+ ../../chibios176/os/hal/ports/STM32/LLD/TIMv1/hal_gpt_lld.h \
  ../../chibios176/os/hal/include/hal_i2c.h \
  ../../chibios176/os/hal/include/hal_i2s.h \
  ../../chibios176/os/hal/include/hal_icu.h \
@@ -252,6 +253,8 @@ mcuconf.h:
 ../../chibios176/os/hal/include/hal_ext.h:
 
 ../../chibios176/os/hal/include/hal_gpt.h:
+
+../../chibios176/os/hal/ports/STM32/LLD/TIMv1/hal_gpt_lld.h:
 
 ../../chibios176/os/hal/include/hal_i2c.h:
 
