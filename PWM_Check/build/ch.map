@@ -6,9 +6,9 @@ Discarded input sections
  .data          0x00000000        0x0 build/obj/chcoreasm_v7m.o
  .bss           0x00000000        0x0 build/obj/chcoreasm_v7m.o
  .text          0x00000000        0x0 build/obj/crt1.o (symbol from plugin)
- .text          0x00000000        0x0 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .data          0x00000000        0x0 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .bss           0x00000000        0x0 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .text          0x00000000        0x0 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .data          0x00000000        0x0 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .bss           0x00000000        0x0 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  .text          0x00000000        0x0 build/obj/vectors.o (symbol from plugin)
  .text          0x00000000        0x0 build/obj/chsys.o (symbol from plugin)
  .text          0x00000000        0x0 build/obj/chdebug.o (symbol from plugin)
@@ -91,7 +91,7 @@ Linker script and memory map
 LOAD build/obj/crt0_v7m.o
 LOAD build/obj/chcoreasm_v7m.o
 LOAD build/obj/crt1.o
-LOAD C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+LOAD C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
 LOAD build/obj/vectors.o
 LOAD build/obj/chsys.o
 LOAD build/obj/chdebug.o
@@ -183,7 +183,7 @@ LOAD build/obj/main.o
 
 .vectors        0x00200000      0x200 load address 0x08000000
  *(.vectors)
- .vectors       0x00200000      0x200 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .vectors       0x00200000      0x200 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x00200000                _vectors
 
 .xtors          0x00200200        0x0 load address 0x08000200
@@ -208,93 +208,93 @@ LOAD build/obj/main.o
  *(.text.*)
  *fill*         0x002002fc        0x4 
  .text._pal_lld_setgroupmode.constprop.3
-                0x00200300       0x90 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .text.notify3  0x00200390       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200300       0x90 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .text.notify3  0x00200390       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  .text._port_irq_epilogue
-                0x002003a0       0x5c C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x002003a0       0x5c C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x002003fc        0x4 
  .text.VectorB8
-                0x00200400       0x64 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200400       0x64 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200464        0xc 
  .text.VectorB4
-                0x00200470       0x34 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200470       0x34 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x002004a4        0xc 
  .text.VectorB0
-                0x002004b0       0x94 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x002004b0       0x94 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200544        0xc 
  .text.SVC_Handler
-                0x00200550       0x1c C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200550       0x1c C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x0020056c        0x4 
- .text.wakeup   0x00200570       0x70 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .text.wakeup   0x00200570       0x70 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  .text.chSchReadyI
-                0x002005e0       0x2c C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x002005e0       0x2c C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x0020060c        0x4 
  .text.chEvtBroadcastFlagsI.constprop.19
-                0x00200610       0x64 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200610       0x64 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200674        0xc 
  .text.VectorDC
-                0x00200680      0x190 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200680      0x190 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  .text._unhandled_exception
-                0x00200810        0x4 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200810        0x4 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200814        0xc 
  .text.chSchGoSleepS
-                0x00200820       0x28 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200820       0x28 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200848        0x8 
  .text.chThdEnqueueTimeoutS
-                0x00200850      0x124 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200850      0x124 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200974        0xc 
  .text.oqWriteTimeout
-                0x00200980       0xb0 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .text._writet  0x00200a30        0x8 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200980       0xb0 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .text._writet  0x00200a30        0x8 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200a38        0x8 
- .text._write   0x00200a40        0xc C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .text._write   0x00200a40        0xc C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200a4c        0x4 
  .text.oqPutTimeout
-                0x00200a50       0x54 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200a50       0x54 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200aa4        0xc 
- .text._putt    0x00200ab0        0x8 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .text._putt    0x00200ab0        0x8 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200ab8        0x8 
- .text._put     0x00200ac0        0xc C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .text._put     0x00200ac0        0xc C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200acc        0x4 
  .text.iqReadTimeout
-                0x00200ad0       0xb0 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .text._readt   0x00200b80        0x8 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200ad0       0xb0 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .text._readt   0x00200b80        0x8 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200b88        0x8 
- .text._read    0x00200b90        0xc C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .text._read    0x00200b90        0xc C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200b9c        0x4 
  .text.iqGetTimeout
-                0x00200ba0       0x50 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .text._gett    0x00200bf0        0x8 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200ba0       0x50 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .text._gett    0x00200bf0        0x8 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200bf8        0x8 
- .text._get     0x00200c00        0xc C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .text._get     0x00200c00        0xc C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *fill*         0x00200c0c        0x4 
  .text.startup.main
-                0x00200c10      0x548 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00200c10      0x548 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x00200c10                main
  *fill*         0x00201158        0x8 
  .text.__early_init
-                0x00201160       0xe8 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00201160       0xe8 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x00201160                __early_init
  *fill*         0x00201248        0x8 
  .text.chThdExit
-                0x00201250       0x50 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00201250       0x50 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x00201250                chThdExit
  .text.chSchDoReschedule
-                0x002012a0       0x40 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x002012a0       0x40 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x002012a0                chSchDoReschedule
  .text.__init_ram_areas
-                0x002012e0       0x60 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x002012e0       0x60 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x002012e0                __init_ram_areas
  .text.__default_exit
-                0x00201340        0x4 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00201340        0x4 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x00201340                __default_exit
  *fill*         0x00201344        0xc 
  .text.__late_init
-                0x00201350        0x4 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00201350        0x4 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x00201350                __late_init
  *fill*         0x00201354        0xc 
  .text.__core_init
-                0x00201360       0x7c C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00201360       0x7c C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x00201360                __core_init
  *(.glue_7t)
  .glue_7t       0x002013dc        0x0 linker stubs
@@ -317,8 +317,8 @@ LOAD build/obj/main.o
  *(.rodata)
  *(.rodata.*)
  .rodata.ram_areas
-                0x080013dc       0x80 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .rodata.vmt    0x0800145c       0x20 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x080013dc       0x80 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .rodata.vmt    0x0800145c       0x20 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                 0x0800147c                . = ALIGN (0x4)
                 0x0800147c                __rodata_end__ = .
 
@@ -372,9 +372,9 @@ LOAD build/obj/main.o
  *(.data)
  *(.data.*)
  .data.gpt3conf
-                0x20020000       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x20020000       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  .data.pwm4conf
-                0x20020010       0x44 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x20020010       0x44 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *(.ramtext)
                 0x20020054                . = ALIGN (0x4)
                 [!provide]                PROVIDE (_edata, .)
@@ -388,14 +388,14 @@ LOAD build/obj/main.o
                 0x20000800                _bss_start = .
  *(.bss)
  *(.bss.*)
- .bss.GPTD3     0x20000800       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .bss.PWMD4     0x20000810       0x1c C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .bss.SD3       0x2000082c       0x60 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
- .bss.ch        0x2000088c       0x78 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .bss.GPTD3     0x20000800       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .bss.PWMD4     0x20000810       0x1c C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .bss.SD3       0x2000082c       0x60 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+ .bss.ch        0x2000088c       0x78 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  .bss.sd_in_buf3
-                0x20000904       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x20000904       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  .bss.sd_out_buf3
-                0x20000914       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x20000914       0x10 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
  *(COMMON)
                 0x20000924                . = ALIGN (0x4)
                 0x20000924                _bss_end = .
@@ -584,37 +584,37 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .ARM.attributes
                 0x00000021       0x21 build/obj/chcoreasm_v7m.o
  .ARM.attributes
-                0x00000042       0x31 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00000042       0x31 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
 
 .comment        0x00000000       0x7f
- .comment       0x00000000       0x7f C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .comment       0x00000000       0x7f C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                  0x80 (size before relaxing)
 
 .debug_info     0x00000000     0x4be5
- .debug_info    0x00000000     0x4be5 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .debug_info    0x00000000     0x4be5 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
 
 .debug_abbrev   0x00000000      0x653
- .debug_abbrev  0x00000000      0x653 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .debug_abbrev  0x00000000      0x653 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
 
 .debug_loc      0x00000000     0x1e4f
- .debug_loc     0x00000000     0x1e4f C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .debug_loc     0x00000000     0x1e4f C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
 
 .debug_aranges  0x00000000      0x128
  .debug_aranges
-                0x00000000      0x128 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                0x00000000      0x128 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
 
 .debug_ranges   0x00000000      0xe18
- .debug_ranges  0x00000000      0xe18 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .debug_ranges  0x00000000      0xe18 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
 
-.debug_line     0x00000000     0x1451
- .debug_line    0x00000000     0x1451 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+.debug_line     0x00000000     0x1481
+ .debug_line    0x00000000     0x1481 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
 
-.debug_str      0x00000000     0x1223
- .debug_str     0x00000000     0x1223 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
-                               0x1314 (size before relaxing)
+.debug_str      0x00000000     0x122d
+ .debug_str     0x00000000     0x122d C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
+                               0x131e (size before relaxing)
 
 .debug_frame    0x00000000      0x3ec
- .debug_frame   0x00000000      0x3ec C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+ .debug_frame   0x00000000      0x3ec C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
 
 Cross Reference Table
 
@@ -630,7 +630,7 @@ PWMD4                                             build/obj/hal_pwm_lld.o (symbo
                                                   build/obj/main.o (symbol from plugin)
 PendSV_Handler                                    build/obj/vectors.o (symbol from plugin)
 Reset_Handler                                     build/obj/crt0_v7m.o
-                                                  C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                                                  C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/vectors.o (symbol from plugin)
 SD3                                               build/obj/hal_serial_lld.o (symbol from plugin)
 SVC_Handler                                       build/obj/chcore_v7m.o (symbol from plugin)
@@ -759,13 +759,13 @@ VectorF0                                          build/obj/vectors.o (symbol fr
 VectorF4                                          build/obj/vectors.o (symbol from plugin)
 VectorF8                                          build/obj/vectors.o (symbol from plugin)
 VectorFC                                          build/obj/vectors.o (symbol from plugin)
-__core_init                                       C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__core_init                                       C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
                                                   build/obj/crt0_v7m.o
-__default_exit                                    C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__default_exit                                    C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
                                                   build/obj/crt0_v7m.o
-__early_init                                      C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__early_init                                      C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/board.o (symbol from plugin)
                                                   build/obj/crt1.o (symbol from plugin)
                                                   build/obj/crt0_v7m.o
@@ -775,81 +775,81 @@ __heap_base__                                     build/obj/chmemcore.o (symbol 
 __heap_end__                                      build/obj/chmemcore.o (symbol from plugin)
 __init_array_end                                  build/obj/crt0_v7m.o
 __init_array_start                                build/obj/crt0_v7m.o
-__init_ram_areas                                  C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__init_ram_areas                                  C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
                                                   build/obj/crt0_v7m.o
-__late_init                                       C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__late_init                                       C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
                                                   build/obj/crt0_v7m.o
 __main_stack_base__                               build/obj/crt0_v7m.o
-__main_stack_end__                                C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__main_stack_end__                                C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/vectors.o (symbol from plugin)
                                                   build/obj/crt0_v7m.o
 __process_stack_base__                            build/obj/crt0_v7m.o
 __process_stack_end__                             build/obj/crt0_v7m.o
-__ram0_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram0_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram0_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram0_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram0_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram0_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram0_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram0_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram1_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram1_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram1_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram1_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram1_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram1_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram1_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram1_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram2_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram2_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram2_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram2_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram2_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram2_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram2_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram2_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram3_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram3_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram3_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram3_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram3_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram3_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram3_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram3_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram4_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram4_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram4_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram4_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram4_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram4_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram4_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram4_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram5_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram5_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram5_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram5_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram5_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram5_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram5_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram5_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram6_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram6_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram6_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram6_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram6_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram6_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram6_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram6_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram7_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram7_clear__                                    C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram7_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram7_init__                                     C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram7_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram7_init_text__                                C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
-__ram7_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+__ram7_noinit__                                   C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/crt1.o (symbol from plugin)
 _bss_end                                          build/obj/crt0_v7m.o
 _bss_start                                        build/obj/crt0_v7m.o
@@ -865,7 +865,7 @@ _pal_lld_setgroupmode                             build/obj/hal_pal_lld.o (symbo
                                                   build/obj/main.o (symbol from plugin)
                                                   build/obj/hal_pal.o (symbol from plugin)
 _port_exit_from_isr                               build/obj/chcoreasm_v7m.o
-                                                  C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                                                  C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/chcore_v7m.o (symbol from plugin)
 _port_irq_epilogue                                build/obj/chcore_v7m.o (symbol from plugin)
                                                   build/obj/hal_serial_lld.o (symbol from plugin)
@@ -873,10 +873,10 @@ _port_irq_epilogue                                build/obj/chcore_v7m.o (symbol
                                                   build/obj/hal_gpt_lld.o (symbol from plugin)
                                                   build/obj/hal_st_lld.o (symbol from plugin)
 _port_switch                                      build/obj/chcoreasm_v7m.o
-                                                  C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                                                  C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/chschd.o (symbol from plugin)
 _port_switch_from_isr                             build/obj/chcoreasm_v7m.o
-                                                  C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+                                                  C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/chcore_v7m.o (symbol from plugin)
 _port_thread_start                                build/obj/chcoreasm_v7m.o
                                                   build/obj/chthreads.o (symbol from plugin)
@@ -913,7 +913,7 @@ _thread_init                                      build/obj/chthreads.o (symbol 
 _tm_init                                          build/obj/chtm.o (symbol from plugin)
                                                   build/obj/chsys.o (symbol from plugin)
 _unhandled_exception                              build/obj/vectors.o (symbol from plugin)
-_vectors                                          C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+_vectors                                          C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/vectors.o (symbol from plugin)
                                                   build/obj/crt0_v7m.o
 _vt_init                                          build/obj/chvt.o (symbol from plugin)
@@ -1086,7 +1086,7 @@ chRegFindThreadByPointer                          build/obj/chregistry.o (symbol
 chRegFindThreadByWorkingArea                      build/obj/chregistry.o (symbol from plugin)
 chRegFirstThread                                  build/obj/chregistry.o (symbol from plugin)
 chRegNextThread                                   build/obj/chregistry.o (symbol from plugin)
-chSchDoReschedule                                 C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+chSchDoReschedule                                 C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/chschd.o (symbol from plugin)
                                                   build/obj/chcoreasm_v7m.o
 chSchDoRescheduleAhead                            build/obj/chschd.o (symbol from plugin)
@@ -1208,7 +1208,7 @@ chThdEnqueueTimeoutS                              build/obj/chthreads.o (symbol 
                                                   build/obj/hal_queues.o (symbol from plugin)
                                                   build/obj/hal_buffers.o (symbol from plugin)
                                                   build/obj/chmboxes.o (symbol from plugin)
-chThdExit                                         C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+chThdExit                                         C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/chthreads.o (symbol from plugin)
                                                   build/obj/test_sequence_012.o (symbol from plugin)
                                                   build/obj/chcoreasm_v7m.o
@@ -1309,7 +1309,7 @@ iqReadTimeout                                     build/obj/hal_queues.o (symbol
                                                   build/obj/hal_serial.o (symbol from plugin)
 iqResetI                                          build/obj/hal_queues.o (symbol from plugin)
                                                   build/obj/hal_serial.o (symbol from plugin)
-main                                              C:\Users\8FEE~1\AppData\Local\Temp\ccdycLdV.ltrans0.ltrans.o
+main                                              C:\Users\8FEE~1\AppData\Local\Temp\ccPKFF5e.ltrans0.ltrans.o
                                                   build/obj/main.o (symbol from plugin)
                                                   build/obj/crt0_v7m.o
 nvicClearPending                                  build/obj/nvic.o (symbol from plugin)
