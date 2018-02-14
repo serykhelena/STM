@@ -19,30 +19,34 @@ static const SerialConfig sdcfg = {
 /* GPT driver related.                                                       */
 /*===========================================================================*/
 
-uint32_t overflow_cntr = 0;
-
-void gpt4cb(GPTDriver *gptp)
-{
-  (void *)gptp;
-//  overflow_cntr++;
-}
-
 /*
  * GPT4 configuration. This timer is used as trigger for the ADC.
  */
 static const GPTConfig gpt4cfg1 = {
   .frequency =  100000,
   .callback  =  NULL,
-  .cr2       =  0, // TIM_CR2_MMS_1,  /* MMS = 010 = TRGO on Update Event.        */
+  .cr2       =  TIM_CR2_MMS_1,  /* MMS = 010 = TRGO on Update Event.        */
   .dier      =  0U
 };
+
+
+/*===========================================================================*/
+/* Mailbox code.                                                             */
+/*===========================================================================*/
+
+#define MAILBOX_SIZE 50
+
+static mailbox_t test_mb;
+static msg_t buffer_test_mb[MAILBOX_SIZE];
+
+
 
 /*===========================================================================*/
 /* ADC driver related.                                                       */
 /*===========================================================================*/
 
 #define ADC_GRP1_NUM_CHANNELS   2
-#define ADC_GRP1_BUF_DEPTH      2
+#define ADC_GRP1_BUF_DEPTH      1
 
 static adcsample_t samples1[ADC_GRP1_NUM_CHANNELS * ADC_GRP1_BUF_DEPTH];
 
@@ -53,13 +57,11 @@ static void adccallback(ADCDriver *adcp, adcsample_t *buffer, size_t n)
 {
   (void)adcp;
 
-  /* Updating counters.*/
-  if (samples1 == buffer) {
-    // Half processed
-  }
-  else {
-    // Second half processed
-  }
+  chSysLockFromISR();
+  chMBPostI( &test_mb, samples1[0]);
+  chMBPostI( &test_mb, samples1[1]);
+  chSysUnlockFromISR();
+
 }
 
 /*
@@ -86,118 +88,6 @@ static const ADCConversionGroup adcgrpcfg1 = {
                   ADC_SQR3_SQ2_N(ADC_CHANNEL_IN10)
 };
 
-/*===========================================================================*/
-/* Mailbox code.                                                             */
-/*===========================================================================*/
-#define MAILBOX_SIZE 50
-static mailbox_t steer_mb;
-static msg_t b_steer[MAILBOX_SIZE];
-
-static mailbox_t speed_mb;
-static msg_t b_speed[MAILBOX_SIZE];
-
-
-static mailbox_t test_mb;
-static msg_t buffer_test_mb[MAILBOX_SIZE];
-
-/*===========================================================================*/
-/* EXT driver related.                                                       */
-/*===========================================================================*/
-
-static void extcb1(EXTDriver *extp, expchannel_t channel) {
-//  static virtual_timer_t vt4;
-
-  static gptcnt_t front_time, edge_time;
-
-  (void)extp;
-  (void)channel;
-
-  if ( palReadPad( GPIOC, 0 ) == PAL_HIGH )
-  {
-    front_time = gptGetCounterX( &GPTD4 );
-  } else {
-    edge_time  = gptGetCounterX( &GPTD4 );
-
-    gptcnt_t result = edge_time < front_time ? edge_time + (UINT16_MAX - front_time) :
-                                               edge_time - front_time;
-
-    chSysLockFromISR();
-    chMBPostI(&test_mb, (msg_t)result);
-    chSysUnlockFromISR();
-  }
-
-}
-
-static const EXTConfig extcfg = {
-  {
-    {EXT_CH_MODE_BOTH_EDGES | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOC, extcb1},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_DISABLED, NULL}
-  }
-};
-
-
-/*===========================================================================*/
-/* ICU driver related.                                                       */
-/*===========================================================================*/
-
-static void icuwidthcb_steer(ICUDriver *icup)
-{
-  icucnt_t last_width = icuGetWidthX(icup);
-
-  chSysLockFromISR();
-  chMBPostI(&steer_mb, (msg_t)last_width);
-  chSysUnlockFromISR();
-}
-
-static void icuwidthcb_speed(ICUDriver *icup)
-{
-  icucnt_t last_width = icuGetWidthX(icup);
-
-  chSysLockFromISR();
-  chMBPostI(&speed_mb, (msg_t)last_width);
-  chSysUnlockFromISR();
-}
-
-static const ICUConfig icucfg_steer = {
-  .mode         = ICU_INPUT_ACTIVE_HIGH,
-  .frequency    = 100000,
-  .width_cb     = icuwidthcb_steer,
-  .period_cb    = NULL,
-  .overflow_cb  = NULL,
-  .channel      = ICU_CHANNEL_1,
-  .dier         = 0
-};
-
-static const ICUConfig icucfg_speed = {
-  .mode         = ICU_INPUT_ACTIVE_HIGH,
-  .frequency    = 100000,
-  .width_cb     = icuwidthcb_speed,
-  .period_cb    = NULL,
-  .overflow_cb  = NULL,
-  .channel      = ICU_CHANNEL_1,
-  .dier         = 0
-};
 
 /*===========================================================================*/
 /* Application code.                                                         */
@@ -229,31 +119,18 @@ int main(void)
     palSetPadMode( GPIOE, 7, PAL_MODE_ALTERNATE(8) );    // RX
 
     // Mailbox init
-    chMBObjectInit(&steer_mb, b_steer, MAILBOX_SIZE);
-    chMBObjectInit(&speed_mb, b_speed, MAILBOX_SIZE);
 
     chMBObjectInit(&test_mb, buffer_test_mb, MAILBOX_SIZE);       // For external interrupt
 
-    // ICU driver
-    icuStart(&ICUD9, &icucfg_steer);
-    palSetPadMode( GPIOE, 5, PAL_MODE_ALTERNATE(3) );
-    icuStartCapture(&ICUD9);
-    icuEnableNotifications(&ICUD9);
 
-    icuStart(&ICUD8, &icucfg_speed);
-    palSetPadMode( GPIOC, 6, PAL_MODE_ALTERNATE(3) );
-    icuStartCapture(&ICUD8);
-    icuEnableNotifications(&ICUD8);
 
     // GPT driver
     gptStart(&GPTD4, &gpt4cfg1);
-    gptStartContinuous( &GPTD4, UINT16_MAX );    // For external interrupt
-
-    // EXT driver
-    extStart( &EXTD1, &extcfg );
 
 
-#if 0
+
+
+#if 1
     /*
      * Fixed an errata on the STM32F7xx, the DAC clock is required for ADC
      * triggering.
@@ -272,19 +149,18 @@ int main(void)
 
 
 
-    msg_t msg;
+    msg_t msg1, msg2;
 
     while (true)
     {
-      if ( chMBFetch(&steer_mb, &msg, TIME_IMMEDIATE) == MSG_OK )
-        chprintf(((BaseSequentialStream *)&SD7), "Steer      : %d\n", msg);
 
-      if ( chMBFetch(&speed_mb, &msg, TIME_IMMEDIATE) == MSG_OK )
-        chprintf(((BaseSequentialStream *)&SD7), "Speed      : %d\n", msg);
+        if ( chMBFetch(&test_mb, &msg1, TIME_IMMEDIATE) == MSG_OK )
+        {
+          chMBFetch(&test_mb, &msg2, TIME_IMMEDIATE);
+          chprintf(((BaseSequentialStream *)&SD7), "ADC values: %d %d\n", msg1, msg2);
 
-      if ( chMBFetch(&test_mb, &msg, TIME_IMMEDIATE) == MSG_OK )
-        chprintf(((BaseSequentialStream *)&SD7), "Steer (GPT): %d\n", msg);
+        }
 
-      chThdSleepMilliseconds( 1 );
-    }
+        chThdSleepMilliseconds( 10 );
+     }
 }
