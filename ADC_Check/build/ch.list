@@ -66,7 +66,7 @@ Disassembly of section .text:
   200280:	e7f9      	b.n	200276 <initloop>
 
 00200282 <endinitloop>:
-  200282:	f001 fa75 	bl	201770 <main>
+  200282:	f001 fa5d 	bl	201740 <main>
   200286:	4c11      	ldr	r4, [pc, #68]	; (2002cc <endfiniloop+0x36>)
   200288:	4d11      	ldr	r5, [pc, #68]	; (2002d0 <endfiniloop+0x3a>)
 
@@ -85,11 +85,11 @@ Disassembly of section .text:
   2002a4:	20000000 	.word	0x20000000
   2002a8:	20000400 	.word	0x20000400
   2002ac:	20000400 	.word	0x20000400
-  2002b0:	0800290c 	.word	0x0800290c
+  2002b0:	08002764 	.word	0x08002764
   2002b4:	20020000 	.word	0x20020000
   2002b8:	20020000 	.word	0x20020000
   2002bc:	20000800 	.word	0x20000800
-  2002c0:	20000d34 	.word	0x20000d34
+  2002c0:	20000be8 	.word	0x20000be8
   2002c4:	00200200 	.word	0x00200200
   2002c8:	00200200 	.word	0x00200200
   2002cc:	00200200 	.word	0x00200200
@@ -328,7 +328,7 @@ bool chSchIsPreemptionRequired(void) {
   2003e8:	4770      	bx	lr
   2003ea:	bf00      	nop
   2003ec:	e000ed00 	.word	0xe000ed00
-  2003f0:	20000c98 	.word	0x20000c98
+  2003f0:	20000944 	.word	0x20000944
   2003f4:	002002f5 	.word	0x002002f5
   2003f8:	002002f8 	.word	0x002002f8
   2003fc:	00000000 	.word	0x00000000
@@ -493,7 +493,7 @@ static inline void chVTDoTickI(void) {
   OSAL_IRQ_EPILOGUE();
   2004de:	f7ff bf5f 	b.w	2003a0 <_port_irq_epilogue>
   2004e2:	bf00      	nop
-  2004e4:	20000c98 	.word	0x20000c98
+  2004e4:	20000944 	.word	0x20000944
 	...
 
 002004f0 <Vector158>:
@@ -532,7 +532,7 @@ OSAL_IRQ_HANDLER(STM32_DMA2_CH7_HANDLER) {
   20050e:	f7ff bf47 	b.w	2003a0 <_port_irq_epilogue>
   200512:	bf00      	nop
   200514:	40026400 	.word	0x40026400
-  200518:	20000a40 	.word	0x20000a40
+  200518:	20000ab0 	.word	0x20000ab0
   20051c:	00000000 	.word	0x00000000
 
 00200520 <Vector154>:
@@ -563,7 +563,7 @@ OSAL_IRQ_HANDLER(STM32_DMA2_CH6_HANDLER) {
   20053e:	f7ff bf2f 	b.w	2003a0 <_port_irq_epilogue>
   200542:	bf00      	nop
   200544:	40026400 	.word	0x40026400
-  200548:	20000a40 	.word	0x20000a40
+  200548:	20000ab0 	.word	0x20000ab0
   20054c:	00000000 	.word	0x00000000
 
 00200550 <Vector150>:
@@ -594,7 +594,7 @@ OSAL_IRQ_HANDLER(STM32_DMA2_CH5_HANDLER) {
   20056e:	f7ff bf17 	b.w	2003a0 <_port_irq_epilogue>
   200572:	bf00      	nop
   200574:	40026400 	.word	0x40026400
-  200578:	20000a40 	.word	0x20000a40
+  200578:	20000ab0 	.word	0x20000ab0
   20057c:	00000000 	.word	0x00000000
 
 00200580 <Vector130>:
@@ -623,7 +623,7 @@ OSAL_IRQ_HANDLER(STM32_DMA2_CH4_HANDLER) {
   20059a:	f7ff bf01 	b.w	2003a0 <_port_irq_epilogue>
   20059e:	bf00      	nop
   2005a0:	40026400 	.word	0x40026400
-  2005a4:	20000a40 	.word	0x20000a40
+  2005a4:	20000ab0 	.word	0x20000ab0
 	...
 
 002005b0 <Vector12C>:
@@ -654,7 +654,7 @@ OSAL_IRQ_HANDLER(STM32_DMA2_CH3_HANDLER) {
   2005ce:	f7ff bee7 	b.w	2003a0 <_port_irq_epilogue>
   2005d2:	bf00      	nop
   2005d4:	40026400 	.word	0x40026400
-  2005d8:	20000a40 	.word	0x20000a40
+  2005d8:	20000ab0 	.word	0x20000ab0
   2005dc:	00000000 	.word	0x00000000
 
 002005e0 <Vector128>:
@@ -685,7 +685,7 @@ OSAL_IRQ_HANDLER(STM32_DMA2_CH2_HANDLER) {
   2005fe:	f7ff becf 	b.w	2003a0 <_port_irq_epilogue>
   200602:	bf00      	nop
   200604:	40026400 	.word	0x40026400
-  200608:	20000a40 	.word	0x20000a40
+  200608:	20000ab0 	.word	0x20000ab0
   20060c:	00000000 	.word	0x00000000
 
 00200610 <Vector124>:
@@ -716,7 +716,7 @@ OSAL_IRQ_HANDLER(STM32_DMA2_CH1_HANDLER) {
   20062e:	f7ff beb7 	b.w	2003a0 <_port_irq_epilogue>
   200632:	bf00      	nop
   200634:	40026400 	.word	0x40026400
-  200638:	20000a40 	.word	0x20000a40
+  200638:	20000ab0 	.word	0x20000ab0
   20063c:	00000000 	.word	0x00000000
 
 00200640 <Vector120>:
@@ -745,7 +745,7 @@ OSAL_IRQ_HANDLER(STM32_DMA2_CH0_HANDLER) {
   20065a:	f7ff bea1 	b.w	2003a0 <_port_irq_epilogue>
   20065e:	bf00      	nop
   200660:	40026400 	.word	0x40026400
-  200664:	20000a40 	.word	0x20000a40
+  200664:	20000ab0 	.word	0x20000ab0
 	...
 
 00200670 <VectorFC>:
@@ -776,7 +776,7 @@ OSAL_IRQ_HANDLER(STM32_DMA1_CH7_HANDLER) {
   20068e:	f7ff be87 	b.w	2003a0 <_port_irq_epilogue>
   200692:	bf00      	nop
   200694:	40026000 	.word	0x40026000
-  200698:	20000a40 	.word	0x20000a40
+  200698:	20000ab0 	.word	0x20000ab0
   20069c:	00000000 	.word	0x00000000
 
 002006a0 <Vector84>:
@@ -807,7 +807,7 @@ OSAL_IRQ_HANDLER(STM32_DMA1_CH6_HANDLER) {
   2006be:	f7ff be6f 	b.w	2003a0 <_port_irq_epilogue>
   2006c2:	bf00      	nop
   2006c4:	40026000 	.word	0x40026000
-  2006c8:	20000a40 	.word	0x20000a40
+  2006c8:	20000ab0 	.word	0x20000ab0
   2006cc:	00000000 	.word	0x00000000
 
 002006d0 <Vector80>:
@@ -838,7 +838,7 @@ OSAL_IRQ_HANDLER(STM32_DMA1_CH5_HANDLER) {
   2006ee:	f7ff be57 	b.w	2003a0 <_port_irq_epilogue>
   2006f2:	bf00      	nop
   2006f4:	40026000 	.word	0x40026000
-  2006f8:	20000a40 	.word	0x20000a40
+  2006f8:	20000ab0 	.word	0x20000ab0
   2006fc:	00000000 	.word	0x00000000
 
 00200700 <Vector7C>:
@@ -867,7 +867,7 @@ OSAL_IRQ_HANDLER(STM32_DMA1_CH4_HANDLER) {
   20071a:	f7ff be41 	b.w	2003a0 <_port_irq_epilogue>
   20071e:	bf00      	nop
   200720:	40026000 	.word	0x40026000
-  200724:	20000a40 	.word	0x20000a40
+  200724:	20000ab0 	.word	0x20000ab0
 	...
 
 00200730 <Vector78>:
@@ -898,7 +898,7 @@ OSAL_IRQ_HANDLER(STM32_DMA1_CH3_HANDLER) {
   20074e:	f7ff be27 	b.w	2003a0 <_port_irq_epilogue>
   200752:	bf00      	nop
   200754:	40026000 	.word	0x40026000
-  200758:	20000a40 	.word	0x20000a40
+  200758:	20000ab0 	.word	0x20000ab0
   20075c:	00000000 	.word	0x00000000
 
 00200760 <Vector74>:
@@ -929,7 +929,7 @@ OSAL_IRQ_HANDLER(STM32_DMA1_CH2_HANDLER) {
   20077e:	f7ff be0f 	b.w	2003a0 <_port_irq_epilogue>
   200782:	bf00      	nop
   200784:	40026000 	.word	0x40026000
-  200788:	20000a40 	.word	0x20000a40
+  200788:	20000ab0 	.word	0x20000ab0
   20078c:	00000000 	.word	0x00000000
 
 00200790 <Vector70>:
@@ -960,7 +960,7 @@ OSAL_IRQ_HANDLER(STM32_DMA1_CH1_HANDLER) {
   2007ae:	f7ff bdf7 	b.w	2003a0 <_port_irq_epilogue>
   2007b2:	bf00      	nop
   2007b4:	40026000 	.word	0x40026000
-  2007b8:	20000a40 	.word	0x20000a40
+  2007b8:	20000ab0 	.word	0x20000ab0
   2007bc:	00000000 	.word	0x00000000
 
 002007c0 <Vector6C>:
@@ -987,7 +987,7 @@ OSAL_IRQ_HANDLER(STM32_DMA1_CH0_HANDLER) {
   2007da:	f7ff bde1 	b.w	2003a0 <_port_irq_epilogue>
   2007de:	bf00      	nop
   2007e0:	40026000 	.word	0x40026000
-  2007e4:	20000a40 	.word	0x20000a40
+  2007e4:	20000ab0 	.word	0x20000ab0
 	...
 
 002007f0 <Vector4C>:
@@ -1571,8 +1571,8 @@ void *chCoreAllocAligned(size_t size, unsigned align) {
   200b7a:	bc70      	pop	{r4, r5, r6}
   200b7c:	4770      	bx	lr
   200b7e:	bf00      	nop
-  200b80:	20000ac8 	.word	0x20000ac8
-  200b84:	20000ac4 	.word	0x20000ac4
+  200b80:	20000b38 	.word	0x20000b38
+  200b84:	20000b34 	.word	0x20000b34
 	...
 
 00200b90 <wakeup>:
@@ -1650,7 +1650,7 @@ static void wakeup(void *p) {
   200bf4:	f383 8811 	msr	BASEPRI, r3
   200bf8:	4770      	bx	lr
   200bfa:	bf00      	nop
-  200bfc:	20000c98 	.word	0x20000c98
+  200bfc:	20000944 	.word	0x20000944
 
 00200c00 <_idle_thread.lto_priv.54>:
  *          that this thread is executed only if there are no other ready
@@ -1782,7 +1782,7 @@ static inline void osalThreadDequeueNextI(threads_queue_t *tqp, msg_t msg) {
 
   chThdDequeueNextI(tqp, msg);
   200c9c:	4836      	ldr	r0, [pc, #216]	; (200d78 <Vector188+0x158>)
-  200c9e:	f001 fac7 	bl	202230 <chThdDequeueNextI.constprop.35>
+  200c9e:	f001 f9f7 	bl	202090 <chThdDequeueNextI.constprop.35>
   200ca2:	2300      	movs	r3, #0
   200ca4:	f383 8811 	msr	BASEPRI, r3
   200ca8:	e7c7      	b.n	200c3a <Vector188+0x1a>
@@ -1795,7 +1795,7 @@ static inline void osalEventBroadcastFlagsI(event_source_t *esp,
 
   chEvtBroadcastFlagsI(esp, flags);
   200cb0:	f44f 7000 	mov.w	r0, #512	; 0x200
-  200cb4:	f001 facc 	bl	202250 <chEvtBroadcastFlagsI.constprop.34>
+  200cb4:	f001 f9fc 	bl	2020b0 <chEvtBroadcastFlagsI.constprop.34>
   200cb8:	2300      	movs	r3, #0
   200cba:	f383 8811 	msr	BASEPRI, r3
   200cbe:	e7ba      	b.n	200c36 <Vector188+0x16>
@@ -1821,7 +1821,7 @@ static inline void osalEventBroadcastFlagsI(event_source_t *esp,
   200ce0:	bf48      	it	mi
   200ce2:	f440 7080 	orrmi.w	r0, r0, #256	; 0x100
   200ce6:	f383 8811 	msr	BASEPRI, r3
-  200cea:	f001 fab1 	bl	202250 <chEvtBroadcastFlagsI.constprop.34>
+  200cea:	f001 f9e1 	bl	2020b0 <chEvtBroadcastFlagsI.constprop.34>
   200cee:	2300      	movs	r3, #0
   200cf0:	f383 8811 	msr	BASEPRI, r3
   200cf4:	e79d      	b.n	200c32 <Vector188+0x12>
@@ -1863,7 +1863,7 @@ msg_t oqGetI(output_queue_t *oqp) {
   200d1a:	64ab      	str	r3, [r5, #72]	; 0x48
   chThdDequeueNextI(tqp, msg);
   200d1c:	4817      	ldr	r0, [pc, #92]	; (200d7c <Vector188+0x15c>)
-  200d1e:	f001 fa87 	bl	202230 <chThdDequeueNextI.constprop.35>
+  200d1e:	f001 f9b7 	bl	202090 <chThdDequeueNextI.constprop.35>
       u->TDR = b;
   200d22:	f8c6 8028 	str.w	r8, [r6, #40]	; 0x28
   200d26:	2300      	movs	r3, #0
@@ -1879,33 +1879,33 @@ msg_t oqGetI(output_queue_t *oqp) {
   200d38:	d08c      	beq.n	200c54 <Vector188+0x34>
   chEvtBroadcastFlagsI(esp, flags);
   200d3a:	2010      	movs	r0, #16
-  200d3c:	f001 fa88 	bl	202250 <chEvtBroadcastFlagsI.constprop.34>
+  200d3c:	f001 f9b8 	bl	2020b0 <chEvtBroadcastFlagsI.constprop.34>
   200d40:	e788      	b.n	200c54 <Vector188+0x34>
   200d42:	2004      	movs	r0, #4
-  200d44:	f001 fa84 	bl	202250 <chEvtBroadcastFlagsI.constprop.34>
+  200d44:	f001 f9b4 	bl	2020b0 <chEvtBroadcastFlagsI.constprop.34>
   200d48:	e799      	b.n	200c7e <Vector188+0x5e>
   if (iqIsFullI(iqp)) {
   200d4a:	696a      	ldr	r2, [r5, #20]
   200d4c:	2a00      	cmp	r2, #0
   200d4e:	d09a      	beq.n	200c86 <Vector188+0x66>
   200d50:	f44f 6080 	mov.w	r0, #1024	; 0x400
-  200d54:	f001 fa7c 	bl	202250 <chEvtBroadcastFlagsI.constprop.34>
+  200d54:	f001 f9ac 	bl	2020b0 <chEvtBroadcastFlagsI.constprop.34>
   200d58:	e7a3      	b.n	200ca2 <Vector188+0x82>
   if (oqIsEmptyI(oqp)) {
   200d5a:	6baa      	ldr	r2, [r5, #56]	; 0x38
   200d5c:	2a00      	cmp	r2, #0
   200d5e:	d0d1      	beq.n	200d04 <Vector188+0xe4>
   200d60:	2008      	movs	r0, #8
-  200d62:	f001 fa75 	bl	202250 <chEvtBroadcastFlagsI.constprop.34>
+  200d62:	f001 f9a5 	bl	2020b0 <chEvtBroadcastFlagsI.constprop.34>
       u->CR1 = (cr1 & ~USART_CR1_TXEIE) | USART_CR1_TCIE;
   200d66:	f027 03c0 	bic.w	r3, r7, #192	; 0xc0
   200d6a:	f043 0340 	orr.w	r3, r3, #64	; 0x40
   200d6e:	6033      	str	r3, [r6, #0]
   200d70:	e7d9      	b.n	200d26 <Vector188+0x106>
   200d72:	bf00      	nop
-  200d74:	20000c38 	.word	0x20000c38
-  200d78:	20000c44 	.word	0x20000c44
-  200d7c:	20000c68 	.word	0x20000c68
+  200d74:	20000b60 	.word	0x20000b60
+  200d78:	20000b6c 	.word	0x20000b6c
+  200d7c:	20000b90 	.word	0x20000b90
 
 00200d80 <chSchGoSleepS>:
   thread_t *otp = currp;
@@ -1936,7 +1936,7 @@ void chSchGoSleepS(tstate_t newstate) {
   chSysSwitch(currp, otp);
   200d9e:	f7ff ba99 	b.w	2002d4 <_port_switch>
   200da2:	bf00      	nop
-  200da4:	20000c98 	.word	0x20000c98
+  200da4:	20000944 	.word	0x20000944
 	...
 
 00200db0 <__early_init>:
@@ -2366,7 +2366,7 @@ NOINLINE void chTMStopMeasurementX(time_measurement_t *tmp) {
   200fc8:	4770      	bx	lr
   200fca:	bf00      	nop
   200fcc:	e0001000 	.word	0xe0001000
-  200fd0:	20000c98 	.word	0x20000c98
+  200fd0:	20000944 	.word	0x20000944
 	...
 
 00200fe0 <chSchDoReschedule>:
@@ -2433,7 +2433,7 @@ void chSchDoRescheduleAhead(void) {
   chSysSwitch(currp, otp);
   201016:	f7ff b95d 	b.w	2002d4 <_port_switch>
   20101a:	bf00      	nop
-  20101c:	20000c98 	.word	0x20000c98
+  20101c:	20000944 	.word	0x20000944
 
 00201020 <chSchRescheduleS>:
  */
@@ -2453,7 +2453,7 @@ static inline bool chSchIsRescRequiredI(void) {
   20102e:	4770      	bx	lr
     chSchDoRescheduleAhead();
   201030:	f7ff bfd6 	b.w	200fe0 <chSchDoReschedule>
-  201034:	20000c98 	.word	0x20000c98
+  201034:	20000944 	.word	0x20000944
 	...
 
 00201040 <chSchGoSleepTimeoutS>:
@@ -2588,7 +2588,7 @@ msg_t chSchGoSleepTimeoutS(tstate_t newstate, systime_t time) {
   2010ba:	b007      	add	sp, #28
   2010bc:	bdf0      	pop	{r4, r5, r6, r7, pc}
   2010be:	bf00      	nop
-  2010c0:	20000c98 	.word	0x20000c98
+  2010c0:	20000944 	.word	0x20000944
   2010c4:	00200b91 	.word	0x00200b91
 	...
 
@@ -2628,7 +2628,7 @@ msg_t chThdEnqueueTimeoutS(threads_queue_t *tqp, systime_t timeout) {
   2010ec:	f04f 30ff 	mov.w	r0, #4294967295
   2010f0:	4770      	bx	lr
   2010f2:	bf00      	nop
-  2010f4:	20000c98 	.word	0x20000c98
+  2010f4:	20000944 	.word	0x20000944
 	...
 
 00201100 <oqWriteTimeout>:
@@ -2767,7 +2767,7 @@ size_t oqWriteTimeout(output_queue_t *oqp, const uint8_t *bp,
   2011ae:	2800      	cmp	r0, #0
   2011b0:	d0bd      	beq.n	20112e <oqWriteTimeout+0x2e>
   2011b2:	e7f1      	b.n	201198 <oqWriteTimeout+0x98>
-  2011b4:	20000c98 	.word	0x20000c98
+  2011b4:	20000944 	.word	0x20000944
 	...
 
 002011c0 <_writet.lto_priv.52>:
@@ -2963,7 +2963,7 @@ msg_t oqPutTimeout(output_queue_t *oqp, uint8_t b, systime_t timeout) {
   20130e:	2800      	cmp	r0, #0
   201310:	d0bd      	beq.n	20128e <iqReadTimeout+0x2e>
   201312:	e7f1      	b.n	2012f8 <iqReadTimeout+0x98>
-  201314:	20000c98 	.word	0x20000c98
+  201314:	20000944 	.word	0x20000944
 	...
 
 00201320 <_readt.lto_priv.53>:
@@ -3088,7 +3088,7 @@ thread_t *chSchReadyI(thread_t *tp) {
   2013d2:	bc10      	pop	{r4}
   2013d4:	4770      	bx	lr
   2013d6:	bf00      	nop
-  2013d8:	20000c98 	.word	0x20000c98
+  2013d8:	20000944 	.word	0x20000944
   2013dc:	00000000 	.word	0x00000000
 
 002013e0 <Vector88>:
@@ -3441,7 +3441,7 @@ void chThdExit(msg_t msg) {
   chSchGoSleepS(CH_STATE_FINAL);
   2015f6:	f7ff bbc3 	b.w	200d80 <chSchGoSleepS>
   2015fa:	bf00      	nop
-  2015fc:	20000c98 	.word	0x20000c98
+  2015fc:	20000944 	.word	0x20000944
 
 00201600 <__init_ram_areas>:
 }
@@ -3502,11 +3502,11 @@ void __init_ram_areas(void) {
   201644:	e897 003a 	ldmia.w	r7, {r1, r3, r4, r5}
   201648:	e7e3      	b.n	201612 <__init_ram_areas+0x12>
   20164a:	bdf0      	pop	{r4, r5, r6, r7, pc}
-  20164c:	08002730 	.word	0x08002730
+  20164c:	08002590 	.word	0x08002590
   201650:	20020000 	.word	0x20020000
   201654:	20020000 	.word	0x20020000
   201658:	20020000 	.word	0x20020000
-  20165c:	0800290c 	.word	0x0800290c
+  20165c:	08002764 	.word	0x08002764
 
 00201660 <__default_exit>:
 void __default_exit(void) {
@@ -3620,2357 +3620,2196 @@ static void adcerrorcallback(ADCDriver *adcp, adcerror_t err) {
   201702:	bf00      	nop
 	...
 
-00201710 <Blinker>:
-static THD_FUNCTION(Blinker, arg) {
-
-  (void)arg;
-  while (true)
-  {
-    palToggleLine(LINE_LED1);
-  201710:	4c08      	ldr	r4, [pc, #32]	; (201734 <Blinker+0x24>)
-  __ASM volatile ("MSR basepri, %0" : : "r" (value) : "memory");
-  201712:	2520      	movs	r5, #32
-static THD_FUNCTION(Blinker, arg) {
-  201714:	b508      	push	{r3, lr}
-    palToggleLine(LINE_LED1);
-  201716:	6963      	ldr	r3, [r4, #20]
-  201718:	f083 0301 	eor.w	r3, r3, #1
-  20171c:	6163      	str	r3, [r4, #20]
-  20171e:	f385 8811 	msr	BASEPRI, r5
- */
-static inline void chThdSleepS(systime_t time) {
-
-  chDbgCheck(time != TIME_IMMEDIATE);
-
-  (void) chSchGoSleepTimeoutS(CH_STATE_SLEEPING, time);
-  201722:	f44f 717a 	mov.w	r1, #1000	; 0x3e8
-  201726:	2008      	movs	r0, #8
-  201728:	f7ff fc8a 	bl	201040 <chSchGoSleepTimeoutS>
-  20172c:	2300      	movs	r3, #0
-  20172e:	f383 8811 	msr	BASEPRI, r3
-  201732:	e7f0      	b.n	201716 <Blinker+0x6>
-  201734:	40020400 	.word	0x40020400
-	...
-
-00201740 <adccallback>:
+00201710 <adccallback>:
 {
-  201740:	b510      	push	{r4, lr}
-  201742:	2320      	movs	r3, #32
-  201744:	f383 8811 	msr	BASEPRI, r3
-  chMBPostI( &test_mb, samples1[0]);
-  201748:	4c05      	ldr	r4, [pc, #20]	; (201760 <adccallback+0x20>)
-  20174a:	8820      	ldrh	r0, [r4, #0]
-  20174c:	f000 fdb8 	bl	2022c0 <chMBPostI.constprop.31>
-  chMBPostI( &test_mb, samples1[1]);
-  201750:	8860      	ldrh	r0, [r4, #2]
-  201752:	f000 fdb5 	bl	2022c0 <chMBPostI.constprop.31>
-  201756:	2300      	movs	r3, #0
-  201758:	f383 8811 	msr	BASEPRI, r3
-  20175c:	bd10      	pop	{r4, pc}
-  20175e:	bf00      	nop
-  201760:	20000acc 	.word	0x20000acc
+  201710:	b510      	push	{r4, lr}
+  __ASM volatile ("MSR basepri, %0" : : "r" (value) : "memory");
+  201712:	2320      	movs	r3, #32
+  201714:	f383 8811 	msr	BASEPRI, r3
+  chMBPostI( &test_mb, samples1[0]);    // send 1st ADC-value (channel 1)
+  201718:	4c05      	ldr	r4, [pc, #20]	; (201730 <adccallback+0x20>)
+  20171a:	8820      	ldrh	r0, [r4, #0]
+  20171c:	f000 fd00 	bl	202120 <chMBPostI.constprop.31>
+  chMBPostI( &test_mb, samples1[1]);    // send 2nd ADC-value (channel 2)
+  201720:	8860      	ldrh	r0, [r4, #2]
+  201722:	f000 fcfd 	bl	202120 <chMBPostI.constprop.31>
+  201726:	2300      	movs	r3, #0
+  201728:	f383 8811 	msr	BASEPRI, r3
+  20172c:	bd10      	pop	{r4, pc}
+  20172e:	bf00      	nop
+  201730:	20000b3c 	.word	0x20000b3c
 	...
 
-00201770 <main>:
+00201740 <main>:
   tqp->next = (thread_t *)tqp;
-  201770:	4c7c      	ldr	r4, [pc, #496]	; (201964 <main+0x1f4>)
+  201740:	4c7e      	ldr	r4, [pc, #504]	; (20193c <main+0x1fc>)
   ch.rlist.prio = NOPRIO;
-  201772:	2600      	movs	r6, #0
+  201742:	2500      	movs	r5, #0
   ch.vtlist.delta = (systime_t)-1;
-  201774:	f64f 72ff 	movw	r2, #65535	; 0xffff
-  tmp->cumulative = (rttime_t)0;
-  201778:	f04f 0800 	mov.w	r8, #0
+  201744:	f64f 71ff 	movw	r1, #65535	; 0xffff
+  tmp->best       = (rtcnt_t)-1;
+  201748:	f04f 32ff 	mov.w	r2, #4294967295
   ch.vtlist.next = (virtual_timer_t *)&ch.vtlist;
-  20177c:	f104 031c 	add.w	r3, r4, #28
-  201780:	f04f 0900 	mov.w	r9, #0
+  20174c:	f104 031c 	add.w	r3, r4, #28
+  tmp->cumulative = (rttime_t)0;
+  201750:	2600      	movs	r6, #0
   reg_value &= ~((uint32_t)(SCB_AIRCR_VECTKEY_Msk | SCB_AIRCR_PRIGROUP_Msk)); /* clear bits to change               */
-  201784:	f64f 0aff 	movw	sl, #63743	; 0xf8ff
-    chThdSleepSeconds(1);
-  }
-}
+  201752:	f64f 08ff 	movw	r8, #63743	; 0xf8ff
+/*===========================================================================*/
+/* Application code.                                                         */
+/*===========================================================================*/
 
 int main(void)
 {
-  201788:	e92d 4880 	stmdb	sp!, {r7, fp, lr}
-  20178c:	b089      	sub	sp, #36	; 0x24
-  tmp->best       = (rtcnt_t)-1;
-  20178e:	f04f 37ff 	mov.w	r7, #4294967295
-  201792:	6024      	str	r4, [r4, #0]
+  201756:	e92d 4880 	stmdb	sp!, {r7, fp, lr}
+  20175a:	b087      	sub	sp, #28
+  20175c:	2700      	movs	r7, #0
+  20175e:	6024      	str	r4, [r4, #0]
   chTMStartMeasurementX(&tm);
-  201794:	a802      	add	r0, sp, #8
+  201760:	4668      	mov	r0, sp
   tqp->prev = (thread_t *)tqp;
-  201796:	6064      	str	r4, [r4, #4]
+  201762:	6064      	str	r4, [r4, #4]
   ch.vtlist.delta = (systime_t)-1;
-  201798:	84a2      	strh	r2, [r4, #36]	; 0x24
+  201764:	84a1      	strh	r1, [r4, #36]	; 0x24
   ch.vtlist.next = (virtual_timer_t *)&ch.vtlist;
-  20179a:	61e3      	str	r3, [r4, #28]
+  201766:	61e3      	str	r3, [r4, #28]
   ch.vtlist.prev = (virtual_timer_t *)&ch.vtlist;
-  20179c:	6223      	str	r3, [r4, #32]
-  ch.rlist.newer = (thread_t *)&ch.rlist;
-  20179e:	6124      	str	r4, [r4, #16]
-  ch.rlist.older = (thread_t *)&ch.rlist;
-  2017a0:	6164      	str	r4, [r4, #20]
-  ch.rlist.prio = NOPRIO;
-  2017a2:	60a6      	str	r6, [r4, #8]
-  ch.vtlist.systime = (systime_t)0;
-  2017a4:	84e6      	strh	r6, [r4, #38]	; 0x26
-  ch.tm.offset = (rtcnt_t)0;
-  2017a6:	6726      	str	r6, [r4, #112]	; 0x70
-  tmp->worst      = (rtcnt_t)0;
-  2017a8:	9603      	str	r6, [sp, #12]
-  tmp->last       = (rtcnt_t)0;
-  2017aa:	9604      	str	r6, [sp, #16]
-  tmp->n          = (ucnt_t)0;
-  2017ac:	9605      	str	r6, [sp, #20]
+  201768:	6223      	str	r3, [r4, #32]
   tmp->best       = (rtcnt_t)-1;
-  2017ae:	9702      	str	r7, [sp, #8]
+  20176a:	9200      	str	r2, [sp, #0]
+  ch.rlist.newer = (thread_t *)&ch.rlist;
+  20176c:	6124      	str	r4, [r4, #16]
+  ch.rlist.older = (thread_t *)&ch.rlist;
+  20176e:	6164      	str	r4, [r4, #20]
+  ch.rlist.prio = NOPRIO;
+  201770:	60a5      	str	r5, [r4, #8]
+  ch.vtlist.systime = (systime_t)0;
+  201772:	84e5      	strh	r5, [r4, #38]	; 0x26
+  ch.tm.offset = (rtcnt_t)0;
+  201774:	6725      	str	r5, [r4, #112]	; 0x70
+  tmp->worst      = (rtcnt_t)0;
+  201776:	9501      	str	r5, [sp, #4]
+  tmp->last       = (rtcnt_t)0;
+  201778:	9502      	str	r5, [sp, #8]
+  tmp->n          = (ucnt_t)0;
+  20177a:	9503      	str	r5, [sp, #12]
   tmp->cumulative = (rttime_t)0;
-  2017b0:	e9cd 8906 	strd	r8, r9, [sp, #24]
+  20177c:	e9cd 6704 	strd	r6, r7, [sp, #16]
   chTMStartMeasurementX(&tm);
-  2017b4:	f000 fd34 	bl	202220 <chTMStartMeasurementX.constprop.38>
+  201780:	f000 fc7e 	bl	202080 <chTMStartMeasurementX.constprop.38>
   chTMStopMeasurementX(&tm);
-  2017b8:	a802      	add	r0, sp, #8
-  2017ba:	f7ff fbe9 	bl	200f90 <chTMStopMeasurementX>
+  201784:	4668      	mov	r0, sp
+  201786:	f7ff fc03 	bl	200f90 <chTMStopMeasurementX>
  *
  * @notapi
  */
 void _heap_init(void) {
 
   default_heap.provider = chCoreAllocAligned;
-  2017be:	4b6a      	ldr	r3, [pc, #424]	; (201968 <main+0x1f8>)
-  2017c0:	496a      	ldr	r1, [pc, #424]	; (20196c <main+0x1fc>)
-  REG_INSERT(tp);
-  2017c2:	f104 0e2c 	add.w	lr, r4, #44	; 0x2c
+  20178a:	4b6d      	ldr	r3, [pc, #436]	; (201940 <main+0x200>)
+  20178c:	496d      	ldr	r1, [pc, #436]	; (201944 <main+0x204>)
+  tp->prio      = prio;
+  20178e:	f04f 0e80 	mov.w	lr, #128	; 0x80
   nextmem = __heap_base__;
-  2017c6:	4a6a      	ldr	r2, [pc, #424]	; (201970 <main+0x200>)
-  tqp->next = (thread_t *)tqp;
-  2017c8:	f103 0910 	add.w	r9, r3, #16
-  2017cc:	6019      	str	r1, [r3, #0]
-  tp->prio      = prio;
-  2017ce:	f04f 0880 	mov.w	r8, #128	; 0x80
-  2017d2:	4968      	ldr	r1, [pc, #416]	; (201974 <main+0x204>)
-  ch.tm.offset = tm.last;
-  2017d4:	9804      	ldr	r0, [sp, #16]
-  2017d6:	6011      	str	r1, [r2, #0]
-  endmem  = __heap_end__;
-  2017d8:	4a67      	ldr	r2, [pc, #412]	; (201978 <main+0x208>)
-  2017da:	4968      	ldr	r1, [pc, #416]	; (20197c <main+0x20c>)
-  tp->flags     = CH_FLAG_MODE_STATIC;
-  2017dc:	f884 604d 	strb.w	r6, [r4, #77]	; 0x4d
-  2017e0:	6011      	str	r1, [r2, #0]
-  tp->refs      = (trefs_t)1;
-  2017e2:	2201      	movs	r2, #1
-  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
-  2017e4:	4966      	ldr	r1, [pc, #408]	; (201980 <main+0x210>)
-  tp->mtxlist   = NULL;
-  2017e6:	6666      	str	r6, [r4, #100]	; 0x64
-  2017e8:	f8d1 c00c 	ldr.w	ip, [r1, #12]
-  2017ec:	6720      	str	r0, [r4, #112]	; 0x70
-  tp->name      = name;
-  2017ee:	4865      	ldr	r0, [pc, #404]	; (201984 <main+0x214>)
-  reg_value &= ~((uint32_t)(SCB_AIRCR_VECTKEY_Msk | SCB_AIRCR_PRIGROUP_Msk)); /* clear bits to change               */
-  2017f0:	ea0c 0c0a 	and.w	ip, ip, sl
-  tp->prio      = prio;
-  2017f4:	f8c4 8034 	str.w	r8, [r4, #52]	; 0x34
-  tp->name      = name;
-  2017f8:	6460      	str	r0, [r4, #68]	; 0x44
-  reg_value  =  (reg_value                                   |
-  2017fa:	4863      	ldr	r0, [pc, #396]	; (201988 <main+0x218>)
-  tp->realprio  = prio;
-  2017fc:	f8c4 8068 	str.w	r8, [r4, #104]	; 0x68
-  tlp->next = (thread_t *)tlp;
-  201800:	f104 0854 	add.w	r8, r4, #84	; 0x54
-  201804:	ea4c 0000 	orr.w	r0, ip, r0
+  201792:	4a6d      	ldr	r2, [pc, #436]	; (201948 <main+0x208>)
   REG_INSERT(tp);
-  201808:	f8d4 c014 	ldr.w	ip, [r4, #20]
+  201794:	f104 062c 	add.w	r6, r4, #44	; 0x2c
+  201798:	6019      	str	r1, [r3, #0]
+  tqp->next = (thread_t *)tqp;
+  20179a:	f103 0c10 	add.w	ip, r3, #16
+  20179e:	496b      	ldr	r1, [pc, #428]	; (20194c <main+0x20c>)
+  endmem  = __heap_end__;
+  2017a0:	4f6b      	ldr	r7, [pc, #428]	; (201950 <main+0x210>)
+  nextmem = __heap_base__;
+  2017a2:	6011      	str	r1, [r2, #0]
+  tp->refs      = (trefs_t)1;
+  2017a4:	2201      	movs	r2, #1
+  endmem  = __heap_end__;
+  2017a6:	496b      	ldr	r1, [pc, #428]	; (201954 <main+0x214>)
+  tp->flags     = CH_FLAG_MODE_STATIC;
+  2017a8:	f884 504d 	strb.w	r5, [r4, #77]	; 0x4d
+  2017ac:	600f      	str	r7, [r1, #0]
+  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+  2017ae:	496a      	ldr	r1, [pc, #424]	; (201958 <main+0x218>)
+  ch.tm.offset = tm.last;
+  2017b0:	9802      	ldr	r0, [sp, #8]
+  2017b2:	68cf      	ldr	r7, [r1, #12]
+  2017b4:	6720      	str	r0, [r4, #112]	; 0x70
+  reg_value &= ~((uint32_t)(SCB_AIRCR_VECTKEY_Msk | SCB_AIRCR_PRIGROUP_Msk)); /* clear bits to change               */
+  2017b6:	ea07 0708 	and.w	r7, r7, r8
+  reg_value  =  (reg_value                                   |
+  2017ba:	4868      	ldr	r0, [pc, #416]	; (20195c <main+0x21c>)
+  tp->prio      = prio;
+  2017bc:	f8c4 e034 	str.w	lr, [r4, #52]	; 0x34
+  tp->realprio  = prio;
+  2017c0:	f8c4 e068 	str.w	lr, [r4, #104]	; 0x68
+  2017c4:	4338      	orrs	r0, r7
+  CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+  2017c6:	f8df e1c0 	ldr.w	lr, [pc, #448]	; 201988 <main+0x248>
+  REG_INSERT(tp);
+  2017ca:	6967      	ldr	r7, [r4, #20]
+  tp->name      = name;
+  2017cc:	f8df 81bc 	ldr.w	r8, [pc, #444]	; 20198c <main+0x24c>
   tp->epending  = (eventmask_t)0;
-  20180c:	6626      	str	r6, [r4, #96]	; 0x60
+  2017d0:	6625      	str	r5, [r4, #96]	; 0x60
 void chMtxObjectInit(mutex_t *mp) {
 
   chDbgCheck(mp != NULL);
 
   queue_init(&mp->queue);
   mp->owner = NULL;
-  20180e:	619e      	str	r6, [r3, #24]
-  tqp->next = (thread_t *)tqp;
-  201810:	f8c3 9010 	str.w	r9, [r3, #16]
+  2017d2:	619d      	str	r5, [r3, #24]
+  2017d4:	f8c3 c010 	str.w	ip, [r3, #16]
   tqp->prev = (thread_t *)tqp;
-  201814:	f8c3 9014 	str.w	r9, [r3, #20]
-  tp->refs      = (trefs_t)1;
-  201818:	f884 204e 	strb.w	r2, [r4, #78]	; 0x4e
+  2017d8:	f8c3 c014 	str.w	ip, [r3, #20]
+  tlp->next = (thread_t *)tlp;
+  2017dc:	f104 0c54 	add.w	ip, r4, #84	; 0x54
   REG_INSERT(tp);
-  20181c:	f8c4 c040 	str.w	ip, [r4, #64]	; 0x40
-  201820:	63e4      	str	r4, [r4, #60]	; 0x3c
-  201822:	f8cc e010 	str.w	lr, [ip, #16]
-  CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
-  201826:	f8df c188 	ldr.w	ip, [pc, #392]	; 2019b0 <main+0x240>
-  SCB->AIRCR =  reg_value;
-  20182a:	60c8      	str	r0, [r1, #12]
+  2017e0:	6427      	str	r7, [r4, #64]	; 0x40
+  tp->refs      = (trefs_t)1;
+  2017e2:	f884 204e 	strb.w	r2, [r4, #78]	; 0x4e
+  tp->mtxlist   = NULL;
+  2017e6:	6665      	str	r5, [r4, #100]	; 0x64
+  REG_INSERT(tp);
+  2017e8:	63e4      	str	r4, [r4, #60]	; 0x3c
+  tp->name      = name;
+  2017ea:	f8c4 8044 	str.w	r8, [r4, #68]	; 0x44
+  REG_INSERT(tp);
+  2017ee:	613e      	str	r6, [r7, #16]
   tqp->next = (thread_t *)tqp;
-  20182c:	f104 0058 	add.w	r0, r4, #88	; 0x58
+  2017f0:	f104 0758 	add.w	r7, r4, #88	; 0x58
+  SCB->AIRCR =  reg_value;
+  2017f4:	60c8      	str	r0, [r1, #12]
+  2017f6:	f8de 000c 	ldr.w	r0, [lr, #12]
   H_NEXT(&default_heap.header) = NULL;
-  201830:	609e      	str	r6, [r3, #8]
+  2017fa:	609d      	str	r5, [r3, #8]
+  2017fc:	f040 7080 	orr.w	r0, r0, #16777216	; 0x1000000
   H_PAGES(&default_heap.header) = 0;
-  201832:	60de      	str	r6, [r3, #12]
-  201834:	f8dc 300c 	ldr.w	r3, [ip, #12]
-  201838:	f8c4 e014 	str.w	lr, [r4, #20]
-  20183c:	f043 7380 	orr.w	r3, r3, #16777216	; 0x1000000
+  201800:	60dd      	str	r5, [r3, #12]
+  201802:	6166      	str	r6, [r4, #20]
 #endif
 
 #if CH_CFG_NO_IDLE_THREAD == FALSE
   /* Now this instructions flow becomes the main thread.*/
 #if CH_CFG_USE_REGISTRY == TRUE
   currp = _thread_init(&ch.mainthread, (const char *)&ch_debug, NORMALPRIO);
-  201840:	f8c4 e018 	str.w	lr, [r4, #24]
+  201804:	61a6      	str	r6, [r4, #24]
+    SCB->SHPR[(((uint32_t)(int32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+  201806:	2620      	movs	r6, #32
+  tlp->next = (thread_t *)tlp;
+  201808:	f8c4 c054 	str.w	ip, [r4, #84]	; 0x54
+  20180c:	f04f 0c10 	mov.w	ip, #16
+  DWT->LAR = 0xC5ACCE55U;
+  201810:	4b53      	ldr	r3, [pc, #332]	; (201960 <main+0x220>)
        symbol must be provided externally.*/
     extern stkalign_t __main_thread_stack_base__;
     currp->wabase = &__main_thread_stack_base__;
   }
 #elif CH_CFG_USE_DYNAMIC == TRUE
   currp->wabase = NULL;
-  201844:	64a6      	str	r6, [r4, #72]	; 0x48
+  201812:	64a5      	str	r5, [r4, #72]	; 0x48
 #endif
 
   /* Setting up the caller as current thread.*/
   currp->state = CH_STATE_CURRENT;
-  201846:	f884 204c 	strb.w	r2, [r4, #76]	; 0x4c
-  tlp->next = (thread_t *)tlp;
-  20184a:	f8c4 8054 	str.w	r8, [r4, #84]	; 0x54
-  DWT->LAR = 0xC5ACCE55U;
-  20184e:	f8df e164 	ldr.w	lr, [pc, #356]	; 2019b4 <main+0x244>
+  201814:	f884 204c 	strb.w	r2, [r4, #76]	; 0x4c
   CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
-  201852:	f8cc 300c 	str.w	r3, [ip, #12]
-    SCB->SHPR[(((uint32_t)(int32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
-  201856:	f04f 0c10 	mov.w	ip, #16
+  201818:	f8ce 000c 	str.w	r0, [lr, #12]
   DWT->LAR = 0xC5ACCE55U;
-  20185a:	4b4c      	ldr	r3, [pc, #304]	; (20198c <main+0x21c>)
+  20181c:	4851      	ldr	r0, [pc, #324]	; (201964 <main+0x224>)
   tqp->next = (thread_t *)tqp;
-  20185c:	65a0      	str	r0, [r4, #88]	; 0x58
+  20181e:	65a7      	str	r7, [r4, #88]	; 0x58
   tqp->prev = (thread_t *)tqp;
-  20185e:	65e0      	str	r0, [r4, #92]	; 0x5c
-  201860:	f8c3 efb0 	str.w	lr, [r3, #4016]	; 0xfb0
-  201864:	f04f 0e20 	mov.w	lr, #32
+  201820:	65e7      	str	r7, [r4, #92]	; 0x5c
+  201822:	f8c3 0fb0 	str.w	r0, [r3, #4016]	; 0xfb0
   DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
-  201868:	6818      	ldr	r0, [r3, #0]
-  20186a:	4310      	orrs	r0, r2
-  20186c:	6018      	str	r0, [r3, #0]
-  20186e:	f881 c01f 	strb.w	ip, [r1, #31]
-  201872:	f881 e022 	strb.w	lr, [r1, #34]	; 0x22
-  201876:	f386 8811 	msr	BASEPRI, r6
+  201826:	6818      	ldr	r0, [r3, #0]
+  201828:	4310      	orrs	r0, r2
+  20182a:	6018      	str	r0, [r3, #0]
+  20182c:	f881 c01f 	strb.w	ip, [r1, #31]
+  201830:	f881 6022 	strb.w	r6, [r1, #34]	; 0x22
+  201834:	f385 8811 	msr	BASEPRI, r5
   __ASM volatile ("cpsie i" : : : "memory");
-  20187a:	b662      	cpsie	i
+  201838:	b662      	cpsie	i
   __ASM volatile ("MSR basepri, %0" : : "r" (value) : "memory");
-  20187c:	f38e 8811 	msr	BASEPRI, lr
+  20183a:	f386 8811 	msr	BASEPRI, r6
   tp->wabase = tdp->wbase;
-  201880:	4b43      	ldr	r3, [pc, #268]	; (201990 <main+0x220>)
+  20183e:	4b4a      	ldr	r3, [pc, #296]	; (201968 <main+0x228>)
   tp->state     = CH_STATE_WTSTART;
-  201882:	f04f 0802 	mov.w	r8, #2
+  201840:	2602      	movs	r6, #2
   REG_INSERT(tp);
-  201886:	f8d4 e014 	ldr.w	lr, [r4, #20]
-  PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
-  20188a:	f103 006c 	add.w	r0, r3, #108	; 0x6c
-  REG_INSERT(tp);
-  20188e:	f103 0190 	add.w	r1, r3, #144	; 0x90
+  201842:	6961      	ldr	r1, [r4, #20]
   tp->prio      = prio;
-  201892:	f8c3 2098 	str.w	r2, [r3, #152]	; 0x98
-  tlp->next = (thread_t *)tlp;
-  201896:	f103 0cb8 	add.w	ip, r3, #184	; 0xb8
+  201844:	f8c3 2098 	str.w	r2, [r3, #152]	; 0x98
+  PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
+  201848:	f103 076c 	add.w	r7, r3, #108	; 0x6c
   tp->realprio  = prio;
-  20189a:	f8c3 20cc 	str.w	r2, [r3, #204]	; 0xcc
+  20184c:	f8c3 20cc 	str.w	r2, [r3, #204]	; 0xcc
+  REG_INSERT(tp);
+  201850:	f103 0090 	add.w	r0, r3, #144	; 0x90
   tp->refs      = (trefs_t)1;
-  20189e:	f883 20b2 	strb.w	r2, [r3, #178]	; 0xb2
-  tqp->next = (thread_t *)tqp;
-  2018a2:	f103 02bc 	add.w	r2, r3, #188	; 0xbc
+  201854:	f883 20b2 	strb.w	r2, [r3, #178]	; 0xb2
   PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
-  2018a6:	f8c3 009c 	str.w	r0, [r3, #156]	; 0x9c
+  201858:	4a44      	ldr	r2, [pc, #272]	; (20196c <main+0x22c>)
+  20185a:	f8df e134 	ldr.w	lr, [pc, #308]	; 201990 <main+0x250>
+  20185e:	f8c3 208c 	str.w	r2, [r3, #140]	; 0x8c
+  tp->name      = name;
+  201862:	4a43      	ldr	r2, [pc, #268]	; (201970 <main+0x230>)
   tp->state     = CH_STATE_WTSTART;
-  2018aa:	f883 80b0 	strb.w	r8, [r3, #176]	; 0xb0
-  PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
-  2018ae:	4839      	ldr	r0, [pc, #228]	; (201994 <main+0x224>)
-  tp->name      = name;
-  2018b0:	f8df 8104 	ldr.w	r8, [pc, #260]	; 2019b8 <main+0x248>
-  PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
-  2018b4:	4d38      	ldr	r5, [pc, #224]	; (201998 <main+0x228>)
-  2018b6:	66d8      	str	r0, [r3, #108]	; 0x6c
-  chSchWakeupS(tp, MSG_OK);
-  2018b8:	4608      	mov	r0, r1
-  PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
-  2018ba:	671e      	str	r6, [r3, #112]	; 0x70
-  REG_INSERT(tp);
-  2018bc:	f8c3 e0a4 	str.w	lr, [r3, #164]	; 0xa4
-  tp->flags     = CH_FLAG_MODE_STATIC;
-  2018c0:	f883 60b1 	strb.w	r6, [r3, #177]	; 0xb1
-  tp->mtxlist   = NULL;
-  2018c4:	f8c3 60c8 	str.w	r6, [r3, #200]	; 0xc8
-  tp->epending  = (eventmask_t)0;
-  2018c8:	f8c3 60c4 	str.w	r6, [r3, #196]	; 0xc4
-  REG_INSERT(tp);
-  2018cc:	f8c3 40a0 	str.w	r4, [r3, #160]	; 0xa0
-  tp->wabase = tdp->wbase;
-  2018d0:	f8c3 30ac 	str.w	r3, [r3, #172]	; 0xac
-  tp->name      = name;
-  2018d4:	f8c3 80a8 	str.w	r8, [r3, #168]	; 0xa8
-  PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
-  2018d8:	f8c3 508c 	str.w	r5, [r3, #140]	; 0x8c
-  REG_INSERT(tp);
-  2018dc:	f8ce 1010 	str.w	r1, [lr, #16]
-  tlp->next = (thread_t *)tlp;
-  2018e0:	f8c3 c0b8 	str.w	ip, [r3, #184]	; 0xb8
+  201864:	f883 60b0 	strb.w	r6, [r3, #176]	; 0xb0
   tqp->next = (thread_t *)tqp;
-  2018e4:	f8c3 20bc 	str.w	r2, [r3, #188]	; 0xbc
+  201868:	f103 06bc 	add.w	r6, r3, #188	; 0xbc
+  REG_INSERT(tp);
+  20186c:	f8c3 10a4 	str.w	r1, [r3, #164]	; 0xa4
+  tp->flags     = CH_FLAG_MODE_STATIC;
+  201870:	f883 50b1 	strb.w	r5, [r3, #177]	; 0xb1
+  tp->epending  = (eventmask_t)0;
+  201874:	f8c3 50c4 	str.w	r5, [r3, #196]	; 0xc4
+  PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
+  201878:	f8c3 709c 	str.w	r7, [r3, #156]	; 0x9c
+  tlp->next = (thread_t *)tlp;
+  20187c:	f103 07b8 	add.w	r7, r3, #184	; 0xb8
+  tp->name      = name;
+  201880:	f8c3 20a8 	str.w	r2, [r3, #168]	; 0xa8
+  PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
+  201884:	671d      	str	r5, [r3, #112]	; 0x70
+  tp->mtxlist   = NULL;
+  201886:	f8c3 50c8 	str.w	r5, [r3, #200]	; 0xc8
+  REG_INSERT(tp);
+  20188a:	f8c3 40a0 	str.w	r4, [r3, #160]	; 0xa0
+  tp->wabase = tdp->wbase;
+  20188e:	f8c3 30ac 	str.w	r3, [r3, #172]	; 0xac
+  PORT_SETUP_CONTEXT(tp, tdp->wbase, tp, tdp->funcp, tdp->arg);
+  201892:	f8c3 e06c 	str.w	lr, [r3, #108]	; 0x6c
+  REG_INSERT(tp);
+  201896:	6108      	str	r0, [r1, #16]
+  thread_t *otp = currp;
+  201898:	69a2      	ldr	r2, [r4, #24]
+  ntp->u.rdymsg = msg;
+  20189a:	f8c3 50b4 	str.w	r5, [r3, #180]	; 0xb4
+  if (ntp->prio <= otp->prio) {
+  20189e:	6891      	ldr	r1, [r2, #8]
+  2018a0:	6160      	str	r0, [r4, #20]
+  2018a2:	f8c3 70b8 	str.w	r7, [r3, #184]	; 0xb8
+  tqp->next = (thread_t *)tqp;
+  2018a6:	f8c3 60bc 	str.w	r6, [r3, #188]	; 0xbc
   tqp->prev = (thread_t *)tqp;
-  2018e8:	f8c3 20c0 	str.w	r2, [r3, #192]	; 0xc0
-  2018ec:	6161      	str	r1, [r4, #20]
-  chSchWakeupS(tp, MSG_OK);
-  2018ee:	f000 fc67 	bl	2021c0 <chSchWakeupS.constprop.42>
-  2018f2:	f386 8811 	msr	BASEPRI, r6
+  2018aa:	f8c3 60c0 	str.w	r6, [r3, #192]	; 0xc0
+  2018ae:	2900      	cmp	r1, #0
+  2018b0:	f000 8328 	beq.w	201f04 <main+0x7c4>
+  tp->state = CH_STATE_READY;
+  2018b4:	f883 50b0 	strb.w	r5, [r3, #176]	; 0xb0
+    cp = cp->queue.next;
+  2018b8:	6824      	ldr	r4, [r4, #0]
+  } while (cp->prio >= tp->prio);
+  2018ba:	68a1      	ldr	r1, [r4, #8]
+  2018bc:	2900      	cmp	r1, #0
+  2018be:	d1fb      	bne.n	2018b8 <main+0x178>
+  tp->queue.next             = cp;
+  2018c0:	f8c3 4090 	str.w	r4, [r3, #144]	; 0x90
+  tp->queue.prev             = cp->queue.prev;
+  2018c4:	6862      	ldr	r2, [r4, #4]
+  2018c6:	f8c3 2094 	str.w	r2, [r3, #148]	; 0x94
+  tp->queue.prev->queue.next = tp;
+  2018ca:	6010      	str	r0, [r2, #0]
+  cp->queue.prev             = tp;
+  2018cc:	6060      	str	r0, [r4, #4]
+  2018ce:	f381 8811 	msr	BASEPRI, r1
   rccResetAHB1(~0);
-  2018f6:	4b29      	ldr	r3, [pc, #164]	; (20199c <main+0x22c>)
+  2018d2:	4b28      	ldr	r3, [pc, #160]	; (201974 <main+0x234>)
+  2018d4:	f04f 32ff 	mov.w	r2, #4294967295
   PWR->CR1 |= PWR_CR1_DBP;
-  2018f8:	4929      	ldr	r1, [pc, #164]	; (2019a0 <main+0x230>)
+  2018d8:	4c27      	ldr	r4, [pc, #156]	; (201978 <main+0x238>)
   rccResetAHB1(~0);
-  2018fa:	691a      	ldr	r2, [r3, #16]
-  2018fc:	611f      	str	r7, [r3, #16]
-  2018fe:	611e      	str	r6, [r3, #16]
+  2018da:	6918      	ldr	r0, [r3, #16]
+  2018dc:	611a      	str	r2, [r3, #16]
+  2018de:	6119      	str	r1, [r3, #16]
   rccResetAHB2(~0);
-  201900:	695a      	ldr	r2, [r3, #20]
-  201902:	615f      	str	r7, [r3, #20]
-  201904:	615e      	str	r6, [r3, #20]
+  2018e0:	6958      	ldr	r0, [r3, #20]
+  2018e2:	615a      	str	r2, [r3, #20]
+  2018e4:	6159      	str	r1, [r3, #20]
   rccResetAPB1(~RCC_APB1RSTR_PWRRST);
-  201906:	6a1a      	ldr	r2, [r3, #32]
-  201908:	f062 5280 	orn	r2, r2, #268435456	; 0x10000000
-  20190c:	621a      	str	r2, [r3, #32]
-  20190e:	621e      	str	r6, [r3, #32]
+  2018e6:	6a18      	ldr	r0, [r3, #32]
+  2018e8:	f060 5080 	orn	r0, r0, #268435456	; 0x10000000
+  2018ec:	6218      	str	r0, [r3, #32]
+  2018ee:	6219      	str	r1, [r3, #32]
   rccResetAPB2(~0);
-  201910:	6a5a      	ldr	r2, [r3, #36]	; 0x24
-  201912:	625f      	str	r7, [r3, #36]	; 0x24
-  201914:	625e      	str	r6, [r3, #36]	; 0x24
+  2018f0:	6a58      	ldr	r0, [r3, #36]	; 0x24
+  2018f2:	625a      	str	r2, [r3, #36]	; 0x24
+  2018f4:	6259      	str	r1, [r3, #36]	; 0x24
   PWR->CR1 |= PWR_CR1_DBP;
-  201916:	680a      	ldr	r2, [r1, #0]
-  201918:	f442 7280 	orr.w	r2, r2, #256	; 0x100
-  20191c:	600a      	str	r2, [r1, #0]
+  2018f6:	6822      	ldr	r2, [r4, #0]
+  2018f8:	f442 7280 	orr.w	r2, r2, #256	; 0x100
+  2018fc:	6022      	str	r2, [r4, #0]
   if ((RCC->BDCR & STM32_RTCSEL_MASK) != STM32_RTCSEL) {
-  20191e:	6f1a      	ldr	r2, [r3, #112]	; 0x70
-  201920:	f402 7240 	and.w	r2, r2, #768	; 0x300
-  201924:	f5b2 7f80 	cmp.w	r2, #256	; 0x100
-  201928:	d003      	beq.n	201932 <main+0x1c2>
+  2018fe:	6f1a      	ldr	r2, [r3, #112]	; 0x70
+  201900:	f402 7240 	and.w	r2, r2, #768	; 0x300
+  201904:	f5b2 7f80 	cmp.w	r2, #256	; 0x100
+  201908:	d003      	beq.n	201912 <main+0x1d2>
     RCC->BDCR = RCC_BDCR_BDRST;
-  20192a:	f44f 3280 	mov.w	r2, #65536	; 0x10000
-  20192e:	671a      	str	r2, [r3, #112]	; 0x70
+  20190a:	f44f 3280 	mov.w	r2, #65536	; 0x10000
+  20190e:	671a      	str	r2, [r3, #112]	; 0x70
     RCC->BDCR = 0;
-  201930:	671e      	str	r6, [r3, #112]	; 0x70
+  201910:	6719      	str	r1, [r3, #112]	; 0x70
   RCC->BDCR |= STM32_LSEDRV | RCC_BDCR_LSEON;
-  201932:	4b1a      	ldr	r3, [pc, #104]	; (20199c <main+0x22c>)
-  201934:	9d01      	ldr	r5, [sp, #4]
-  201936:	6f1a      	ldr	r2, [r3, #112]	; 0x70
+  201912:	4b18      	ldr	r3, [pc, #96]	; (201974 <main+0x234>)
+  201914:	6f1a      	ldr	r2, [r3, #112]	; 0x70
   while ((RCC->BDCR & RCC_BDCR_LSERDY) == 0)
-  201938:	4619      	mov	r1, r3
+  201916:	4618      	mov	r0, r3
   RCC->BDCR |= STM32_LSEDRV | RCC_BDCR_LSEON;
-  20193a:	f042 0219 	orr.w	r2, r2, #25
-  20193e:	671a      	str	r2, [r3, #112]	; 0x70
+  201918:	f042 0219 	orr.w	r2, r2, #25
+  20191c:	671a      	str	r2, [r3, #112]	; 0x70
   while ((RCC->BDCR & RCC_BDCR_LSERDY) == 0)
-  201940:	6f0b      	ldr	r3, [r1, #112]	; 0x70
-  201942:	079b      	lsls	r3, r3, #30
-  201944:	d5fc      	bpl.n	201940 <main+0x1d0>
+  20191e:	6f03      	ldr	r3, [r0, #112]	; 0x70
+  201920:	079b      	lsls	r3, r3, #30
+  201922:	d5fc      	bpl.n	20191e <main+0x1de>
   PWR->CSR1 &= ~PWR_CSR1_BRE;
-  201946:	4e16      	ldr	r6, [pc, #88]	; (2019a0 <main+0x230>)
+  201924:	4d14      	ldr	r5, [pc, #80]	; (201978 <main+0x238>)
  * @init
  */
 void dmaInit(void) {
   unsigned i;
 
   dma_streams_mask = 0U;
-  201948:	2000      	movs	r0, #0
-  20194a:	9501      	str	r5, [sp, #4]
-  20194c:	6872      	ldr	r2, [r6, #4]
+  201926:	2400      	movs	r4, #0
+  201928:	4814      	ldr	r0, [pc, #80]	; (20197c <main+0x23c>)
+  20192a:	686a      	ldr	r2, [r5, #4]
   for (i = 0U; i < STM32_DMA_STREAMS; i++) {
-  20194e:	4684      	mov	ip, r0
-  201950:	4914      	ldr	r1, [pc, #80]	; (2019a4 <main+0x234>)
     _stm32_dma_streams[i].stream->CR = 0U;
-  201952:	4603      	mov	r3, r0
-  201954:	f422 7200 	bic.w	r2, r2, #512	; 0x200
+  20192c:	4623      	mov	r3, r4
   dma_streams_mask = 0U;
-  201958:	4f13      	ldr	r7, [pc, #76]	; (2019a8 <main+0x238>)
-  20195a:	9d01      	ldr	r5, [sp, #4]
-  20195c:	6072      	str	r2, [r6, #4]
-  20195e:	4a13      	ldr	r2, [pc, #76]	; (2019ac <main+0x23c>)
-  201960:	6010      	str	r0, [r2, #0]
-  201962:	e02d      	b.n	2019c0 <main+0x250>
-  201964:	20000c98 	.word	0x20000c98
-  201968:	20000a20 	.word	0x20000a20
-  20196c:	00200b41 	.word	0x00200b41
-  201970:	20000ac8 	.word	0x20000ac8
-  201974:	20020000 	.word	0x20020000
-  201978:	20000ac4 	.word	0x20000ac4
-  20197c:	20080000 	.word	0x20080000
-  201980:	e000ed00 	.word	0xe000ed00
-  201984:	08002898 	.word	0x08002898
-  201988:	05fa0300 	.word	0x05fa0300
-  20198c:	e0001000 	.word	0xe0001000
-  201990:	20000948 	.word	0x20000948
-  201994:	00200c01 	.word	0x00200c01
-  201998:	002002e5 	.word	0x002002e5
-  20199c:	40023800 	.word	0x40023800
-  2019a0:	40007000 	.word	0x40007000
-  2019a4:	080027bc 	.word	0x080027bc
-  2019a8:	40026010 	.word	0x40026010
-  2019ac:	20000ac0 	.word	0x20000ac0
-  2019b0:	e000edf0 	.word	0xe000edf0
-  2019b4:	c5acce55 	.word	0xc5acce55
-  2019b8:	080028c0 	.word	0x080028c0
-  2019bc:	f851 7c0c 	ldr.w	r7, [r1, #-12]
+  20192e:	4e14      	ldr	r6, [pc, #80]	; (201980 <main+0x240>)
+  201930:	f422 7200 	bic.w	r2, r2, #512	; 0x200
+  201934:	606a      	str	r2, [r5, #4]
+  201936:	4a13      	ldr	r2, [pc, #76]	; (201984 <main+0x244>)
+  201938:	6014      	str	r4, [r2, #0]
+  20193a:	e02d      	b.n	201998 <main+0x258>
+  20193c:	20000944 	.word	0x20000944
+  201940:	20000a90 	.word	0x20000a90
+  201944:	00200b41 	.word	0x00200b41
+  201948:	20000b38 	.word	0x20000b38
+  20194c:	20020000 	.word	0x20020000
+  201950:	20080000 	.word	0x20080000
+  201954:	20000b34 	.word	0x20000b34
+  201958:	e000ed00 	.word	0xe000ed00
+  20195c:	05fa0300 	.word	0x05fa0300
+  201960:	e0001000 	.word	0xe0001000
+  201964:	c5acce55 	.word	0xc5acce55
+  201968:	200009b8 	.word	0x200009b8
+  20196c:	002002e5 	.word	0x002002e5
+  201970:	08002720 	.word	0x08002720
+  201974:	40023800 	.word	0x40023800
+  201978:	40007000 	.word	0x40007000
+  20197c:	0800261c 	.word	0x0800261c
+  201980:	40026010 	.word	0x40026010
+  201984:	20000b30 	.word	0x20000b30
+  201988:	e000edf0 	.word	0xe000edf0
+  20198c:	080026f8 	.word	0x080026f8
+  201990:	00200c01 	.word	0x00200c01
+  201994:	f850 6c0c 	ldr.w	r6, [r0, #-12]
     dma_isr_redir[i].dma_func = NULL;
-  2019c0:	4ad5      	ldr	r2, [pc, #852]	; (201d18 <main+0x5a8>)
-  2019c2:	310c      	adds	r1, #12
+  201998:	4ac8      	ldr	r2, [pc, #800]	; (201cbc <main+0x57c>)
+  20199a:	300c      	adds	r0, #12
     _stm32_dma_streams[i].stream->CR = 0U;
-  2019c4:	603b      	str	r3, [r7, #0]
+  20199c:	6033      	str	r3, [r6, #0]
     dma_isr_redir[i].dma_func = NULL;
-  2019c6:	f842 303c 	str.w	r3, [r2, ip, lsl #3]
+  20199e:	f842 3031 	str.w	r3, [r2, r1, lsl #3]
   for (i = 0U; i < STM32_DMA_STREAMS; i++) {
-  2019ca:	f10c 0c01 	add.w	ip, ip, #1
-  2019ce:	f1bc 0f10 	cmp.w	ip, #16
-  2019d2:	d1f3      	bne.n	2019bc <main+0x24c>
+  2019a2:	3101      	adds	r1, #1
+  2019a4:	2910      	cmp	r1, #16
+  2019a6:	d1f5      	bne.n	201994 <main+0x254>
   }
   DMA1->LIFCR = 0xFFFFFFFFU;
-  2019d4:	f04f 3eff 	mov.w	lr, #4294967295
-  2019d8:	4ed0      	ldr	r6, [pc, #832]	; (201d1c <main+0x5ac>)
+  2019a8:	f04f 35ff 	mov.w	r5, #4294967295
+  2019ac:	4fc4      	ldr	r7, [pc, #784]	; (201cc0 <main+0x580>)
   DMA1->HIFCR = 0xFFFFFFFFU;
   DMA2->LIFCR = 0xFFFFFFFFU;
-  2019da:	4ad1      	ldr	r2, [pc, #836]	; (201d20 <main+0x5b0>)
+  2019ae:	4ac5      	ldr	r2, [pc, #788]	; (201cc4 <main+0x584>)
   RCC->AHB1ENR   |= AHB1_EN_MASK;
-  2019dc:	f240 70ff 	movw	r0, #2047	; 0x7ff
-  2019e0:	4fd0      	ldr	r7, [pc, #832]	; (201d24 <main+0x5b4>)
-  gpiop->ODR     = config->odr;
-  2019e2:	f64f 71ff 	movw	r1, #65535	; 0xffff
-  2019e6:	9501      	str	r5, [sp, #4]
-  2019e8:	f64b 797e 	movw	r9, #49022	; 0xbf7e
+  2019b0:	f240 74ff 	movw	r4, #2047	; 0x7ff
   DMA1->LIFCR = 0xFFFFFFFFU;
-  2019ec:	f8c6 e008 	str.w	lr, [r6, #8]
-  gpiop->AFRH    = config->afrh;
-  2019f0:	f44f 0b30 	mov.w	fp, #11534336	; 0xb00000
+  2019b4:	60bd      	str	r5, [r7, #8]
+  gpiop->ODR     = config->odr;
+  2019b6:	f64f 70ff 	movw	r0, #65535	; 0xffff
   DMA1->HIFCR = 0xFFFFFFFFU;
-  2019f4:	f8c6 e00c 	str.w	lr, [r6, #12]
-  gpiop->OSPEEDR = config->ospeedr;
-  2019f8:	f06f 4570 	mvn.w	r5, #4026531840	; 0xf0000000
+  2019ba:	60fd      	str	r5, [r7, #12]
+  2019bc:	f64b 7e7e 	movw	lr, #49022	; 0xbf7e
   DMA2->LIFCR = 0xFFFFFFFFU;
-  2019fc:	f8c2 e008 	str.w	lr, [r2, #8]
+  2019c0:	6095      	str	r5, [r2, #8]
+  gpiop->AFRH    = config->afrh;
+  2019c2:	f44f 0730 	mov.w	r7, #11534336	; 0xb00000
   DMA2->HIFCR = 0xFFFFFFFFU;
-  201a00:	f8c2 e00c 	str.w	lr, [r2, #12]
+  2019c6:	60d5      	str	r5, [r2, #12]
   RCC->AHB1ENR   |= AHB1_EN_MASK;
-  201a04:	6b3a      	ldr	r2, [r7, #48]	; 0x30
+  2019c8:	f5a2 5230 	sub.w	r2, r2, #11264	; 0x2c00
+  2019cc:	4ebe      	ldr	r6, [pc, #760]	; (201cc8 <main+0x588>)
+  gpiop->OSPEEDR = config->ospeedr;
+  2019ce:	f06f 4970 	mvn.w	r9, #4026531840	; 0xf0000000
+  RCC->AHB1ENR   |= AHB1_EN_MASK;
+  2019d2:	6b12      	ldr	r2, [r2, #48]	; 0x30
  *
  * @init
  */
 void adcObjectInit(ADCDriver *adcp) {
 
   adcp->state    = ADC_STOP;
-  201a06:	4ec8      	ldr	r6, [pc, #800]	; (201d28 <main+0x5b8>)
-  201a08:	4302      	orrs	r2, r0
+  2019d4:	f8df b368 	ldr.w	fp, [pc, #872]	; 201d40 <main+0x600>
+  2019d8:	4322      	orrs	r2, r4
   iqp->q_buffer  = bp;
-  201a0a:	f8df a360 	ldr.w	sl, [pc, #864]	; 201d6c <main+0x5fc>
-  201a0e:	633a      	str	r2, [r7, #48]	; 0x30
+  2019da:	f8df 8368 	ldr.w	r8, [pc, #872]	; 201d44 <main+0x604>
+  2019de:	6332      	str	r2, [r6, #48]	; 0x30
   RCC->AHB1LPENR |= AHB1_LPEN_MASK;
-  201a10:	6d3a      	ldr	r2, [r7, #80]	; 0x50
-  201a12:	ea42 0800 	orr.w	r8, r2, r0
+  2019e0:	6d32      	ldr	r2, [r6, #80]	; 0x50
+  2019e2:	ea42 0c04 	orr.w	ip, r2, r4
   gpiop->OTYPER  = config->otyper;
-  201a16:	48c5      	ldr	r0, [pc, #788]	; (201d2c <main+0x5bc>)
+  2019e6:	4cb9      	ldr	r4, [pc, #740]	; (201ccc <main+0x58c>)
   sdp->vmt = &vmt;
-  201a18:	4ac5      	ldr	r2, [pc, #788]	; (201d30 <main+0x5c0>)
+  2019e8:	4ab9      	ldr	r2, [pc, #740]	; (201cd0 <main+0x590>)
   RCC->AHB1LPENR |= AHB1_LPEN_MASK;
-  201a1a:	f8c7 8050 	str.w	r8, [r7, #80]	; 0x50
-  gpiop->PUPDR   = config->pupdr;
-  201a1e:	f8df 8350 	ldr.w	r8, [pc, #848]	; 201d70 <main+0x600>
-  gpiop->OTYPER  = config->otyper;
-  201a22:	6043      	str	r3, [r0, #4]
+  2019ea:	f8c6 c050 	str.w	ip, [r6, #80]	; 0x50
   gpiop->OSPEEDR = config->ospeedr;
-  201a24:	f8c0 e008 	str.w	lr, [r0, #8]
+  2019ee:	260f      	movs	r6, #15
   gpiop->PUPDR   = config->pupdr;
-  201a28:	f8c0 800c 	str.w	r8, [r0, #12]
+  2019f0:	f8df c354 	ldr.w	ip, [pc, #852]	; 201d48 <main+0x608>
+  gpiop->OTYPER  = config->otyper;
+  2019f4:	6063      	str	r3, [r4, #4]
+  gpiop->OSPEEDR = config->ospeedr;
+  2019f6:	60a5      	str	r5, [r4, #8]
+  gpiop->PUPDR   = config->pupdr;
+  2019f8:	f8c4 c00c 	str.w	ip, [r4, #12]
   gpiop->AFRL    = config->afrl;
-  201a2c:	f8df 8344 	ldr.w	r8, [pc, #836]	; 201d74 <main+0x604>
+  2019fc:	f8df c34c 	ldr.w	ip, [pc, #844]	; 201d4c <main+0x60c>
   gpiop->ODR     = config->odr;
-  201a30:	6141      	str	r1, [r0, #20]
+  201a00:	6160      	str	r0, [r4, #20]
   gpiop->AFRL    = config->afrl;
-  201a32:	f8c0 8020 	str.w	r8, [r0, #32]
+  201a02:	f8c4 c020 	str.w	ip, [r4, #32]
   gpiop->AFRH    = config->afrh;
-  201a36:	f8df 8340 	ldr.w	r8, [pc, #832]	; 201d78 <main+0x608>
-  201a3a:	f8c0 8024 	str.w	r8, [r0, #36]	; 0x24
+  201a06:	f8df c348 	ldr.w	ip, [pc, #840]	; 201d50 <main+0x610>
+  201a0a:	f8c4 c024 	str.w	ip, [r4, #36]	; 0x24
   gpiop->MODER   = config->moder;
-  201a3e:	f8df 833c 	ldr.w	r8, [pc, #828]	; 201d7c <main+0x60c>
-  201a42:	f8c0 8000 	str.w	r8, [r0]
-  gpiop->PUPDR   = config->pupdr;
-  201a46:	f04f 3855 	mov.w	r8, #1431655765	; 0x55555555
+  201a0e:	f8df c344 	ldr.w	ip, [pc, #836]	; 201d54 <main+0x614>
+  201a12:	f8c4 c000 	str.w	ip, [r4]
   gpiop->OTYPER  = config->otyper;
-  201a4a:	f8c0 3404 	str.w	r3, [r0, #1028]	; 0x404
+  201a16:	f8c4 3404 	str.w	r3, [r4, #1028]	; 0x404
   gpiop->OSPEEDR = config->ospeedr;
-  201a4e:	f8c0 e408 	str.w	lr, [r0, #1032]	; 0x408
+  201a1a:	f8c4 5408 	str.w	r5, [r4, #1032]	; 0x408
   gpiop->PUPDR   = config->pupdr;
-  201a52:	f10e 4e8a 	add.w	lr, lr, #1157627904	; 0x45000000
-  201a56:	f10e 1e55 	add.w	lr, lr, #5570645	; 0x550055
-  201a5a:	f50e 5ea8 	add.w	lr, lr, #5376	; 0x1500
-  201a5e:	f8c0 e40c 	str.w	lr, [r0, #1036]	; 0x40c
+  201a1e:	f105 458a 	add.w	r5, r5, #1157627904	; 0x45000000
+  oqp->q_buffer  = bp;
+  201a22:	f8df c334 	ldr.w	ip, [pc, #820]	; 201d58 <main+0x618>
+  201a26:	f105 1555 	add.w	r5, r5, #5570645	; 0x550055
+  201a2a:	f505 55a8 	add.w	r5, r5, #5376	; 0x1500
+  201a2e:	f8c4 540c 	str.w	r5, [r4, #1036]	; 0x40c
   gpiop->MODER   = config->moder;
-  201a62:	f8df e31c 	ldr.w	lr, [pc, #796]	; 201d80 <main+0x610>
+  201a32:	4da8      	ldr	r5, [pc, #672]	; (201cd4 <main+0x594>)
   gpiop->ODR     = config->odr;
-  201a66:	f8c0 9414 	str.w	r9, [r0, #1044]	; 0x414
+  201a34:	f8c4 e414 	str.w	lr, [r4, #1044]	; 0x414
   gpiop->AFRL    = config->afrl;
-  201a6a:	f8c0 3420 	str.w	r3, [r0, #1056]	; 0x420
+  201a38:	f8c4 3420 	str.w	r3, [r4, #1056]	; 0x420
   gpiop->AFRH    = config->afrh;
-  201a6e:	f8c0 b424 	str.w	fp, [r0, #1060]	; 0x424
+  201a3c:	f8c4 7424 	str.w	r7, [r4, #1060]	; 0x424
   gpiop->MODER   = config->moder;
-  201a72:	f8c0 e400 	str.w	lr, [r0, #1024]	; 0x400
+  201a40:	f8c4 5400 	str.w	r5, [r4, #1024]	; 0x400
   gpiop->OTYPER  = config->otyper;
-  201a76:	f500 6000 	add.w	r0, r0, #2048	; 0x800
+  201a44:	f504 6400 	add.w	r4, r4, #2048	; 0x800
   gpiop->PUPDR   = config->pupdr;
-  201a7a:	f8df e308 	ldr.w	lr, [pc, #776]	; 201d84 <main+0x614>
+  201a48:	4fa3      	ldr	r7, [pc, #652]	; (201cd8 <main+0x598>)
+  201a4a:	f04f 3555 	mov.w	r5, #1431655765	; 0x55555555
   gpiop->OTYPER  = config->otyper;
-  201a7e:	6043      	str	r3, [r0, #4]
+  201a4e:	6063      	str	r3, [r4, #4]
   gpiop->OSPEEDR = config->ospeedr;
-  201a80:	6085      	str	r5, [r0, #8]
+  201a50:	f8c4 9008 	str.w	r9, [r4, #8]
   gpiop->MODER   = config->moder;
-  201a82:	f640 2508 	movw	r5, #2568	; 0xa08
+  201a54:	f04f 6908 	mov.w	r9, #142606336	; 0x8800000
   gpiop->PUPDR   = config->pupdr;
-  201a86:	f8c0 e00c 	str.w	lr, [r0, #12]
+  201a58:	60e7      	str	r7, [r4, #12]
   gpiop->AFRL    = config->afrl;
-  201a8a:	f8df e2fc 	ldr.w	lr, [pc, #764]	; 201d88 <main+0x618>
+  201a5a:	4fa0      	ldr	r7, [pc, #640]	; (201cdc <main+0x59c>)
   gpiop->ODR     = config->odr;
-  201a8e:	6141      	str	r1, [r0, #20]
+  201a5c:	6160      	str	r0, [r4, #20]
   gpiop->AFRL    = config->afrl;
-  201a90:	f8c0 e020 	str.w	lr, [r0, #32]
-  gpiop->AFRH    = config->afrh;
-  201a94:	6243      	str	r3, [r0, #36]	; 0x24
+  201a5e:	6227      	str	r7, [r4, #32]
   gpiop->MODER   = config->moder;
-  201a96:	6005      	str	r5, [r0, #0]
-  gpiop->OSPEEDR = config->ospeedr;
-  201a98:	f46f 1540 	mvn.w	r5, #3145728	; 0x300000
-  gpiop->OTYPER  = config->otyper;
-  201a9c:	f8c0 3404 	str.w	r3, [r0, #1028]	; 0x404
-  gpiop->PUPDR   = config->pupdr;
-  201aa0:	f8df e2e8 	ldr.w	lr, [pc, #744]	; 201d8c <main+0x61c>
-  gpiop->OSPEEDR = config->ospeedr;
-  201aa4:	f8c0 5408 	str.w	r5, [r0, #1032]	; 0x408
+  201a60:	f640 2708 	movw	r7, #2568	; 0xa08
   gpiop->AFRH    = config->afrh;
-  201aa8:	2577      	movs	r5, #119	; 0x77
+  201a64:	6263      	str	r3, [r4, #36]	; 0x24
+  gpiop->MODER   = config->moder;
+  201a66:	6027      	str	r7, [r4, #0]
+  gpiop->OSPEEDR = config->ospeedr;
+  201a68:	f46f 1740 	mvn.w	r7, #3145728	; 0x300000
+  gpiop->OTYPER  = config->otyper;
+  201a6c:	f8c4 3404 	str.w	r3, [r4, #1028]	; 0x404
+  gpiop->OSPEEDR = config->ospeedr;
+  201a70:	f8c4 7408 	str.w	r7, [r4, #1032]	; 0x408
   gpiop->PUPDR   = config->pupdr;
-  201aaa:	f8c0 e40c 	str.w	lr, [r0, #1036]	; 0x40c
+  201a74:	4f9a      	ldr	r7, [pc, #616]	; (201ce0 <main+0x5a0>)
+  201a76:	f8df e2e4 	ldr.w	lr, [pc, #740]	; 201d5c <main+0x61c>
+  201a7a:	f8c4 740c 	str.w	r7, [r4, #1036]	; 0x40c
+  gpiop->AFRH    = config->afrh;
+  201a7e:	2777      	movs	r7, #119	; 0x77
   gpiop->ODR     = config->odr;
-  201aae:	f8c0 1414 	str.w	r1, [r0, #1044]	; 0x414
-  gpiop->OSPEEDR = config->ospeedr;
-  201ab2:	f8df e2dc 	ldr.w	lr, [pc, #732]	; 201d90 <main+0x620>
+  201a80:	f8c4 0414 	str.w	r0, [r4, #1044]	; 0x414
   gpiop->AFRL    = config->afrl;
-  201ab6:	f8c0 3420 	str.w	r3, [r0, #1056]	; 0x420
+  201a84:	f8c4 3420 	str.w	r3, [r4, #1056]	; 0x420
   gpiop->AFRH    = config->afrh;
-  201aba:	f8c0 5424 	str.w	r5, [r0, #1060]	; 0x424
+  201a88:	f8c4 7424 	str.w	r7, [r4, #1060]	; 0x424
   gpiop->MODER   = config->moder;
-  201abe:	f44f 2520 	mov.w	r5, #655360	; 0xa0000
-  gpiop->PUPDR   = config->pupdr;
-  201ac2:	f8df b2d0 	ldr.w	fp, [pc, #720]	; 201d94 <main+0x624>
-  gpiop->MODER   = config->moder;
-  201ac6:	f8c0 5400 	str.w	r5, [r0, #1024]	; 0x400
-  201aca:	f04f 6508 	mov.w	r5, #142606336	; 0x8800000
-  gpiop->OTYPER  = config->otyper;
-  201ace:	f8c0 3804 	str.w	r3, [r0, #2052]	; 0x804
+  201a8c:	f44f 2720 	mov.w	r7, #655360	; 0xa0000
+  201a90:	f8c4 7400 	str.w	r7, [r4, #1024]	; 0x400
   gpiop->OSPEEDR = config->ospeedr;
-  201ad2:	f8c0 e808 	str.w	lr, [r0, #2056]	; 0x808
-  gpiop->PUPDR   = config->pupdr;
-  201ad6:	f8c0 880c 	str.w	r8, [r0, #2060]	; 0x80c
+  201a94:	4f93      	ldr	r7, [pc, #588]	; (201ce4 <main+0x5a4>)
   gpiop->OTYPER  = config->otyper;
-  201ada:	f8df e2bc 	ldr.w	lr, [pc, #700]	; 201d98 <main+0x628>
+  201a96:	f8c4 3804 	str.w	r3, [r4, #2052]	; 0x804
+  gpiop->OSPEEDR = config->ospeedr;
+  201a9a:	f8c4 7808 	str.w	r7, [r4, #2056]	; 0x808
+  gpiop->PUPDR   = config->pupdr;
+  201a9e:	f8c4 580c 	str.w	r5, [r4, #2060]	; 0x80c
+  gpiop->OTYPER  = config->otyper;
+  201aa2:	4f91      	ldr	r7, [pc, #580]	; (201ce8 <main+0x5a8>)
   gpiop->ODR     = config->odr;
-  201ade:	f8c0 1814 	str.w	r1, [r0, #2068]	; 0x814
+  201aa4:	f8c4 0814 	str.w	r0, [r4, #2068]	; 0x814
   gpiop->AFRL    = config->afrl;
-  201ae2:	f8c0 3820 	str.w	r3, [r0, #2080]	; 0x820
+  201aa8:	f8c4 3820 	str.w	r3, [r4, #2080]	; 0x820
   gpiop->AFRH    = config->afrh;
-  201ae6:	f8c0 3824 	str.w	r3, [r0, #2084]	; 0x824
+  201aac:	f8c4 3824 	str.w	r3, [r4, #2084]	; 0x824
   gpiop->MODER   = config->moder;
-  201aea:	f8c0 3800 	str.w	r3, [r0, #2048]	; 0x800
+  201ab0:	f8c4 3800 	str.w	r3, [r4, #2048]	; 0x800
   gpiop->OSPEEDR = config->ospeedr;
-  201aee:	4891      	ldr	r0, [pc, #580]	; (201d34 <main+0x5c4>)
+  201ab4:	4c8d      	ldr	r4, [pc, #564]	; (201cec <main+0x5ac>)
   gpiop->OTYPER  = config->otyper;
-  201af0:	f8ce 3004 	str.w	r3, [lr, #4]
+  201ab6:	607b      	str	r3, [r7, #4]
   gpiop->OSPEEDR = config->ospeedr;
-  201af4:	f8ce 0008 	str.w	r0, [lr, #8]
+  201ab8:	60bc      	str	r4, [r7, #8]
   gpiop->OTYPER  = config->otyper;
-  201af8:	488f      	ldr	r0, [pc, #572]	; (201d38 <main+0x5c8>)
+  201aba:	4c8d      	ldr	r4, [pc, #564]	; (201cf0 <main+0x5b0>)
   gpiop->PUPDR   = config->pupdr;
-  201afa:	f8ce 800c 	str.w	r8, [lr, #12]
+  201abc:	60fd      	str	r5, [r7, #12]
   gpiop->ODR     = config->odr;
-  201afe:	f8ce 1014 	str.w	r1, [lr, #20]
+  201abe:	6178      	str	r0, [r7, #20]
   gpiop->AFRL    = config->afrl;
-  201b02:	f8ce 3020 	str.w	r3, [lr, #32]
+  201ac0:	623b      	str	r3, [r7, #32]
   gpiop->AFRH    = config->afrh;
-  201b06:	f8ce 3024 	str.w	r3, [lr, #36]	; 0x24
+  201ac2:	627b      	str	r3, [r7, #36]	; 0x24
   gpiop->MODER   = config->moder;
-  201b0a:	f8ce 3000 	str.w	r3, [lr]
+  201ac4:	603b      	str	r3, [r7, #0]
   gpiop->OSPEEDR = config->ospeedr;
-  201b0e:	f8df e28c 	ldr.w	lr, [pc, #652]	; 201d9c <main+0x62c>
+  201ac6:	4f8b      	ldr	r7, [pc, #556]	; (201cf4 <main+0x5b4>)
   gpiop->OTYPER  = config->otyper;
-  201b12:	6043      	str	r3, [r0, #4]
+  201ac8:	6063      	str	r3, [r4, #4]
   gpiop->OSPEEDR = config->ospeedr;
-  201b14:	f8c0 e008 	str.w	lr, [r0, #8]
-  201b18:	f04f 0e01 	mov.w	lr, #1
+  201aca:	60a7      	str	r7, [r4, #8]
+  201acc:	2701      	movs	r7, #1
   gpiop->PUPDR   = config->pupdr;
-  201b1c:	f8c0 b00c 	str.w	fp, [r0, #12]
+  201ace:	f8c4 e00c 	str.w	lr, [r4, #12]
   gpiop->AFRH    = config->afrh;
-  201b20:	f8df b27c 	ldr.w	fp, [pc, #636]	; 201da0 <main+0x630>
+  201ad2:	f8df e28c 	ldr.w	lr, [pc, #652]	; 201d60 <main+0x620>
   gpiop->ODR     = config->odr;
-  201b24:	6141      	str	r1, [r0, #20]
+  201ad6:	6160      	str	r0, [r4, #20]
   gpiop->AFRL    = config->afrl;
-  201b26:	6203      	str	r3, [r0, #32]
+  201ad8:	6223      	str	r3, [r4, #32]
   gpiop->AFRH    = config->afrh;
-  201b28:	f8c0 b024 	str.w	fp, [r0, #36]	; 0x24
-  gpiop->MODER   = config->moder;
-  201b2c:	6005      	str	r5, [r0, #0]
-  gpiop->OSPEEDR = config->ospeedr;
-  201b2e:	250f      	movs	r5, #15
-  gpiop->PUPDR   = config->pupdr;
-  201b30:	f8df b270 	ldr.w	fp, [pc, #624]	; 201da4 <main+0x634>
-  gpiop->OTYPER  = config->otyper;
-  201b34:	f8c0 3404 	str.w	r3, [r0, #1028]	; 0x404
-  gpiop->OSPEEDR = config->ospeedr;
-  201b38:	f8c0 5408 	str.w	r5, [r0, #1032]	; 0x408
-  tqp->next = (thread_t *)tqp;
-  201b3c:	f106 0518 	add.w	r5, r6, #24
-  gpiop->PUPDR   = config->pupdr;
-  201b40:	f8c0 b40c 	str.w	fp, [r0, #1036]	; 0x40c
-  iqp->q_top     = bp + size;
-  201b44:	f10a 0b10 	add.w	fp, sl, #16
-  gpiop->ODR     = config->odr;
-  201b48:	f8c0 1414 	str.w	r1, [r0, #1044]	; 0x414
-  gpiop->AFRL    = config->afrl;
-  201b4c:	f8c0 3420 	str.w	r3, [r0, #1056]	; 0x420
-  gpiop->AFRH    = config->afrh;
-  201b50:	f8c0 3424 	str.w	r3, [r0, #1060]	; 0x424
-  gpiop->MODER   = config->moder;
-  201b54:	f8c0 3400 	str.w	r3, [r0, #1024]	; 0x400
-  gpiop->OTYPER  = config->otyper;
-  201b58:	f500 6000 	add.w	r0, r0, #2048	; 0x800
-  201b5c:	6043      	str	r3, [r0, #4]
-  gpiop->OSPEEDR = config->ospeedr;
-  201b5e:	6083      	str	r3, [r0, #8]
-  gpiop->PUPDR   = config->pupdr;
-  201b60:	f8c0 800c 	str.w	r8, [r0, #12]
-  adcp->config   = NULL;
-  201b64:	6073      	str	r3, [r6, #4]
-  gpiop->ODR     = config->odr;
-  201b66:	6141      	str	r1, [r0, #20]
-  adcp->samples  = NULL;
-  201b68:	60b3      	str	r3, [r6, #8]
-  gpiop->AFRL    = config->afrl;
-  201b6a:	6203      	str	r3, [r0, #32]
-  adcp->depth    = 0;
-  201b6c:	60f3      	str	r3, [r6, #12]
-  gpiop->AFRH    = config->afrh;
-  201b6e:	6243      	str	r3, [r0, #36]	; 0x24
-  adcp->grpp     = NULL;
-  201b70:	6133      	str	r3, [r6, #16]
-  gpiop->MODER   = config->moder;
-  201b72:	6003      	str	r3, [r0, #0]
-#if ADC_USE_WAIT == TRUE
-  adcp->thread   = NULL;
-  201b74:	6173      	str	r3, [r6, #20]
-  gpiop->OTYPER  = config->otyper;
-  201b76:	f8c0 3404 	str.w	r3, [r0, #1028]	; 0x404
-  201b7a:	6233      	str	r3, [r6, #32]
-  gpiop->OSPEEDR = config->ospeedr;
-  201b7c:	f8c0 3408 	str.w	r3, [r0, #1032]	; 0x408
-  201b80:	61b5      	str	r5, [r6, #24]
-  gpiop->PUPDR   = config->pupdr;
-  201b82:	f8c0 840c 	str.w	r8, [r0, #1036]	; 0x40c
-  tqp->prev = (thread_t *)tqp;
-  201b86:	61f5      	str	r5, [r6, #28]
-
-#if defined(__CORE_CM0_H_GENERIC)
+  201ada:	f8c4 e024 	str.w	lr, [r4, #36]	; 0x24
   NVIC->IP[_IP_IDX(n)] = (NVIC->IP[_IP_IDX(n)] & ~(0xFFU << _BIT_SHIFT(n))) |
                          (NVIC_PRIORITY_MASK(prio) << _BIT_SHIFT(n));
 #else
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
-  201b88:	f04f 0560 	mov.w	r5, #96	; 0x60
-  gpiop->ODR     = config->odr;
-  201b8c:	f8c0 1414 	str.w	r1, [r0, #1044]	; 0x414
-  gpiop->AFRL    = config->afrl;
-  201b90:	f8c0 3420 	str.w	r3, [r0, #1056]	; 0x420
-  gpiop->AFRH    = config->afrh;
-  201b94:	f8c0 3424 	str.w	r3, [r0, #1060]	; 0x424
-  gpiop->MODER   = config->moder;
-  201b98:	f8c0 3400 	str.w	r3, [r0, #1024]	; 0x400
-  gpiop->OTYPER  = config->otyper;
-  201b9c:	f8c0 3804 	str.w	r3, [r0, #2052]	; 0x804
-  gpiop->OSPEEDR = config->ospeedr;
-  201ba0:	f8c0 3808 	str.w	r3, [r0, #2056]	; 0x808
-  gpiop->PUPDR   = config->pupdr;
-  201ba4:	f8c0 880c 	str.w	r8, [r0, #2060]	; 0x80c
-  201ba8:	4690      	mov	r8, r2
-  gpiop->ODR     = config->odr;
-  201baa:	f8c0 1814 	str.w	r1, [r0, #2068]	; 0x814
-  ADCD1.adc = ADC1;
-  201bae:	4963      	ldr	r1, [pc, #396]	; (201d3c <main+0x5cc>)
-  gpiop->AFRL    = config->afrl;
-  201bb0:	f8c0 3820 	str.w	r3, [r0, #2080]	; 0x820
-  gpiop->AFRH    = config->afrh;
-  201bb4:	f8c0 3824 	str.w	r3, [r0, #2084]	; 0x824
-  gpiop->MODER   = config->moder;
-  201bb8:	f8c0 3800 	str.w	r3, [r0, #2048]	; 0x800
-  tqp->next = (thread_t *)tqp;
-  201bbc:	f102 000c 	add.w	r0, r2, #12
-  201bc0:	62b1      	str	r1, [r6, #40]	; 0x28
-  ADCD1.dmastp  = STM32_DMA_STREAM(STM32_ADC_ADC1_DMA_STREAM);
-  201bc2:	495f      	ldr	r1, [pc, #380]	; (201d40 <main+0x5d0>)
-  adcp->state    = ADC_STOP;
-  201bc4:	f886 e000 	strb.w	lr, [r6]
-  201bc8:	62f1      	str	r1, [r6, #44]	; 0x2c
-  ADCD1.dmamode = STM32_DMA_CR_CHSEL(ADC1_DMA_CHANNEL) |
-  201bca:	495e      	ldr	r1, [pc, #376]	; (201d44 <main+0x5d4>)
-  oqp->q_buffer  = bp;
-  201bcc:	f8df 91d8 	ldr.w	r9, [pc, #472]	; 201da8 <main+0x638>
-  201bd0:	6331      	str	r1, [r6, #48]	; 0x30
-  201bd2:	495d      	ldr	r1, [pc, #372]	; (201d48 <main+0x5d8>)
-  201bd4:	f881 5312 	strb.w	r5, [r1, #786]	; 0x312
 #endif
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
-  201bd8:	f44f 2580 	mov.w	r5, #262144	; 0x40000
-  201bdc:	f8c1 5180 	str.w	r5, [r1, #384]	; 0x180
-  NVIC->ISER[n >> 5U] = 1U << (n & 0x1FU);
-  201be0:	600d      	str	r5, [r1, #0]
-  oqp->q_top     = bp + size;
-  201be2:	f109 0510 	add.w	r5, r9, #16
-  iqp->q_counter = 0;
-  201be6:	6153      	str	r3, [r2, #20]
-  oqp->q_counter = size;
-  201be8:	f8c2 c038 	str.w	ip, [r2, #56]	; 0x38
-  oqp->q_notify  = onfy;
-  201bec:	f8df c1bc 	ldr.w	ip, [pc, #444]	; 201dac <main+0x63c>
-  201bf0:	60d0      	str	r0, [r2, #12]
-  201bf2:	f8c2 c04c 	str.w	ip, [r2, #76]	; 0x4c
-  201bf6:	f8df c1b8 	ldr.w	ip, [pc, #440]	; 201db0 <main+0x640>
+  201ade:	f44f 2e80 	mov.w	lr, #262144	; 0x40000
+  gpiop->MODER   = config->moder;
+  201ae2:	f8c4 9000 	str.w	r9, [r4]
+  gpiop->PUPDR   = config->pupdr;
+  201ae6:	f8df 927c 	ldr.w	r9, [pc, #636]	; 201d64 <main+0x624>
+  gpiop->OTYPER  = config->otyper;
+  201aea:	f8c4 3404 	str.w	r3, [r4, #1028]	; 0x404
+  gpiop->OSPEEDR = config->ospeedr;
+  201aee:	f8c4 6408 	str.w	r6, [r4, #1032]	; 0x408
+  tqp->next = (thread_t *)tqp;
+  201af2:	f10b 0618 	add.w	r6, fp, #24
+  gpiop->PUPDR   = config->pupdr;
+  201af6:	f8c4 940c 	str.w	r9, [r4, #1036]	; 0x40c
+  iqp->q_top     = bp + size;
+  201afa:	f108 0910 	add.w	r9, r8, #16
+  gpiop->ODR     = config->odr;
+  201afe:	f8c4 0414 	str.w	r0, [r4, #1044]	; 0x414
+  gpiop->AFRL    = config->afrl;
+  201b02:	f8c4 3420 	str.w	r3, [r4, #1056]	; 0x420
+  gpiop->AFRH    = config->afrh;
+  201b06:	f8c4 3424 	str.w	r3, [r4, #1060]	; 0x424
+  gpiop->MODER   = config->moder;
+  201b0a:	f8c4 3400 	str.w	r3, [r4, #1024]	; 0x400
+  gpiop->OTYPER  = config->otyper;
+  201b0e:	f504 6400 	add.w	r4, r4, #2048	; 0x800
+  201b12:	6063      	str	r3, [r4, #4]
+  gpiop->OSPEEDR = config->ospeedr;
+  201b14:	60a3      	str	r3, [r4, #8]
+  gpiop->PUPDR   = config->pupdr;
+  201b16:	60e5      	str	r5, [r4, #12]
+  adcp->config   = NULL;
+  201b18:	f8cb 3004 	str.w	r3, [fp, #4]
+  gpiop->ODR     = config->odr;
+  201b1c:	6160      	str	r0, [r4, #20]
+  adcp->samples  = NULL;
+  201b1e:	f8cb 3008 	str.w	r3, [fp, #8]
+  gpiop->AFRL    = config->afrl;
+  201b22:	6223      	str	r3, [r4, #32]
+  adcp->depth    = 0;
+  201b24:	f8cb 300c 	str.w	r3, [fp, #12]
+  gpiop->AFRH    = config->afrh;
+  201b28:	6263      	str	r3, [r4, #36]	; 0x24
+  adcp->grpp     = NULL;
+  201b2a:	f8cb 3010 	str.w	r3, [fp, #16]
+  gpiop->MODER   = config->moder;
+  201b2e:	6023      	str	r3, [r4, #0]
+#if ADC_USE_WAIT == TRUE
+  adcp->thread   = NULL;
+  201b30:	f8cb 3014 	str.w	r3, [fp, #20]
+  gpiop->OTYPER  = config->otyper;
+  201b34:	f8c4 3404 	str.w	r3, [r4, #1028]	; 0x404
+  201b38:	f8cb 3020 	str.w	r3, [fp, #32]
+  gpiop->OSPEEDR = config->ospeedr;
+  201b3c:	f8c4 3408 	str.w	r3, [r4, #1032]	; 0x408
+  201b40:	f8cb 6018 	str.w	r6, [fp, #24]
+  gpiop->PUPDR   = config->pupdr;
+  201b44:	f8c4 540c 	str.w	r5, [r4, #1036]	; 0x40c
   tqp->prev = (thread_t *)tqp;
-  201bfa:	6110      	str	r0, [r2, #16]
-  201bfc:	f848 cb04 	str.w	ip, [r8], #4
- *
- * @init
- */
-void extObjectInit(EXTDriver *extp) {
-
-  extp->state  = EXT_STOP;
-  201c00:	4852      	ldr	r0, [pc, #328]	; (201d4c <main+0x5dc>)
+  201b48:	f8cb 601c 	str.w	r6, [fp, #28]
+  NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
+  201b4c:	f04f 0660 	mov.w	r6, #96	; 0x60
+  gpiop->ODR     = config->odr;
+  201b50:	f8c4 0414 	str.w	r0, [r4, #1044]	; 0x414
+  gpiop->AFRL    = config->afrl;
+  201b54:	f8c4 3420 	str.w	r3, [r4, #1056]	; 0x420
+  gpiop->AFRH    = config->afrh;
+  201b58:	f8c4 3424 	str.w	r3, [r4, #1060]	; 0x424
+  gpiop->MODER   = config->moder;
+  201b5c:	f8c4 3400 	str.w	r3, [r4, #1024]	; 0x400
+  gpiop->OTYPER  = config->otyper;
+  201b60:	f8c4 3804 	str.w	r3, [r4, #2052]	; 0x804
+  gpiop->OSPEEDR = config->ospeedr;
+  201b64:	f8c4 3808 	str.w	r3, [r4, #2056]	; 0x808
+  gpiop->PUPDR   = config->pupdr;
+  201b68:	f8c4 580c 	str.w	r5, [r4, #2060]	; 0x80c
+  201b6c:	4615      	mov	r5, r2
+  gpiop->ODR     = config->odr;
+  201b6e:	f8c4 0814 	str.w	r0, [r4, #2068]	; 0x814
+  ADCD1.adc = ADC1;
+  201b72:	4861      	ldr	r0, [pc, #388]	; (201cf8 <main+0x5b8>)
+  gpiop->AFRL    = config->afrl;
+  201b74:	f8c4 3820 	str.w	r3, [r4, #2080]	; 0x820
+  gpiop->AFRH    = config->afrh;
+  201b78:	f8c4 3824 	str.w	r3, [r4, #2084]	; 0x824
+  gpiop->MODER   = config->moder;
+  201b7c:	f8c4 3800 	str.w	r3, [r4, #2048]	; 0x800
+  tqp->next = (thread_t *)tqp;
+  201b80:	f102 040c 	add.w	r4, r2, #12
+  201b84:	f8cb 0028 	str.w	r0, [fp, #40]	; 0x28
+  ADCD1.dmastp  = STM32_DMA_STREAM(STM32_ADC_ADC1_DMA_STREAM);
+  201b88:	485c      	ldr	r0, [pc, #368]	; (201cfc <main+0x5bc>)
+  adcp->state    = ADC_STOP;
+  201b8a:	f88b 7000 	strb.w	r7, [fp]
+  201b8e:	f8cb 002c 	str.w	r0, [fp, #44]	; 0x2c
+  ADCD1.dmamode = STM32_DMA_CR_CHSEL(ADC1_DMA_CHANNEL) |
+  201b92:	485b      	ldr	r0, [pc, #364]	; (201d00 <main+0x5c0>)
+  201b94:	f8cb 0030 	str.w	r0, [fp, #48]	; 0x30
+  201b98:	485a      	ldr	r0, [pc, #360]	; (201d04 <main+0x5c4>)
+  201b9a:	f880 6312 	strb.w	r6, [r0, #786]	; 0x312
+  oqp->q_top     = bp + size;
+  201b9e:	f10c 0610 	add.w	r6, ip, #16
+  NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
+  201ba2:	f8c0 e180 	str.w	lr, [r0, #384]	; 0x180
+  NVIC->ISER[n >> 5U] = 1U << (n & 0x1FU);
+  201ba6:	f8c0 e000 	str.w	lr, [r0]
+  oqp->q_buffer  = bp;
+  201baa:	f8c2 c03c 	str.w	ip, [r2, #60]	; 0x3c
+  oqp->q_rdptr   = bp;
+  201bae:	f8c2 c048 	str.w	ip, [r2, #72]	; 0x48
+  oqp->q_wrptr   = bp;
+  201bb2:	f8c2 c044 	str.w	ip, [r2, #68]	; 0x44
+  oqp->q_notify  = onfy;
+  201bb6:	f8df c1b0 	ldr.w	ip, [pc, #432]	; 201d68 <main+0x628>
+  iqp->q_counter = 0;
+  201bba:	6153      	str	r3, [r2, #20]
+  oqp->q_notify  = onfy;
+  201bbc:	f8c2 c04c 	str.w	ip, [r2, #76]	; 0x4c
+  oqp->q_counter = size;
+  201bc0:	6391      	str	r1, [r2, #56]	; 0x38
+  201bc2:	f102 0130 	add.w	r1, r2, #48	; 0x30
+  201bc6:	f8df c1a4 	ldr.w	ip, [pc, #420]	; 201d6c <main+0x62c>
+  201bca:	60d4      	str	r4, [r2, #12]
+  201bcc:	f845 cb04 	str.w	ip, [r5], #4
+  tqp->prev = (thread_t *)tqp;
+  201bd0:	6114      	str	r4, [r2, #16]
  *
  * @init
  */
 static inline void chEvtObjectInit(event_source_t *esp) {
 
   esp->next = (event_listener_t *)esp;
-  201c02:	f8c2 8004 	str.w	r8, [r2, #4]
+  201bd2:	6055      	str	r5, [r2, #4]
+ *
+ * @init
+ */
+void extObjectInit(EXTDriver *extp) {
+
+  extp->state  = EXT_STOP;
+  201bd4:	4c4c      	ldr	r4, [pc, #304]	; (201d08 <main+0x5c8>)
   GPTD4.tim = STM32_TIM4;
-  201c06:	f8df c1ac 	ldr.w	ip, [pc, #428]	; 201db4 <main+0x644>
-  201c0a:	f8df 81ac 	ldr.w	r8, [pc, #428]	; 201db8 <main+0x648>
-  201c0e:	f880 e000 	strb.w	lr, [r0]
+  201bd6:	4d4d      	ldr	r5, [pc, #308]	; (201d0c <main+0x5cc>)
+  tqp->next = (thread_t *)tqp;
+  201bd8:	6311      	str	r1, [r2, #48]	; 0x30
+  tqp->prev = (thread_t *)tqp;
+  201bda:	6351      	str	r1, [r2, #52]	; 0x34
+  201bdc:	494c      	ldr	r1, [pc, #304]	; (201d10 <main+0x5d0>)
+  201bde:	7027      	strb	r7, [r4, #0]
   extp->config = NULL;
-  201c12:	6043      	str	r3, [r0, #4]
-  201c14:	f8c8 c00c 	str.w	ip, [r8, #12]
+  201be0:	6063      	str	r3, [r4, #4]
+  201be2:	60e9      	str	r1, [r5, #12]
   ICUD8.tim = STM32_TIM8;
-  201c18:	f50c 4c7c 	add.w	ip, ip, #64512	; 0xfc00
+  201be4:	f501 417c 	add.w	r1, r1, #64512	; 0xfc00
  *
  * @init
  */
 void icuObjectInit(ICUDriver *icup) {
 
   icup->state  = ICU_STOP;
-  201c1c:	484c      	ldr	r0, [pc, #304]	; (201d50 <main+0x5e0>)
+  201be8:	4c4a      	ldr	r4, [pc, #296]	; (201d14 <main+0x5d4>)
   sdp->state = SD_STOP;
-  201c1e:	f882 e008 	strb.w	lr, [r2, #8]
-  201c22:	f880 e000 	strb.w	lr, [r0]
-  icup->config = NULL;
-  201c26:	6043      	str	r3, [r0, #4]
-  201c28:	f8c0 c00c 	str.w	ip, [r0, #12]
-  201c2c:	f04f 0c20 	mov.w	ip, #32
-  icup->state  = ICU_STOP;
-  201c30:	4848      	ldr	r0, [pc, #288]	; (201d54 <main+0x5e4>)
-  iqp->q_buffer  = bp;
-  201c32:	f8c2 a018 	str.w	sl, [r2, #24]
-  iqp->q_rdptr   = bp;
-  201c36:	f8c2 a024 	str.w	sl, [r2, #36]	; 0x24
-  iqp->q_wrptr   = bp;
-  201c3a:	f8c2 a020 	str.w	sl, [r2, #32]
-  tqp->next = (thread_t *)tqp;
-  201c3e:	f102 0a30 	add.w	sl, r2, #48	; 0x30
+  201bea:	7217      	strb	r7, [r2, #8]
+  201bec:	60e1      	str	r1, [r4, #12]
+  201bee:	494a      	ldr	r1, [pc, #296]	; (201d18 <main+0x5d8>)
  *
  * @init
  */
 void gptObjectInit(GPTDriver *gptp) {
 
   gptp->state  = GPT_STOP;
-  201c42:	f888 e000 	strb.w	lr, [r8]
-  201c46:	f880 e000 	strb.w	lr, [r0]
+  201bf0:	702f      	strb	r7, [r5, #0]
+  201bf2:	7027      	strb	r7, [r4, #0]
+  201bf4:	700f      	strb	r7, [r1, #0]
   ICUD9.tim = STM32_TIM9;
-  201c4a:	f8df e170 	ldr.w	lr, [pc, #368]	; 201dbc <main+0x64c>
-  iqp->q_notify  = infy;
-  201c4e:	6293      	str	r3, [r2, #40]	; 0x28
-  iqp->q_top     = bp + size;
-  201c50:	f8c2 b01c 	str.w	fp, [r2, #28]
+  201bf6:	4f49      	ldr	r7, [pc, #292]	; (201d1c <main+0x5dc>)
+  iqp->q_buffer  = bp;
+  201bf8:	f8c2 8018 	str.w	r8, [r2, #24]
+  iqp->q_rdptr   = bp;
+  201bfc:	f8c2 8024 	str.w	r8, [r2, #36]	; 0x24
+  iqp->q_wrptr   = bp;
+  201c00:	f8c2 8020 	str.w	r8, [r2, #32]
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
-  201c54:	f04f 0bc0 	mov.w	fp, #192	; 0xc0
-  oqp->q_buffer  = bp;
-  201c58:	f8c2 903c 	str.w	r9, [r2, #60]	; 0x3c
-  oqp->q_rdptr   = bp;
-  201c5c:	f8c2 9048 	str.w	r9, [r2, #72]	; 0x48
-  oqp->q_wrptr   = bp;
-  201c60:	f8c2 9044 	str.w	r9, [r2, #68]	; 0x44
-
-#if defined(__CORE_CM0_H_GENERIC)
-  SCB->SHP[_SHP_IDX(handler)] = (SCB->SHP[_SHP_IDX(handler)] & ~(0xFFU << _BIT_SHIFT(handler))) |
-                                (NVIC_PRIORITY_MASK(prio) << _BIT_SHIFT(handler));
-#elif defined(__CORE_CM7_H_GENERIC)
-  SCB->SHPR[handler] = NVIC_PRIORITY_MASK(prio);
-  201c64:	f04f 0980 	mov.w	r9, #128	; 0x80
-  oqp->q_top     = bp + size;
-  201c68:	6415      	str	r5, [r2, #64]	; 0x40
-  NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
-  201c6a:	f44f 2580 	mov.w	r5, #262144	; 0x40000
-  gptp->config = NULL;
-  201c6e:	f8c8 3004 	str.w	r3, [r8, #4]
+  201c04:	f04f 08c0 	mov.w	r8, #192	; 0xc0
   icup->config = NULL;
-  201c72:	6043      	str	r3, [r0, #4]
-  iqp->q_link    = link;
-  201c74:	62d2      	str	r2, [r2, #44]	; 0x2c
-  201c76:	f8c2 a030 	str.w	sl, [r2, #48]	; 0x30
-  tqp->prev = (thread_t *)tqp;
-  201c7a:	f8c2 a034 	str.w	sl, [r2, #52]	; 0x34
-  201c7e:	f8c0 e00c 	str.w	lr, [r0, #12]
+  201c08:	604b      	str	r3, [r1, #4]
+  201c0a:	60cf      	str	r7, [r1, #12]
 
 #if STM32_SERIAL_USE_UART7
   sdObjectInit(&SD7);
   iqObjectInit(&SD7.iqueue, sd_in_buf7, sizeof sd_in_buf7, NULL, &SD7);
   oqObjectInit(&SD7.oqueue, sd_out_buf7, sizeof sd_out_buf7, notify7, &SD7);
   SD7.usart = UART7;
-  201c82:	4835      	ldr	r0, [pc, #212]	; (201d58 <main+0x5e8>)
+  201c0c:	4944      	ldr	r1, [pc, #272]	; (201d20 <main+0x5e0>)
   SD7.clock = STM32_UART7CLK;
-  201c84:	f8df e138 	ldr.w	lr, [pc, #312]	; 201dc0 <main+0x650>
+  201c0e:	4f45      	ldr	r7, [pc, #276]	; (201d24 <main+0x5e4>)
+  iqp->q_notify  = infy;
+  201c10:	6293      	str	r3, [r2, #40]	; 0x28
+  iqp->q_top     = bp + size;
+  201c12:	f8c2 901c 	str.w	r9, [r2, #28]
+
+#if defined(__CORE_CM0_H_GENERIC)
+  SCB->SHP[_SHP_IDX(handler)] = (SCB->SHP[_SHP_IDX(handler)] & ~(0xFFU << _BIT_SHIFT(handler))) |
+                                (NVIC_PRIORITY_MASK(prio) << _BIT_SHIFT(handler));
+#elif defined(__CORE_CM7_H_GENERIC)
+  SCB->SHPR[handler] = NVIC_PRIORITY_MASK(prio);
+  201c16:	f04f 0980 	mov.w	r9, #128	; 0x80
+  gptp->config = NULL;
+  201c1a:	606b      	str	r3, [r5, #4]
+  201c1c:	6063      	str	r3, [r4, #4]
+  201c1e:	2420      	movs	r4, #32
+  iqp->q_link    = link;
+  201c20:	62d2      	str	r2, [r2, #44]	; 0x2c
+  oqp->q_top     = bp + size;
+  201c22:	6416      	str	r6, [r2, #64]	; 0x40
   oqp->q_link    = link;
-  201c88:	6512      	str	r2, [r2, #80]	; 0x50
+  201c24:	6512      	str	r2, [r2, #80]	; 0x50
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
-  201c8a:	f881 b352 	strb.w	fp, [r1, #850]	; 0x352
+  201c26:	f880 8352 	strb.w	r8, [r0, #850]	; 0x352
   SD7.usart = UART7;
-  201c8e:	6550      	str	r0, [r2, #84]	; 0x54
+  201c2a:	6551      	str	r1, [r2, #84]	; 0x54
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
-  201c90:	f8c1 5188 	str.w	r5, [r1, #392]	; 0x188
+  201c2c:	f8c0 e188 	str.w	lr, [r0, #392]	; 0x188
 #endif /* OSAL_ST_MODE == OSAL_ST_MODE_FREERUNNING */
 
 #if OSAL_ST_MODE == OSAL_ST_MODE_PERIODIC
   /* Periodic systick mode, the Cortex-Mx internal systick timer is used
      in this mode.*/
   SysTick->LOAD = (STM32_HCLK / OSAL_ST_FREQUENCY) - 1;
-  201c94:	4831      	ldr	r0, [pc, #196]	; (201d5c <main+0x5ec>)
+  201c30:	493d      	ldr	r1, [pc, #244]	; (201d28 <main+0x5e8>)
   SD7.clock = STM32_UART7CLK;
-  201c96:	f8c2 e058 	str.w	lr, [r2, #88]	; 0x58
-  201c9a:	f8df e128 	ldr.w	lr, [pc, #296]	; 201dc4 <main+0x654>
+  201c32:	6597      	str	r7, [r2, #88]	; 0x58
+  201c34:	4f3d      	ldr	r7, [pc, #244]	; (201d2c <main+0x5ec>)
   NVIC->ISER[n >> 5U] = 1U << (n & 0x1FU);
-  201c9e:	608d      	str	r5, [r1, #8]
-  201ca0:	f8c0 e004 	str.w	lr, [r0, #4]
+  201c36:	f8c0 e008 	str.w	lr, [r0, #8]
+  201c3a:	604f      	str	r7, [r1, #4]
   SysTick->VAL = 0;
-  201ca4:	6083      	str	r3, [r0, #8]
+  201c3c:	608b      	str	r3, [r1, #8]
   SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk |
-  201ca6:	2307      	movs	r3, #7
-  201ca8:	6003      	str	r3, [r0, #0]
+  201c3e:	2307      	movs	r3, #7
+  201c40:	600b      	str	r3, [r1, #0]
   SCB->SHPR[handler] = NVIC_PRIORITY_MASK(prio);
-  201caa:	f881 9c23 	strb.w	r9, [r1, #3107]	; 0xc23
-  201cae:	f38c 8811 	msr	BASEPRI, ip
+  201c42:	f880 9c23 	strb.w	r9, [r0, #3107]	; 0xc23
+  201c46:	f384 8811 	msr	BASEPRI, r4
 void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
 
   if (config == NULL)
     config = &default_config;
 
   if (sdp->state == SD_STOP) {
-  201cb2:	7a13      	ldrb	r3, [r2, #8]
-  201cb4:	2b01      	cmp	r3, #1
-  201cb6:	d103      	bne.n	201cc0 <main+0x550>
+  201c4a:	7a13      	ldrb	r3, [r2, #8]
+  201c4c:	2b01      	cmp	r3, #1
+  201c4e:	d105      	bne.n	201c5c <main+0x51c>
       rccEnableUSART6(FALSE);
     }
 #endif
 #if STM32_SERIAL_USE_UART7
     if (&SD7 == sdp) {
       rccEnableUART7(FALSE);
-  201cb8:	6c3b      	ldr	r3, [r7, #64]	; 0x40
-  201cba:	f043 4380 	orr.w	r3, r3, #1073741824	; 0x40000000
-  201cbe:	643b      	str	r3, [r7, #64]	; 0x40
+  201c50:	4b1d      	ldr	r3, [pc, #116]	; (201cc8 <main+0x588>)
+  201c52:	491d      	ldr	r1, [pc, #116]	; (201cc8 <main+0x588>)
+  201c54:	6c1b      	ldr	r3, [r3, #64]	; 0x40
+  201c56:	f043 4380 	orr.w	r3, r3, #1073741824	; 0x40000000
+  201c5a:	640b      	str	r3, [r1, #64]	; 0x40
   u->BRR = (uint32_t)(sdp->clock / config->speed);
-  201cc0:	6d93      	ldr	r3, [r2, #88]	; 0x58
+  201c5c:	6d93      	ldr	r3, [r2, #88]	; 0x58
   u->ICR = 0xFFFFFFFFU;
-  201cc2:	f04f 31ff 	mov.w	r1, #4294967295
+  201c5e:	f04f 30ff 	mov.w	r0, #4294967295
   u->BRR = (uint32_t)(sdp->clock / config->speed);
-  201cc6:	4826      	ldr	r0, [pc, #152]	; (201d60 <main+0x5f0>)
+  201c62:	4933      	ldr	r1, [pc, #204]	; (201d30 <main+0x5f0>)
   u->CR2 = config->cr2 | USART_CR2_LBDIE;
-  201cc8:	f244 0e40 	movw	lr, #16448	; 0x4040
+  201c64:	f244 0640 	movw	r6, #16448	; 0x4040
   u->CR3 = config->cr3 | USART_CR3_EIE;
-  201ccc:	2701      	movs	r7, #1
+  201c68:	2401      	movs	r4, #1
   u->CR1 = config->cr1 | USART_CR1_UE | USART_CR1_PEIE |
-  201cce:	f240 1c2d 	movw	ip, #301	; 0x12d
+  201c6a:	f240 172d 	movw	r7, #301	; 0x12d
   u->BRR = (uint32_t)(sdp->clock / config->speed);
-  201cd2:	fba0 3003 	umull	r3, r0, r0, r3
+  201c6e:	fba1 3103 	umull	r3, r1, r1, r3
   USART_TypeDef *u = sdp->usart;
-  201cd6:	6d53      	ldr	r3, [r2, #84]	; 0x54
-  201cd8:	f04f 0900 	mov.w	r9, #0
+  201c72:	6d53      	ldr	r3, [r2, #84]	; 0x54
   u->BRR = (uint32_t)(sdp->clock / config->speed);
-  201cdc:	0c80      	lsrs	r0, r0, #18
-  201cde:	60d8      	str	r0, [r3, #12]
+  201c74:	0c89      	lsrs	r1, r1, #18
+  201c76:	60d9      	str	r1, [r3, #12]
   sdp->state = SD_READY;
-  201ce0:	2002      	movs	r0, #2
+  201c78:	2102      	movs	r1, #2
   u->CR2 = config->cr2 | USART_CR2_LBDIE;
-  201ce2:	f8c3 e004 	str.w	lr, [r3, #4]
+  201c7a:	605e      	str	r6, [r3, #4]
+  201c7c:	2600      	movs	r6, #0
   u->CR3 = config->cr3 | USART_CR3_EIE;
-  201ce6:	609f      	str	r7, [r3, #8]
+  201c7e:	609c      	str	r4, [r3, #8]
   u->CR1 = config->cr1 | USART_CR1_UE | USART_CR1_PEIE |
-  201ce8:	f8c3 c000 	str.w	ip, [r3]
+  201c80:	601f      	str	r7, [r3, #0]
   u->ICR = 0xFFFFFFFFU;
-  201cec:	6219      	str	r1, [r3, #32]
-  201cee:	7210      	strb	r0, [r2, #8]
+  201c82:	6218      	str	r0, [r3, #32]
+  201c84:	7211      	strb	r1, [r2, #8]
     sdp->rxmask = 0xFF;
-  201cf0:	f882 105c 	strb.w	r1, [r2, #92]	; 0x5c
-  201cf4:	f389 8811 	msr	BASEPRI, r9
-    chSysInit();
-    halInit();
+  201c86:	f882 005c 	strb.w	r0, [r2, #92]	; 0x5c
+  201c8a:	f386 8811 	msr	BASEPRI, r6
+    chSysInit();            // core function init
+    halInit();              // hal init
 
     // Serial driver
     sdStart( &SD7, &sdcfg );
     palSetPadMode( GPIOE, 8, PAL_MODE_ALTERNATE(8) );    // TX
-  201cf8:	f240 4202 	movw	r2, #1026	; 0x402
-  201cfc:	f44f 7180 	mov.w	r1, #256	; 0x100
-  201d00:	4818      	ldr	r0, [pc, #96]	; (201d64 <main+0x5f4>)
-  201d02:	f7ff f8cd 	bl	200ea0 <_pal_lld_setgroupmode>
+  201c8e:	f240 4202 	movw	r2, #1026	; 0x402
+  201c92:	f44f 7180 	mov.w	r1, #256	; 0x100
+  201c96:	4827      	ldr	r0, [pc, #156]	; (201d34 <main+0x5f4>)
+  201c98:	f7ff f902 	bl	200ea0 <_pal_lld_setgroupmode>
     palSetPadMode( GPIOE, 7, PAL_MODE_ALTERNATE(8) );    // RX
-  201d06:	f240 4202 	movw	r2, #1026	; 0x402
-  201d0a:	2180      	movs	r1, #128	; 0x80
-  201d0c:	4815      	ldr	r0, [pc, #84]	; (201d64 <main+0x5f4>)
-  201d0e:	f7ff f8c7 	bl	200ea0 <_pal_lld_setgroupmode>
+  201c9c:	f240 4202 	movw	r2, #1026	; 0x402
+  201ca0:	2180      	movs	r1, #128	; 0x80
+  201ca2:	4824      	ldr	r0, [pc, #144]	; (201d34 <main+0x5f4>)
+  201ca4:	f7ff f8fc 	bl	200ea0 <_pal_lld_setgroupmode>
  */
 void chMBObjectInit(mailbox_t *mbp, msg_t *buf, cnt_t n) {
 
   chDbgCheck((mbp != NULL) && (buf != NULL) && (n > (cnt_t)0));
 
   mbp->buffer = buf;
-  201d12:	4f15      	ldr	r7, [pc, #84]	; (201d68 <main+0x5f8>)
-  201d14:	e058      	b.n	201dc8 <main+0x658>
-  201d16:	bf00      	nop
-  201d18:	20000a40 	.word	0x20000a40
-  201d1c:	40026000 	.word	0x40026000
-  201d20:	40026400 	.word	0x40026400
-  201d24:	40023800 	.word	0x40023800
-  201d28:	20000800 	.word	0x20000800
-  201d2c:	40020000 	.word	0x40020000
-  201d30:	20000c38 	.word	0x20000c38
-  201d34:	003fcfff 	.word	0x003fcfff
-  201d38:	40021800 	.word	0x40021800
-  201d3c:	40012000 	.word	0x40012000
-  201d40:	08002840 	.word	0x08002840
-  201d44:	00022c16 	.word	0x00022c16
-  201d48:	e000e100 	.word	0xe000e100
-  201d4c:	20000834 	.word	0x20000834
-  201d50:	2000084c 	.word	0x2000084c
-  201d54:	20000864 	.word	0x20000864
-  201d58:	40007800 	.word	0x40007800
-  201d5c:	e000e010 	.word	0xe000e010
-  201d60:	91a2b3c5 	.word	0x91a2b3c5
-  201d64:	40021000 	.word	0x40021000
-  201d68:	20000d0c 	.word	0x20000d0c
-  201d6c:	20000ad0 	.word	0x20000ad0
-  201d70:	40005551 	.word	0x40005551
-  201d74:	b0000bb0 	.word	0xb0000bb0
-  201d78:	000aaa0a 	.word	0x000aaa0a
-  201d7c:	2aae8028 	.word	0x2aae8028
-  201d80:	18004001 	.word	0x18004001
-  201d84:	01555051 	.word	0x01555051
-  201d88:	00bb00b0 	.word	0x00bb00b0
-  201d8c:	55505555 	.word	0x55505555
-  201d90:	cffffff3 	.word	0xcffffff3
-  201d94:	51155555 	.word	0x51155555
-  201d98:	40021400 	.word	0x40021400
-  201d9c:	3cccf000 	.word	0x3cccf000
-  201da0:	00b0b000 	.word	0x00b0b000
-  201da4:	55555550 	.word	0x55555550
-  201da8:	20000ae0 	.word	0x20000ae0
-  201dac:	00200301 	.word	0x00200301
-  201db0:	080028e4 	.word	0x080028e4
-  201db4:	40000800 	.word	0x40000800
-  201db8:	2000083c 	.word	0x2000083c
-  201dbc:	40014000 	.word	0x40014000
-  201dc0:	0337f980 	.word	0x0337f980
-  201dc4:	00034bbf 	.word	0x00034bbf
-  201dc8:	4bc7      	ldr	r3, [pc, #796]	; (2020e8 <main+0x978>)
-  201dca:	2020      	movs	r0, #32
+  201ca8:	4c23      	ldr	r4, [pc, #140]	; (201d38 <main+0x5f8>)
+  201caa:	4b24      	ldr	r3, [pc, #144]	; (201d3c <main+0x5fc>)
+  201cac:	2020      	movs	r0, #32
   tqp->next = (thread_t *)tqp;
-  201dcc:	f107 0118 	add.w	r1, r7, #24
+  201cae:	f104 0118 	add.w	r1, r4, #24
   mbp->rdptr  = buf;
   mbp->wrptr  = buf;
   mbp->top    = &buf[n];
   mbp->cnt    = (cnt_t)0;
-  201dd0:	f8c7 9010 	str.w	r9, [r7, #16]
-  201dd4:	183a      	adds	r2, r7, r0
+  201cb2:	6126      	str	r6, [r4, #16]
+  201cb4:	1822      	adds	r2, r4, r0
   mbp->top    = &buf[n];
-  201dd6:	f103 0ec8 	add.w	lr, r3, #200	; 0xc8
+  201cb6:	f103 07c8 	add.w	r7, r3, #200	; 0xc8
+  201cba:	e059      	b.n	201d70 <main+0x630>
+  201cbc:	20000ab0 	.word	0x20000ab0
+  201cc0:	40026000 	.word	0x40026000
+  201cc4:	40026400 	.word	0x40026400
+  201cc8:	40023800 	.word	0x40023800
+  201ccc:	40020000 	.word	0x40020000
+  201cd0:	20000b60 	.word	0x20000b60
+  201cd4:	18004001 	.word	0x18004001
+  201cd8:	01555051 	.word	0x01555051
+  201cdc:	00bb00b0 	.word	0x00bb00b0
+  201ce0:	55505555 	.word	0x55505555
+  201ce4:	cffffff3 	.word	0xcffffff3
+  201ce8:	40021400 	.word	0x40021400
+  201cec:	003fcfff 	.word	0x003fcfff
+  201cf0:	40021800 	.word	0x40021800
+  201cf4:	3cccf000 	.word	0x3cccf000
+  201cf8:	40012000 	.word	0x40012000
+  201cfc:	080026a0 	.word	0x080026a0
+  201d00:	00022c16 	.word	0x00022c16
+  201d04:	e000e100 	.word	0xe000e100
+  201d08:	20000834 	.word	0x20000834
+  201d0c:	2000083c 	.word	0x2000083c
+  201d10:	40000800 	.word	0x40000800
+  201d14:	2000084c 	.word	0x2000084c
+  201d18:	20000864 	.word	0x20000864
+  201d1c:	40014000 	.word	0x40014000
+  201d20:	40007800 	.word	0x40007800
+  201d24:	0337f980 	.word	0x0337f980
+  201d28:	e000e010 	.word	0xe000e010
+  201d2c:	00034bbf 	.word	0x00034bbf
+  201d30:	91a2b3c5 	.word	0x91a2b3c5
+  201d34:	40021000 	.word	0x40021000
+  201d38:	20000bc0 	.word	0x20000bc0
+  201d3c:	2000087c 	.word	0x2000087c
+  201d40:	20000800 	.word	0x20000800
+  201d44:	20000b40 	.word	0x20000b40
+  201d48:	40005551 	.word	0x40005551
+  201d4c:	b0000bb0 	.word	0xb0000bb0
+  201d50:	000aaa0a 	.word	0x000aaa0a
+  201d54:	2aae8028 	.word	0x2aae8028
+  201d58:	20000b50 	.word	0x20000b50
+  201d5c:	51155555 	.word	0x51155555
+  201d60:	00b0b000 	.word	0x00b0b000
+  201d64:	55555550 	.word	0x55555550
+  201d68:	00200301 	.word	0x00200301
+  201d6c:	0800273c 	.word	0x0800273c
   mbp->reset  = false;
-  201dda:	f887 9014 	strb.w	r9, [r7, #20]
+  201d70:	7526      	strb	r6, [r4, #20]
   mbp->buffer = buf;
-  201dde:	603b      	str	r3, [r7, #0]
+  201d72:	6023      	str	r3, [r4, #0]
   mbp->rdptr  = buf;
-  201de0:	60fb      	str	r3, [r7, #12]
+  201d74:	60e3      	str	r3, [r4, #12]
   mbp->wrptr  = buf;
-  201de2:	60bb      	str	r3, [r7, #8]
+  201d76:	60a3      	str	r3, [r4, #8]
   mbp->top    = &buf[n];
-  201de4:	f8c7 e004 	str.w	lr, [r7, #4]
-  201de8:	61b9      	str	r1, [r7, #24]
+  201d78:	6067      	str	r7, [r4, #4]
+  201d7a:	61a1      	str	r1, [r4, #24]
   tqp->prev = (thread_t *)tqp;
-  201dea:	61f9      	str	r1, [r7, #28]
+  201d7c:	61e1      	str	r1, [r4, #28]
   tqp->next = (thread_t *)tqp;
-  201dec:	623a      	str	r2, [r7, #32]
+  201d7e:	6222      	str	r2, [r4, #32]
   tqp->prev = (thread_t *)tqp;
-  201dee:	627a      	str	r2, [r7, #36]	; 0x24
-  201df0:	f380 8811 	msr	BASEPRI, r0
+  201d80:	6262      	str	r2, [r4, #36]	; 0x24
+  201d82:	f380 8811 	msr	BASEPRI, r0
   if (gptp->state == GPT_STOP) {
-  201df4:	f898 3000 	ldrb.w	r3, [r8]
+  201d86:	782b      	ldrb	r3, [r5, #0]
   osalDbgCheck((gptp != NULL) && (config != NULL));
 
   osalSysLock();
   osalDbgAssert((gptp->state == GPT_STOP) || (gptp->state == GPT_READY),
               "invalid state");
   gptp->config = config;
-  201df8:	4abc      	ldr	r2, [pc, #752]	; (2020ec <main+0x97c>)
-  201dfa:	2b01      	cmp	r3, #1
-  201dfc:	f8c8 2004 	str.w	r2, [r8, #4]
-  201e00:	f000 81b5 	beq.w	20216e <main+0x9fe>
-  201e04:	f8d8 3008 	ldr.w	r3, [r8, #8]
-  201e08:	4ab9      	ldr	r2, [pc, #740]	; (2020f0 <main+0x980>)
-  201e0a:	095b      	lsrs	r3, r3, #5
-  201e0c:	fba2 2303 	umull	r2, r3, r2, r3
-  201e10:	09db      	lsrs	r3, r3, #7
-  201e12:	3b01      	subs	r3, #1
-  201e14:	b29b      	uxth	r3, r3
+  201d88:	4aa7      	ldr	r2, [pc, #668]	; (202028 <main+0x8e8>)
+  201d8a:	2b01      	cmp	r3, #1
+  201d8c:	606a      	str	r2, [r5, #4]
+  201d8e:	f000 8132 	beq.w	201ff6 <main+0x8b6>
+  201d92:	68ab      	ldr	r3, [r5, #8]
+  201d94:	4aa5      	ldr	r2, [pc, #660]	; (20202c <main+0x8ec>)
+  201d96:	095b      	lsrs	r3, r3, #5
+  201d98:	fba2 2303 	umull	r2, r3, r2, r3
+  201d9c:	09db      	lsrs	r3, r3, #7
+  201d9e:	3b01      	subs	r3, #1
+  201da0:	b29b      	uxth	r3, r3
   gptp->tim->CR1 = 0;                           /* Initially stopped.       */
-  201e16:	f8d8 200c 	ldr.w	r2, [r8, #12]
-  201e1a:	2100      	movs	r1, #0
+  201da2:	68e9      	ldr	r1, [r5, #12]
+  201da4:	2200      	movs	r2, #0
   gptp->tim->CR2 = gptp->config->cr2;
-  201e1c:	f04f 0e20 	mov.w	lr, #32
+  201da6:	2020      	movs	r0, #32
   gpt_lld_start(gptp);
   gptp->state = GPT_READY;
-  201e20:	2002      	movs	r0, #2
+  201da8:	2602      	movs	r6, #2
   gptp->tim->CR1 = 0;                           /* Initially stopped.       */
-  201e22:	6011      	str	r1, [r2, #0]
+  201daa:	600a      	str	r2, [r1, #0]
   gptp->tim->CR2 = gptp->config->cr2;
-  201e24:	f8c2 e004 	str.w	lr, [r2, #4]
-  201e28:	f888 0000 	strb.w	r0, [r8]
+  201dac:	6048      	str	r0, [r1, #4]
+  201dae:	702e      	strb	r6, [r5, #0]
   gptp->tim->PSC = psc;                         /* Prescaler value.         */
-  201e2c:	6293      	str	r3, [r2, #40]	; 0x28
+  201db0:	628b      	str	r3, [r1, #40]	; 0x28
   gptp->tim->SR = 0;                            /* Clear pending IRQs.      */
-  201e2e:	6111      	str	r1, [r2, #16]
+  201db2:	610a      	str	r2, [r1, #16]
   gptp->tim->DIER = gptp->config->dier &        /* DMA-related DIER bits.   */
-  201e30:	60d1      	str	r1, [r2, #12]
-  201e32:	f381 8811 	msr	BASEPRI, r1
-#if 1
+  201db4:	60ca      	str	r2, [r1, #12]
+  201db6:	f382 8811 	msr	BASEPRI, r2
+
     /*
      * Fixed an errata on the STM32F7xx, the DAC clock is required for ADC
      * triggering.
      */
-    rccEnableDAC1(false);
-  201e36:	48af      	ldr	r0, [pc, #700]	; (2020f4 <main+0x984>)
-  201e38:	6c03      	ldr	r3, [r0, #64]	; 0x40
-  201e3a:	f043 5300 	orr.w	r3, r3, #536870912	; 0x20000000
-  201e3e:	6403      	str	r3, [r0, #64]	; 0x40
-  201e40:	f38e 8811 	msr	BASEPRI, lr
+    rccEnableDAC1(false);       // ???
+  201dba:	499d      	ldr	r1, [pc, #628]	; (202030 <main+0x8f0>)
+  201dbc:	6c0b      	ldr	r3, [r1, #64]	; 0x40
+  201dbe:	f043 5300 	orr.w	r3, r3, #536870912	; 0x20000000
+  201dc2:	640b      	str	r3, [r1, #64]	; 0x40
+  201dc4:	f380 8811 	msr	BASEPRI, r0
   if (adcp->state == ADC_STOP) {
-  201e44:	7833      	ldrb	r3, [r6, #0]
+  201dc8:	f89b 3000 	ldrb.w	r3, [fp]
   osalDbgCheck(adcp != NULL);
 
   osalSysLock();
   osalDbgAssert((adcp->state == ADC_STOP) || (adcp->state == ADC_READY),
                 "invalid state");
   adcp->config = config;
-  201e46:	6071      	str	r1, [r6, #4]
-  201e48:	2b01      	cmp	r3, #1
-  201e4a:	f000 80f9 	beq.w	202040 <main+0x8d0>
+  201dcc:	f8cb 2004 	str.w	r2, [fp, #4]
+  201dd0:	2b01      	cmp	r3, #1
+  201dd2:	f000 80af 	beq.w	201f34 <main+0x7f4>
   adc_lld_start(adcp);
   adcp->state = ADC_READY;
-  201e4e:	f04f 0a02 	mov.w	sl, #2
-  201e52:	f04f 0900 	mov.w	r9, #0
-  201e56:	f886 a000 	strb.w	sl, [r6]
-  201e5a:	f389 8811 	msr	BASEPRI, r9
+  201dd6:	f04f 0802 	mov.w	r8, #2
+  201dda:	2600      	movs	r6, #0
+  201ddc:	f88b 8000 	strb.w	r8, [fp]
+  201de0:	f386 8811 	msr	BASEPRI, r6
 
     // ADC driver
     adcStart(&ADCD1, NULL);
-    palSetLineMode( LINE_ADC123_IN10, PAL_MODE_INPUT_ANALOG );
-  201e5e:	2203      	movs	r2, #3
-  201e60:	2101      	movs	r1, #1
-  201e62:	48a5      	ldr	r0, [pc, #660]	; (2020f8 <main+0x988>)
-  201e64:	f7ff f81c 	bl	200ea0 <_pal_lld_setgroupmode>
-    palSetLineMode( LINE_ADC123_IN3, PAL_MODE_INPUT_ANALOG );
-  201e68:	2203      	movs	r2, #3
-  201e6a:	2108      	movs	r1, #8
-  201e6c:	48a3      	ldr	r0, [pc, #652]	; (2020fc <main+0x98c>)
-  201e6e:	f7ff f817 	bl	200ea0 <_pal_lld_setgroupmode>
-  201e72:	f04f 0e20 	mov.w	lr, #32
-  201e76:	f38e 8811 	msr	BASEPRI, lr
+    palSetLineMode( LINE_ADC123_IN10, PAL_MODE_INPUT_ANALOG );  // PC0
+  201de4:	2203      	movs	r2, #3
+  201de6:	2101      	movs	r1, #1
+  201de8:	4892      	ldr	r0, [pc, #584]	; (202034 <main+0x8f4>)
+  201dea:	f7ff f859 	bl	200ea0 <_pal_lld_setgroupmode>
+    palSetLineMode( LINE_ADC123_IN3, PAL_MODE_INPUT_ANALOG );   // PA3
+  201dee:	2203      	movs	r2, #3
+  201df0:	2108      	movs	r1, #8
+  201df2:	4891      	ldr	r0, [pc, #580]	; (202038 <main+0x8f8>)
+  201df4:	f7ff f854 	bl	200ea0 <_pal_lld_setgroupmode>
+  201df8:	f04f 0e20 	mov.w	lr, #32
+  201dfc:	f38e 8811 	msr	BASEPRI, lr
                 "not ready");
 
   adcp->samples  = samples;
   adcp->depth    = depth;
   adcp->grpp     = grpp;
   adcp->state    = ADC_ACTIVE;
-  201e7a:	2003      	movs	r0, #3
+  201e00:	2703      	movs	r7, #3
   mode = adcp->dmamode;
-  201e7c:	6b33      	ldr	r3, [r6, #48]	; 0x30
+  201e02:	f8db 3030 	ldr.w	r3, [fp, #48]	; 0x30
   dmaStreamSetMemory0(adcp->dmastp, adcp->samples);
-  201e7e:	6af1      	ldr	r1, [r6, #44]	; 0x2c
+  201e06:	f8db 202c 	ldr.w	r2, [fp, #44]	; 0x2c
   adcp->depth    = depth;
-  201e80:	2201      	movs	r2, #1
+  201e0a:	2001      	movs	r0, #1
   adcp->grpp     = grpp;
-  201e82:	f8df c298 	ldr.w	ip, [pc, #664]	; 20211c <main+0x9ac>
+  201e0c:	498b      	ldr	r1, [pc, #556]	; (20203c <main+0x8fc>)
     mode |= STM32_DMA_CR_CIRC;
-  201e86:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+  201e0e:	f443 7380 	orr.w	r3, r3, #256	; 0x100
   adcp->state    = ADC_ACTIVE;
-  201e8a:	7030      	strb	r0, [r6, #0]
+  201e12:	f88b 7000 	strb.w	r7, [fp]
   adcp->adc->SMPR1 = grpp->smpr1;
-  201e8c:	f04f 0b06 	mov.w	fp, #6
+  201e16:	f04f 0906 	mov.w	r9, #6
   dmaStreamSetMemory0(adcp->dmastp, adcp->samples);
-  201e90:	6809      	ldr	r1, [r1, #0]
+  201e1a:	6812      	ldr	r2, [r2, #0]
   adcp->adc->SMPR2 = grpp->smpr2;
-  201e92:	f44f 6540 	mov.w	r5, #3072	; 0xc00
+  201e1c:	f44f 6c40 	mov.w	ip, #3072	; 0xc00
   adcp->grpp     = grpp;
-  201e96:	f8c6 c010 	str.w	ip, [r6, #16]
+  201e20:	f8cb 1010 	str.w	r1, [fp, #16]
   adcp->samples  = samples;
-  201e9a:	f8df c284 	ldr.w	ip, [pc, #644]	; 202120 <main+0x9b0>
+  201e24:	4986      	ldr	r1, [pc, #536]	; (202040 <main+0x900>)
   adcp->depth    = depth;
-  201e9e:	60f2      	str	r2, [r6, #12]
+  201e26:	f8cb 000c 	str.w	r0, [fp, #12]
   adcp->samples  = samples;
-  201ea0:	f8c6 c008 	str.w	ip, [r6, #8]
+  201e2a:	f8cb 1008 	str.w	r1, [fp, #8]
   dmaStreamSetMemory0(adcp->dmastp, adcp->samples);
-  201ea4:	f8c1 c00c 	str.w	ip, [r1, #12]
-  adcp->adc->SQR3  = grpp->sqr3;
-  201ea8:	f240 1c43 	movw	ip, #323	; 0x143
+  201e2e:	60d1      	str	r1, [r2, #12]
   dmaStreamSetTransactionSize(adcp->dmastp, (uint32_t)grpp->num_channels *
-  201eac:	f8c1 a004 	str.w	sl, [r1, #4]
-  dmaStreamSetMode(adcp->dmastp, mode);
-  201eb0:	600b      	str	r3, [r1, #0]
-  dmaStreamEnable(adcp->dmastp);
-  201eb2:	f8d1 a000 	ldr.w	sl, [r1]
-  adcp->adc->SR    = 0;
-  201eb6:	6ab3      	ldr	r3, [r6, #40]	; 0x28
-  dmaStreamEnable(adcp->dmastp);
-  201eb8:	ea4a 0602 	orr.w	r6, sl, r2
-  adcp->adc->CR1   = grpp->cr1 | ADC_CR1_OVRIE | ADC_CR1_SCAN;
-  201ebc:	f8df a264 	ldr.w	sl, [pc, #612]	; 202124 <main+0x9b4>
-  dmaStreamEnable(adcp->dmastp);
-  201ec0:	600e      	str	r6, [r1, #0]
-  adcp->adc->SR    = 0;
-  201ec2:	f8c3 9000 	str.w	r9, [r3]
-    adcp->adc->CR2 = cr2;
-  201ec6:	498e      	ldr	r1, [pc, #568]	; (202100 <main+0x990>)
-  adcp->adc->SMPR1 = grpp->smpr1;
-  201ec8:	f8c3 b00c 	str.w	fp, [r3, #12]
-  adcp->adc->SMPR2 = grpp->smpr2;
-  201ecc:	611d      	str	r5, [r3, #16]
-  adcp->adc->SQR1  = grpp->sqr1 | ADC_SQR1_NUM_CH(grpp->num_channels);
-  201ece:	f44f 1580 	mov.w	r5, #1048576	; 0x100000
-  201ed2:	62dd      	str	r5, [r3, #44]	; 0x2c
-  adcp->adc->SQR2  = grpp->sqr2;
-  201ed4:	f8c3 9030 	str.w	r9, [r3, #48]	; 0x30
+  201e30:	f8c2 8004 	str.w	r8, [r2, #4]
   adcp->adc->SQR3  = grpp->sqr3;
-  201ed8:	f8c3 c034 	str.w	ip, [r3, #52]	; 0x34
+  201e34:	f240 1843 	movw	r8, #323	; 0x143
+  dmaStreamSetMode(adcp->dmastp, mode);
+  201e38:	6013      	str	r3, [r2, #0]
+  dmaStreamEnable(adcp->dmastp);
+  201e3a:	6811      	ldr	r1, [r2, #0]
+  adcp->adc->SR    = 0;
+  201e3c:	f8db 3028 	ldr.w	r3, [fp, #40]	; 0x28
+  dmaStreamEnable(adcp->dmastp);
+  201e40:	4301      	orrs	r1, r0
   adcp->adc->CR1   = grpp->cr1 | ADC_CR1_OVRIE | ADC_CR1_SCAN;
-  201edc:	f8c3 a004 	str.w	sl, [r3, #4]
+  201e42:	f8df b224 	ldr.w	fp, [pc, #548]	; 202068 <main+0x928>
+  dmaStreamEnable(adcp->dmastp);
+  201e46:	6011      	str	r1, [r2, #0]
+  adcp->adc->SQR1  = grpp->sqr1 | ADC_SQR1_NUM_CH(grpp->num_channels);
+  201e48:	f44f 1180 	mov.w	r1, #1048576	; 0x100000
     adcp->adc->CR2 = cr2;
-  201ee0:	6099      	str	r1, [r3, #8]
-  201ee2:	f389 8811 	msr	BASEPRI, r9
-  201ee6:	f38e 8811 	msr	BASEPRI, lr
+  201e4c:	4a7d      	ldr	r2, [pc, #500]	; (202044 <main+0x904>)
+  adcp->adc->SR    = 0;
+  201e4e:	601e      	str	r6, [r3, #0]
+  adcp->adc->SMPR1 = grpp->smpr1;
+  201e50:	f8c3 900c 	str.w	r9, [r3, #12]
+  adcp->adc->SMPR2 = grpp->smpr2;
+  201e54:	f8c3 c010 	str.w	ip, [r3, #16]
+  adcp->adc->SQR1  = grpp->sqr1 | ADC_SQR1_NUM_CH(grpp->num_channels);
+  201e58:	62d9      	str	r1, [r3, #44]	; 0x2c
+  adcp->adc->SQR2  = grpp->sqr2;
+  201e5a:	631e      	str	r6, [r3, #48]	; 0x30
+  adcp->adc->SQR3  = grpp->sqr3;
+  201e5c:	f8c3 8034 	str.w	r8, [r3, #52]	; 0x34
+  adcp->adc->CR1   = grpp->cr1 | ADC_CR1_OVRIE | ADC_CR1_SCAN;
+  201e60:	f8c3 b004 	str.w	fp, [r3, #4]
+    adcp->adc->CR2 = cr2;
+  201e64:	609a      	str	r2, [r3, #8]
+  201e66:	f386 8811 	msr	BASEPRI, r6
+  201e6a:	f38e 8811 	msr	BASEPRI, lr
   if (NULL != gptp->config->callback)
-  201eea:	f8d8 3004 	ldr.w	r3, [r8, #4]
+  201e6e:	686a      	ldr	r2, [r5, #4]
   gptp->tim->ARR = (uint32_t)(interval);        /* Time constant.           */
-  201eee:	f242 7610 	movw	r6, #10000	; 0x2710
-  201ef2:	f8d8 100c 	ldr.w	r1, [r8, #12]
+  201e70:	f242 7110 	movw	r1, #10000	; 0x2710
+  201e74:	68eb      	ldr	r3, [r5, #12]
   if (NULL != gptp->config->callback)
-  201ef6:	685b      	ldr	r3, [r3, #4]
+  201e76:	6852      	ldr	r2, [r2, #4]
   osalDbgCheckClassI();
   osalDbgCheck(gptp != NULL);
   osalDbgAssert(gptp->state == GPT_READY,
                 "invalid state");
 
   gptp->state = GPT_CONTINUOUS;
-  201ef8:	f888 0000 	strb.w	r0, [r8]
+  201e78:	702f      	strb	r7, [r5, #0]
   gptp->tim->ARR = (uint32_t)(interval);        /* Time constant.           */
-  201efc:	62ce      	str	r6, [r1, #44]	; 0x2c
+  201e7a:	62d9      	str	r1, [r3, #44]	; 0x2c
   gptp->tim->EGR = STM32_TIM_EGR_UG;            /* Update event.            */
-  201efe:	614a      	str	r2, [r1, #20]
+  201e7c:	6158      	str	r0, [r3, #20]
   gptp->tim->CNT = 0;                           /* Reset counter.           */
-  201f00:	f8c1 9024 	str.w	r9, [r1, #36]	; 0x24
+  201e7e:	625e      	str	r6, [r3, #36]	; 0x24
   gptp->tim->SR = 0;                            /* Clear pending IRQs.      */
-  201f04:	f8c1 9010 	str.w	r9, [r1, #16]
+  201e80:	611e      	str	r6, [r3, #16]
   if (NULL != gptp->config->callback)
-  201f08:	b113      	cbz	r3, 201f10 <main+0x7a0>
+  201e82:	b112      	cbz	r2, 201e8a <main+0x74a>
     gptp->tim->DIER |= STM32_TIM_DIER_UIE;      /* Update Event IRQ enabled.*/
-  201f0a:	68cb      	ldr	r3, [r1, #12]
-  201f0c:	4313      	orrs	r3, r2
-  201f0e:	60cb      	str	r3, [r1, #12]
+  201e84:	68da      	ldr	r2, [r3, #12]
+  201e86:	4302      	orrs	r2, r0
+  201e88:	60da      	str	r2, [r3, #12]
   gptp->tim->CR1 = STM32_TIM_CR1_ARPE | STM32_TIM_CR1_URS | STM32_TIM_CR1_CEN;
-  201f10:	2385      	movs	r3, #133	; 0x85
-  201f12:	2600      	movs	r6, #0
-  201f14:	600b      	str	r3, [r1, #0]
-  201f16:	f386 8811 	msr	BASEPRI, r6
-  201f1a:	f04f 0820 	mov.w	r8, #32
-  201f1e:	f388 8811 	msr	BASEPRI, r8
-  tp->wabase = (stkalign_t *)wsp;
-  201f22:	4b78      	ldr	r3, [pc, #480]	; (202104 <main+0x994>)
-  tp->refs      = (trefs_t)1;
-  201f24:	f04f 0e01 	mov.w	lr, #1
-  tp->state     = CH_STATE_WTSTART;
-  201f28:	2102      	movs	r1, #2
-  PORT_SETUP_CONTEXT(tp, wsp, tp, pf, arg);
-  201f2a:	f8df c1fc 	ldr.w	ip, [pc, #508]	; 202128 <main+0x9b8>
-  tp->refs      = (trefs_t)1;
-  201f2e:	f883 e122 	strb.w	lr, [r3, #290]	; 0x122
-  PORT_SETUP_CONTEXT(tp, wsp, tp, pf, arg);
-  201f32:	f103 09dc 	add.w	r9, r3, #220	; 0xdc
-  201f36:	4a74      	ldr	r2, [pc, #464]	; (202108 <main+0x998>)
-  tp->prio      = prio;
-  201f38:	2080      	movs	r0, #128	; 0x80
-  tp->name      = name;
-  201f3a:	f8df e1f0 	ldr.w	lr, [pc, #496]	; 20212c <main+0x9bc>
-  PORT_SETUP_CONTEXT(tp, wsp, tp, pf, arg);
-  201f3e:	f8c3 20fc 	str.w	r2, [r3, #252]	; 0xfc
-  REG_INSERT(tp);
-  201f42:	f503 7280 	add.w	r2, r3, #256	; 0x100
-  PORT_SETUP_CONTEXT(tp, wsp, tp, pf, arg);
-  201f46:	f8c3 c0dc 	str.w	ip, [r3, #220]	; 0xdc
-  tlp->next = (thread_t *)tlp;
-  201f4a:	f503 7c94 	add.w	ip, r3, #296	; 0x128
-  tp->state     = CH_STATE_WTSTART;
-  201f4e:	f883 1120 	strb.w	r1, [r3, #288]	; 0x120
-  tqp->next = (thread_t *)tqp;
-  201f52:	f503 7196 	add.w	r1, r3, #300	; 0x12c
-  tp->name      = name;
-  201f56:	f8c3 e118 	str.w	lr, [r3, #280]	; 0x118
-  REG_INSERT(tp);
-  201f5a:	f8d4 e014 	ldr.w	lr, [r4, #20]
-  tp->prio      = prio;
-  201f5e:	f8c3 0108 	str.w	r0, [r3, #264]	; 0x108
-  tp->realprio  = prio;
-  201f62:	f8c3 013c 	str.w	r0, [r3, #316]	; 0x13c
-  chSchWakeupS(tp, MSG_OK);
-  201f66:	4610      	mov	r0, r2
-  PORT_SETUP_CONTEXT(tp, wsp, tp, pf, arg);
-  201f68:	f8c3 60e0 	str.w	r6, [r3, #224]	; 0xe0
-  tp->flags     = CH_FLAG_MODE_STATIC;
-  201f6c:	f883 6121 	strb.w	r6, [r3, #289]	; 0x121
-  tp->mtxlist   = NULL;
-  201f70:	f8c3 6138 	str.w	r6, [r3, #312]	; 0x138
-  tp->epending  = (eventmask_t)0;
-  201f74:	f8c3 6134 	str.w	r6, [r3, #308]	; 0x134
-  REG_INSERT(tp);
-  201f78:	f8c3 4110 	str.w	r4, [r3, #272]	; 0x110
-  tp->wabase = (stkalign_t *)wsp;
-  201f7c:	f8c3 311c 	str.w	r3, [r3, #284]	; 0x11c
-  PORT_SETUP_CONTEXT(tp, wsp, tp, pf, arg);
-  201f80:	f8c3 910c 	str.w	r9, [r3, #268]	; 0x10c
-  REG_INSERT(tp);
-  201f84:	f8c3 e114 	str.w	lr, [r3, #276]	; 0x114
-  201f88:	f8ce 2010 	str.w	r2, [lr, #16]
-  tlp->next = (thread_t *)tlp;
-  201f8c:	f8c3 c128 	str.w	ip, [r3, #296]	; 0x128
-  tqp->next = (thread_t *)tqp;
-  201f90:	f8c3 112c 	str.w	r1, [r3, #300]	; 0x12c
-  tqp->prev = (thread_t *)tqp;
-  201f94:	f8c3 1130 	str.w	r1, [r3, #304]	; 0x130
-  201f98:	6162      	str	r2, [r4, #20]
-  chSchWakeupS(tp, MSG_OK);
-  201f9a:	f000 f911 	bl	2021c0 <chSchWakeupS.constprop.42>
-  201f9e:	f386 8811 	msr	BASEPRI, r6
+  201e8a:	2285      	movs	r2, #133	; 0x85
+  201e8c:	2600      	movs	r6, #0
+  201e8e:	601a      	str	r2, [r3, #0]
+  201e90:	f386 8811 	msr	BASEPRI, r6
+  201e94:	2520      	movs	r5, #32
         mbp->rdptr = mbp->buffer;
       }
       mbp->cnt--;
 
       /* If there is a writer waiting then makes it ready.*/
       chThdDequeueNextI(&mbp->qw, MSG_OK);
-  201fa2:	f8df 918c 	ldr.w	r9, [pc, #396]	; 202130 <main+0x9c0>
-  201fa6:	4644      	mov	r4, r8
-  201fa8:	f8dd 8004 	ldr.w	r8, [sp, #4]
-  201fac:	e009      	b.n	201fc2 <main+0x852>
-  201fae:	f382 8811 	msr	BASEPRI, r2
-  201fb2:	f384 8811 	msr	BASEPRI, r4
-  201fb6:	210a      	movs	r1, #10
-  201fb8:	2008      	movs	r0, #8
-  201fba:	f7ff f841 	bl	201040 <chSchGoSleepTimeoutS>
-  201fbe:	f386 8811 	msr	BASEPRI, r6
-  201fc2:	f384 8811 	msr	BASEPRI, r4
-    if (mbp->reset) {
-  201fc6:	7d3a      	ldrb	r2, [r7, #20]
-  201fc8:	2a00      	cmp	r2, #0
-  201fca:	d136      	bne.n	20203a <main+0x8ca>
-  201fcc:	693b      	ldr	r3, [r7, #16]
-    if (chMBGetUsedCountI(mbp) > (cnt_t)0) {
-  201fce:	2b00      	cmp	r3, #0
-  201fd0:	dded      	ble.n	201fae <main+0x83e>
-      *msgp = *mbp->rdptr++;
-  201fd2:	68f9      	ldr	r1, [r7, #12]
-      if (mbp->rdptr >= mbp->top) {
-  201fd4:	6878      	ldr	r0, [r7, #4]
-      *msgp = *mbp->rdptr++;
-  201fd6:	1d0a      	adds	r2, r1, #4
-  201fd8:	680d      	ldr	r5, [r1, #0]
-      if (mbp->rdptr >= mbp->top) {
-  201fda:	4282      	cmp	r2, r0
-      *msgp = *mbp->rdptr++;
-  201fdc:	60fa      	str	r2, [r7, #12]
-      if (mbp->rdptr >= mbp->top) {
-  201fde:	d301      	bcc.n	201fe4 <main+0x874>
-        mbp->rdptr = mbp->buffer;
-  201fe0:	683a      	ldr	r2, [r7, #0]
-  201fe2:	60fa      	str	r2, [r7, #12]
-      mbp->cnt--;
-  201fe4:	3b01      	subs	r3, #1
-      chThdDequeueNextI(&mbp->qw, MSG_OK);
-  201fe6:	4648      	mov	r0, r9
-      mbp->cnt--;
-  201fe8:	613b      	str	r3, [r7, #16]
-      chThdDequeueNextI(&mbp->qw, MSG_OK);
-  201fea:	f000 f921 	bl	202230 <chThdDequeueNextI.constprop.35>
-      chSchRescheduleS();
-  201fee:	f7ff f817 	bl	201020 <chSchRescheduleS>
-  201ff2:	f386 8811 	msr	BASEPRI, r6
-  201ff6:	f384 8811 	msr	BASEPRI, r4
-    if (mbp->reset) {
-  201ffa:	7d3b      	ldrb	r3, [r7, #20]
-  201ffc:	b913      	cbnz	r3, 202004 <main+0x894>
-  201ffe:	693b      	ldr	r3, [r7, #16]
-    if (chMBGetUsedCountI(mbp) > (cnt_t)0) {
-  202000:	2b00      	cmp	r3, #0
-  202002:	dc08      	bgt.n	202016 <main+0x8a6>
-  202004:	f386 8811 	msr	BASEPRI, r6
-    {
+  201e96:	f8df 81d4 	ldr.w	r8, [pc, #468]	; 20206c <main+0x92c>
+  201e9a:	e009      	b.n	201eb0 <main+0x770>
+  201e9c:	f382 8811 	msr	BASEPRI, r2
+  201ea0:	f385 8811 	msr	BASEPRI, r5
+ */
+static inline void chThdSleepS(systime_t time) {
 
-        if ( chMBFetch(&test_mb, &msg1, TIME_IMMEDIATE) == MSG_OK )
-        {
-          chMBFetch(&test_mb, &msg2, TIME_IMMEDIATE);
-          chprintf(((BaseSequentialStream *)&SD7), "ADC values: %d %d\n", msg1, msg2);
-  202008:	4940      	ldr	r1, [pc, #256]	; (20210c <main+0x99c>)
-  20200a:	462a      	mov	r2, r5
-  20200c:	4643      	mov	r3, r8
-  20200e:	4840      	ldr	r0, [pc, #256]	; (202110 <main+0x9a0>)
-  202010:	f000 f97e 	bl	202310 <chprintf.constprop.0>
-  202014:	e7cd      	b.n	201fb2 <main+0x842>
+  chDbgCheck(time != TIME_IMMEDIATE);
+
+  (void) chSchGoSleepTimeoutS(CH_STATE_SLEEPING, time);
+  201ea4:	210a      	movs	r1, #10
+  201ea6:	2008      	movs	r0, #8
+  201ea8:	f7ff f8ca 	bl	201040 <chSchGoSleepTimeoutS>
+  201eac:	f386 8811 	msr	BASEPRI, r6
+  201eb0:	f385 8811 	msr	BASEPRI, r5
+    if (mbp->reset) {
+  201eb4:	7d22      	ldrb	r2, [r4, #20]
+  201eb6:	2a00      	cmp	r2, #0
+  201eb8:	d139      	bne.n	201f2e <main+0x7ee>
+  201eba:	6923      	ldr	r3, [r4, #16]
+    if (chMBGetUsedCountI(mbp) > (cnt_t)0) {
+  201ebc:	2b00      	cmp	r3, #0
+  201ebe:	dded      	ble.n	201e9c <main+0x75c>
       *msgp = *mbp->rdptr++;
-  202016:	68f9      	ldr	r1, [r7, #12]
+  201ec0:	68e1      	ldr	r1, [r4, #12]
       if (mbp->rdptr >= mbp->top) {
-  202018:	6878      	ldr	r0, [r7, #4]
+  201ec2:	6860      	ldr	r0, [r4, #4]
       *msgp = *mbp->rdptr++;
-  20201a:	1d0a      	adds	r2, r1, #4
-  20201c:	f8d1 8000 	ldr.w	r8, [r1]
+  201ec4:	1d0a      	adds	r2, r1, #4
+  201ec6:	680f      	ldr	r7, [r1, #0]
       if (mbp->rdptr >= mbp->top) {
-  202020:	4282      	cmp	r2, r0
+  201ec8:	4282      	cmp	r2, r0
       *msgp = *mbp->rdptr++;
-  202022:	60fa      	str	r2, [r7, #12]
+  201eca:	60e2      	str	r2, [r4, #12]
       if (mbp->rdptr >= mbp->top) {
-  202024:	d301      	bcc.n	20202a <main+0x8ba>
+  201ecc:	d301      	bcc.n	201ed2 <main+0x792>
         mbp->rdptr = mbp->buffer;
-  202026:	683a      	ldr	r2, [r7, #0]
-  202028:	60fa      	str	r2, [r7, #12]
+  201ece:	6822      	ldr	r2, [r4, #0]
+  201ed0:	60e2      	str	r2, [r4, #12]
       mbp->cnt--;
-  20202a:	3b01      	subs	r3, #1
+  201ed2:	3b01      	subs	r3, #1
       chThdDequeueNextI(&mbp->qw, MSG_OK);
-  20202c:	4648      	mov	r0, r9
+  201ed4:	4640      	mov	r0, r8
       mbp->cnt--;
-  20202e:	613b      	str	r3, [r7, #16]
+  201ed6:	6123      	str	r3, [r4, #16]
       chThdDequeueNextI(&mbp->qw, MSG_OK);
-  202030:	f000 f8fe 	bl	202230 <chThdDequeueNextI.constprop.35>
+  201ed8:	f000 f8da 	bl	202090 <chThdDequeueNextI.constprop.35>
       chSchRescheduleS();
-  202034:	f7fe fff4 	bl	201020 <chSchRescheduleS>
-  202038:	e7e4      	b.n	202004 <main+0x894>
-  20203a:	f386 8811 	msr	BASEPRI, r6
-  20203e:	e7b8      	b.n	201fb2 <main+0x842>
+  201edc:	f7ff f8a0 	bl	201020 <chSchRescheduleS>
+  201ee0:	f386 8811 	msr	BASEPRI, r6
+  201ee4:	f385 8811 	msr	BASEPRI, r5
+    if (mbp->reset) {
+  201ee8:	7d23      	ldrb	r3, [r4, #20]
+  201eea:	b913      	cbnz	r3, 201ef2 <main+0x7b2>
+  201eec:	6923      	ldr	r3, [r4, #16]
+    if (chMBGetUsedCountI(mbp) > (cnt_t)0) {
+  201eee:	2b00      	cmp	r3, #0
+  201ef0:	dc0b      	bgt.n	201f0a <main+0x7ca>
+  201ef2:	f386 8811 	msr	BASEPRI, r6
+    while (true)
+    {
+        if ( chMBFetch(&test_mb, &msg1, TIME_IMMEDIATE) == MSG_OK ) // get the 1st ADC value
+        {
+          chMBFetch(&test_mb, &msg2, TIME_IMMEDIATE);       // get the 2nd ADC value
+          chprintf(((BaseSequentialStream *)&SD7), "ADC values: %d %d\n", msg1, msg2);
+  201ef6:	4954      	ldr	r1, [pc, #336]	; (202048 <main+0x908>)
+  201ef8:	463a      	mov	r2, r7
+  201efa:	4653      	mov	r3, sl
+  201efc:	4853      	ldr	r0, [pc, #332]	; (20204c <main+0x90c>)
+  201efe:	f000 f937 	bl	202170 <chprintf.constprop.0>
+  201f02:	e7cd      	b.n	201ea0 <main+0x760>
+  tp->state = CH_STATE_READY;
+  201f04:	f882 1020 	strb.w	r1, [r2, #32]
+  201f08:	e7fe      	b.n	201f08 <main+0x7c8>
+      *msgp = *mbp->rdptr++;
+  201f0a:	68e1      	ldr	r1, [r4, #12]
+      if (mbp->rdptr >= mbp->top) {
+  201f0c:	6860      	ldr	r0, [r4, #4]
+      *msgp = *mbp->rdptr++;
+  201f0e:	1d0a      	adds	r2, r1, #4
+  201f10:	f8d1 a000 	ldr.w	sl, [r1]
+      if (mbp->rdptr >= mbp->top) {
+  201f14:	4282      	cmp	r2, r0
+      *msgp = *mbp->rdptr++;
+  201f16:	60e2      	str	r2, [r4, #12]
+      if (mbp->rdptr >= mbp->top) {
+  201f18:	d301      	bcc.n	201f1e <main+0x7de>
+        mbp->rdptr = mbp->buffer;
+  201f1a:	6822      	ldr	r2, [r4, #0]
+  201f1c:	60e2      	str	r2, [r4, #12]
+      mbp->cnt--;
+  201f1e:	3b01      	subs	r3, #1
+      chThdDequeueNextI(&mbp->qw, MSG_OK);
+  201f20:	4640      	mov	r0, r8
+      mbp->cnt--;
+  201f22:	6123      	str	r3, [r4, #16]
+      chThdDequeueNextI(&mbp->qw, MSG_OK);
+  201f24:	f000 f8b4 	bl	202090 <chThdDequeueNextI.constprop.35>
+      chSchRescheduleS();
+  201f28:	f7ff f87a 	bl	201020 <chSchRescheduleS>
+  201f2c:	e7e1      	b.n	201ef2 <main+0x7b2>
+  201f2e:	f386 8811 	msr	BASEPRI, r6
+  201f32:	e7b5      	b.n	201ea0 <main+0x760>
                        void *param) {
 
   osalDbgCheck(dmastp != NULL);
 
   /* Checks if the stream is already taken.*/
   if ((dma_streams_mask & (1U << dmastp->selfindex)) != 0U)
-  202040:	4934      	ldr	r1, [pc, #208]	; (202114 <main+0x9a4>)
+  201f34:	4846      	ldr	r0, [pc, #280]	; (202050 <main+0x910>)
       b = dmaStreamAllocate(adcp->dmastp,
-  202042:	6af2      	ldr	r2, [r6, #44]	; 0x2c
-  202044:	f8d1 e000 	ldr.w	lr, [r1]
-  202048:	7a51      	ldrb	r1, [r2, #9]
-  20204a:	408b      	lsls	r3, r1
-  20204c:	ea13 0f0e 	tst.w	r3, lr
-  202050:	d174      	bne.n	20213c <main+0x9cc>
+  201f36:	f8db 202c 	ldr.w	r2, [fp, #44]	; 0x2c
+  201f3a:	6806      	ldr	r6, [r0, #0]
+  201f3c:	7a50      	ldrb	r0, [r2, #9]
+  201f3e:	4083      	lsls	r3, r0
+  201f40:	4233      	tst	r3, r6
+  201f42:	d141      	bne.n	201fc8 <main+0x888>
     return true;
 
   /* Marks the stream as allocated.*/
   dma_isr_redir[dmastp->selfindex].dma_func  = func;
   dma_isr_redir[dmastp->selfindex].dma_param = param;
-  202052:	4d31      	ldr	r5, [pc, #196]	; (202118 <main+0x9a8>)
   dma_streams_mask |= (1U << dmastp->selfindex);
-  202054:	ea43 030e 	orr.w	r3, r3, lr
-  dma_isr_redir[dmastp->selfindex].dma_func  = func;
-  202058:	f8df c0d8 	ldr.w	ip, [pc, #216]	; 202134 <main+0x9c4>
+  201f44:	4333      	orrs	r3, r6
+  201f46:	4f42      	ldr	r7, [pc, #264]	; (202050 <main+0x910>)
   dma_isr_redir[dmastp->selfindex].dma_param = param;
-  20205c:	eb05 0ec1 	add.w	lr, r5, r1, lsl #3
-  dma_streams_mask |= (1U << dmastp->selfindex);
-  202060:	4d2c      	ldr	r5, [pc, #176]	; (202114 <main+0x9a4>)
+  201f48:	4e42      	ldr	r6, [pc, #264]	; (202054 <main+0x914>)
+  dma_isr_redir[dmastp->selfindex].dma_func  = func;
+  201f4a:	f8df e124 	ldr.w	lr, [pc, #292]	; 202070 <main+0x930>
 
   /* Enabling DMA clocks required by the current streams set.*/
   if ((dma_streams_mask & STM32_DMA1_STREAMS_MASK) != 0U) {
-  202062:	f013 0fff 	tst.w	r3, #255	; 0xff
-  dma_streams_mask |= (1U << dmastp->selfindex);
-  202066:	602b      	str	r3, [r5, #0]
-  dma_isr_redir[dmastp->selfindex].dma_func  = func;
-  202068:	4d2b      	ldr	r5, [pc, #172]	; (202118 <main+0x9a8>)
+  201f4e:	f013 0fff 	tst.w	r3, #255	; 0xff
   dma_isr_redir[dmastp->selfindex].dma_param = param;
-  20206a:	f8ce 6004 	str.w	r6, [lr, #4]
+  201f52:	eb06 06c0 	add.w	r6, r6, r0, lsl #3
+  dma_streams_mask |= (1U << dmastp->selfindex);
+  201f56:	603b      	str	r3, [r7, #0]
   dma_isr_redir[dmastp->selfindex].dma_func  = func;
-  20206e:	f845 c031 	str.w	ip, [r5, r1, lsl #3]
+  201f58:	4f3e      	ldr	r7, [pc, #248]	; (202054 <main+0x914>)
+  dma_isr_redir[dmastp->selfindex].dma_param = param;
+  201f5a:	f8c6 b004 	str.w	fp, [r6, #4]
+  dma_isr_redir[dmastp->selfindex].dma_func  = func;
+  201f5e:	f847 e030 	str.w	lr, [r7, r0, lsl #3]
   if ((dma_streams_mask & STM32_DMA1_STREAMS_MASK) != 0U) {
-  202072:	d003      	beq.n	20207c <main+0x90c>
+  201f62:	d003      	beq.n	201f6c <main+0x82c>
     rccEnableDMA1(false);
-  202074:	6b01      	ldr	r1, [r0, #48]	; 0x30
-  202076:	f441 1100 	orr.w	r1, r1, #2097152	; 0x200000
-  20207a:	6301      	str	r1, [r0, #48]	; 0x30
+  201f64:	6b08      	ldr	r0, [r1, #48]	; 0x30
+  201f66:	f440 1000 	orr.w	r0, r0, #2097152	; 0x200000
+  201f6a:	6308      	str	r0, [r1, #48]	; 0x30
   }
   if ((dma_streams_mask & STM32_DMA2_STREAMS_MASK) != 0U) {
-  20207c:	f413 4f7f 	tst.w	r3, #65280	; 0xff00
-  202080:	d004      	beq.n	20208c <main+0x91c>
+  201f6c:	f413 4f7f 	tst.w	r3, #65280	; 0xff00
+  201f70:	d004      	beq.n	201f7c <main+0x83c>
     rccEnableDMA2(false);
-  202082:	491c      	ldr	r1, [pc, #112]	; (2020f4 <main+0x984>)
-  202084:	6b0b      	ldr	r3, [r1, #48]	; 0x30
-  202086:	f443 0380 	orr.w	r3, r3, #4194304	; 0x400000
-  20208a:	630b      	str	r3, [r1, #48]	; 0x30
+  201f72:	492f      	ldr	r1, [pc, #188]	; (202030 <main+0x8f0>)
+  201f74:	6b0b      	ldr	r3, [r1, #48]	; 0x30
+  201f76:	f443 0380 	orr.w	r3, r3, #4194304	; 0x400000
+  201f7a:	630b      	str	r3, [r1, #48]	; 0x30
   }
 
   /* Putting the stream in a safe state.*/
   dmaStreamDisable(dmastp);
-  20208c:	6813      	ldr	r3, [r2, #0]
-  20208e:	9d01      	ldr	r5, [sp, #4]
-  202090:	6819      	ldr	r1, [r3, #0]
-  202092:	f021 011f 	bic.w	r1, r1, #31
-  202096:	6019      	str	r1, [r3, #0]
-  202098:	6819      	ldr	r1, [r3, #0]
-  20209a:	f011 0901 	ands.w	r9, r1, #1
-  20209e:	d1fb      	bne.n	202098 <main+0x928>
-  2020a0:	7a10      	ldrb	r0, [r2, #8]
-  2020a2:	f04f 0c3d 	mov.w	ip, #61	; 0x3d
-  2020a6:	9501      	str	r5, [sp, #4]
+  201f7c:	6813      	ldr	r3, [r2, #0]
+  201f7e:	6819      	ldr	r1, [r3, #0]
+  201f80:	f021 011f 	bic.w	r1, r1, #31
+  201f84:	6019      	str	r1, [r3, #0]
+  201f86:	6819      	ldr	r1, [r3, #0]
+  201f88:	f011 0e01 	ands.w	lr, r1, #1
+  201f8c:	d1fb      	bne.n	201f86 <main+0x846>
+  201f8e:	7a11      	ldrb	r1, [r2, #8]
+  201f90:	263d      	movs	r6, #61	; 0x3d
   dmastp->stream->CR = STM32_DMA_CR_RESET_VALUE;
   dmastp->stream->FCR = STM32_DMA_FCR_RESET_VALUE;
-  2020a8:	2121      	movs	r1, #33	; 0x21
+  201f92:	2021      	movs	r0, #33	; 0x21
+  NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
+  201f94:	4f30      	ldr	r7, [pc, #192]	; (202058 <main+0x918>)
   dmaStreamDisable(dmastp);
-  2020aa:	6855      	ldr	r5, [r2, #4]
-  2020ac:	fa0c fc00 	lsl.w	ip, ip, r0
-  NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
-  2020b0:	f8df e084 	ldr.w	lr, [pc, #132]	; 202138 <main+0x9c8>
+  201f96:	408e      	lsls	r6, r1
+  201f98:	6851      	ldr	r1, [r2, #4]
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
-  2020b4:	2001      	movs	r0, #1
-  2020b6:	f8c5 c000 	str.w	ip, [r5]
+  201f9a:	f04f 0c01 	mov.w	ip, #1
+  201f9e:	600e      	str	r6, [r1, #0]
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
-  2020ba:	f04f 0c60 	mov.w	ip, #96	; 0x60
+  201fa0:	2660      	movs	r6, #96	; 0x60
   dmastp->stream->CR = STM32_DMA_CR_RESET_VALUE;
-  2020be:	f8c3 9000 	str.w	r9, [r3]
+  201fa2:	f8c3 e000 	str.w	lr, [r3]
   dmastp->stream->FCR = STM32_DMA_FCR_RESET_VALUE;
-  2020c2:	6159      	str	r1, [r3, #20]
+  201fa6:	6158      	str	r0, [r3, #20]
 
   /* Enables the associated IRQ vector if a callback is defined.*/
   if (func != NULL) {
     nvicEnableVector(dmastp->vector, priority);
-  2020c4:	7a91      	ldrb	r1, [r2, #10]
+  201fa8:	7a92      	ldrb	r2, [r2, #10]
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
-  2020c6:	ea4f 1951 	mov.w	r9, r1, lsr #5
-  2020ca:	f001 021f 	and.w	r2, r1, #31
+  201faa:	f002 0e1f 	and.w	lr, r2, #31
+  201fae:	0950      	lsrs	r0, r2, #5
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
-  2020ce:	4471      	add	r1, lr
+  201fb0:	443a      	add	r2, r7
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
-  2020d0:	fa00 f202 	lsl.w	r2, r0, r2
-  2020d4:	eb0e 0089 	add.w	r0, lr, r9, lsl #2
+  201fb2:	fa0c f10e 	lsl.w	r1, ip, lr
+  201fb6:	eb07 0e80 	add.w	lr, r7, r0, lsl #2
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
-  2020d8:	f881 c300 	strb.w	ip, [r1, #768]	; 0x300
+  201fba:	f882 6300 	strb.w	r6, [r2, #768]	; 0x300
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
-  2020dc:	f8c0 2180 	str.w	r2, [r0, #384]	; 0x180
+  201fbe:	f8ce 1180 	str.w	r1, [lr, #384]	; 0x180
   NVIC->ISER[n >> 5U] = 1U << (n & 0x1FU);
-  2020e0:	f84e 2029 	str.w	r2, [lr, r9, lsl #2]
-  2020e4:	e02b      	b.n	20213e <main+0x9ce>
-  2020e6:	bf00      	nop
-  2020e8:	2000087c 	.word	0x2000087c
-  2020ec:	080028b0 	.word	0x080028b0
-  2020f0:	0a7c5ac5 	.word	0x0a7c5ac5
-  2020f4:	40023800 	.word	0x40023800
-  2020f8:	40020800 	.word	0x40020800
-  2020fc:	40020000 	.word	0x40020000
-  202100:	1c000301 	.word	0x1c000301
-  202104:	20000af0 	.word	0x20000af0
-  202108:	002002e5 	.word	0x002002e5
-  20210c:	080028d0 	.word	0x080028d0
-  202110:	20000c38 	.word	0x20000c38
-  202114:	20000ac0 	.word	0x20000ac0
-  202118:	20000a40 	.word	0x20000a40
-  20211c:	08002870 	.word	0x08002870
-  202120:	20000acc 	.word	0x20000acc
-  202124:	04000100 	.word	0x04000100
-  202128:	00201711 	.word	0x00201711
-  20212c:	080028c8 	.word	0x080028c8
-  202130:	20000d24 	.word	0x20000d24
-  202134:	00201481 	.word	0x00201481
-  202138:	e000e100 	.word	0xe000e100
-  20213c:	6813      	ldr	r3, [r2, #0]
-      rccEnableADC1(FALSE);
-  20213e:	4a1a      	ldr	r2, [pc, #104]	; (2021a8 <main+0xa38>)
+  201fc2:	f847 1020 	str.w	r1, [r7, r0, lsl #2]
+  201fc6:	e000      	b.n	201fca <main+0x88a>
+  201fc8:	6813      	ldr	r3, [r2, #0]
+      dmaStreamSetPeripheral(adcp->dmastp, &ADC1->DR);
+  201fca:	4a24      	ldr	r2, [pc, #144]	; (20205c <main+0x91c>)
     adcp->adc->CR1 = 0;
-  202140:	2100      	movs	r1, #0
-      dmaStreamSetPeripheral(adcp->dmastp, &ADC1->DR);
-  202142:	481a      	ldr	r0, [pc, #104]	; (2021ac <main+0xa3c>)
-    ADC->CCR = (ADC->CCR & (ADC_CCR_TSVREFE | ADC_CCR_VBATE)) |
-  202144:	f8df e070 	ldr.w	lr, [pc, #112]	; 2021b8 <main+0xa48>
-      dmaStreamSetPeripheral(adcp->dmastp, &ADC1->DR);
-  202148:	6098      	str	r0, [r3, #8]
+  201fcc:	2100      	movs	r1, #0
+      rccEnableADC1(FALSE);
+  201fce:	4f18      	ldr	r7, [pc, #96]	; (202030 <main+0x8f0>)
     adcp->adc->CR2 = ADC_CR2_ADON;
-  20214a:	2001      	movs	r0, #1
+  201fd0:	2601      	movs	r6, #1
+      dmaStreamSetPeripheral(adcp->dmastp, &ADC1->DR);
+  201fd2:	609a      	str	r2, [r3, #8]
       rccEnableADC1(FALSE);
-  20214c:	6c53      	ldr	r3, [r2, #68]	; 0x44
-  20214e:	f443 7380 	orr.w	r3, r3, #256	; 0x100
-  202152:	6453      	str	r3, [r2, #68]	; 0x44
+  201fd4:	6c7b      	ldr	r3, [r7, #68]	; 0x44
     ADC->CCR = (ADC->CCR & (ADC_CCR_TSVREFE | ADC_CCR_VBATE)) |
-  202154:	f8de 3004 	ldr.w	r3, [lr, #4]
+  201fd6:	4822      	ldr	r0, [pc, #136]	; (202060 <main+0x920>)
+      rccEnableADC1(FALSE);
+  201fd8:	f443 7380 	orr.w	r3, r3, #256	; 0x100
     adcp->adc->CR1 = 0;
-  202158:	6ab2      	ldr	r2, [r6, #40]	; 0x28
+  201fdc:	f8db 2028 	ldr.w	r2, [fp, #40]	; 0x28
+      rccEnableADC1(FALSE);
+  201fe0:	647b      	str	r3, [r7, #68]	; 0x44
     ADC->CCR = (ADC->CCR & (ADC_CCR_TSVREFE | ADC_CCR_VBATE)) |
-  20215a:	f403 0340 	and.w	r3, r3, #12582912	; 0xc00000
-  20215e:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
-  202162:	f8ce 3004 	str.w	r3, [lr, #4]
+  201fe2:	6843      	ldr	r3, [r0, #4]
+  201fe4:	f403 0340 	and.w	r3, r3, #12582912	; 0xc00000
+  201fe8:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
+  201fec:	6043      	str	r3, [r0, #4]
     adcp->adc->CR1 = 0;
-  202166:	6051      	str	r1, [r2, #4]
+  201fee:	6051      	str	r1, [r2, #4]
     adcp->adc->CR2 = 0;
-  202168:	6091      	str	r1, [r2, #8]
+  201ff0:	6091      	str	r1, [r2, #8]
     adcp->adc->CR2 = ADC_CR2_ADON;
-  20216a:	6090      	str	r0, [r2, #8]
-  20216c:	e66f      	b.n	201e4e <main+0x6de>
+  201ff2:	6096      	str	r6, [r2, #8]
+  201ff4:	e6ef      	b.n	201dd6 <main+0x696>
       rccEnableTIM4(FALSE);
-  20216e:	4a0e      	ldr	r2, [pc, #56]	; (2021a8 <main+0xa38>)
+  201ff6:	4a0e      	ldr	r2, [pc, #56]	; (202030 <main+0x8f0>)
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
-  202170:	f04f 4e80 	mov.w	lr, #1073741824	; 0x40000000
+  201ff8:	f04f 4780 	mov.w	r7, #1073741824	; 0x40000000
   NVIC->IP[n] = NVIC_PRIORITY_MASK(prio);
-  202174:	490e      	ldr	r1, [pc, #56]	; (2021b0 <main+0xa40>)
-  202176:	f04f 0c70 	mov.w	ip, #112	; 0x70
-  20217a:	6c13      	ldr	r3, [r2, #64]	; 0x40
-  20217c:	f043 0304 	orr.w	r3, r3, #4
-  202180:	6413      	str	r3, [r2, #64]	; 0x40
+  201ffc:	4916      	ldr	r1, [pc, #88]	; (202058 <main+0x918>)
+  201ffe:	f04f 0e70 	mov.w	lr, #112	; 0x70
+  202002:	6c13      	ldr	r3, [r2, #64]	; 0x40
+  202004:	f043 0304 	orr.w	r3, r3, #4
+  202008:	6413      	str	r3, [r2, #64]	; 0x40
       gptp->clock = STM32_TIMCLK1;
-  202182:	f240 4337 	movw	r3, #1079	; 0x437
+  20200a:	f240 4337 	movw	r3, #1079	; 0x437
       rccResetTIM4();
-  202186:	6a10      	ldr	r0, [r2, #32]
-  202188:	f040 0004 	orr.w	r0, r0, #4
-  20218c:	6210      	str	r0, [r2, #32]
-  20218e:	f8c2 9020 	str.w	r9, [r2, #32]
+  20200e:	6a10      	ldr	r0, [r2, #32]
+  202010:	f040 0004 	orr.w	r0, r0, #4
+  202014:	6210      	str	r0, [r2, #32]
+  202016:	6216      	str	r6, [r2, #32]
       gptp->clock = STM32_TIMCLK1;
-  202192:	4a08      	ldr	r2, [pc, #32]	; (2021b4 <main+0xa44>)
-  202194:	f881 c31e 	strb.w	ip, [r1, #798]	; 0x31e
+  202018:	4a12      	ldr	r2, [pc, #72]	; (202064 <main+0x924>)
+  20201a:	f881 e31e 	strb.w	lr, [r1, #798]	; 0x31e
   NVIC->ICPR[n >> 5U] = 1U << (n & 0x1FU);
-  202198:	f8c1 e180 	str.w	lr, [r1, #384]	; 0x180
-  20219c:	f8c8 2008 	str.w	r2, [r8, #8]
+  20201e:	f8c1 7180 	str.w	r7, [r1, #384]	; 0x180
+  202022:	60aa      	str	r2, [r5, #8]
   NVIC->ISER[n >> 5U] = 1U << (n & 0x1FU);
-  2021a0:	f8c1 e000 	str.w	lr, [r1]
-  2021a4:	e637      	b.n	201e16 <main+0x6a6>
-  2021a6:	bf00      	nop
-  2021a8:	40023800 	.word	0x40023800
-  2021ac:	4001204c 	.word	0x4001204c
-  2021b0:	e000e100 	.word	0xe000e100
-  2021b4:	066ff300 	.word	0x066ff300
-  2021b8:	40012300 	.word	0x40012300
-  2021bc:	00000000 	.word	0x00000000
+  202024:	600f      	str	r7, [r1, #0]
+  202026:	e6bc      	b.n	201da2 <main+0x662>
+  202028:	08002710 	.word	0x08002710
+  20202c:	0a7c5ac5 	.word	0x0a7c5ac5
+  202030:	40023800 	.word	0x40023800
+  202034:	40020800 	.word	0x40020800
+  202038:	40020000 	.word	0x40020000
+  20203c:	080026d0 	.word	0x080026d0
+  202040:	20000b3c 	.word	0x20000b3c
+  202044:	1c000301 	.word	0x1c000301
+  202048:	08002728 	.word	0x08002728
+  20204c:	20000b60 	.word	0x20000b60
+  202050:	20000b30 	.word	0x20000b30
+  202054:	20000ab0 	.word	0x20000ab0
+  202058:	e000e100 	.word	0xe000e100
+  20205c:	4001204c 	.word	0x4001204c
+  202060:	40012300 	.word	0x40012300
+  202064:	066ff300 	.word	0x066ff300
+  202068:	04000100 	.word	0x04000100
+  20206c:	20000bd8 	.word	0x20000bd8
+  202070:	00201481 	.word	0x00201481
+	...
 
-002021c0 <chSchWakeupS.constprop.42>:
-  thread_t *otp = currp;
-  2021c0:	4b15      	ldr	r3, [pc, #84]	; (202218 <chSchWakeupS.constprop.42+0x58>)
-  if (ntp->prio <= otp->prio) {
-  2021c2:	6881      	ldr	r1, [r0, #8]
-void chSchWakeupS(thread_t *ntp, msg_t msg) {
-  2021c4:	b4f0      	push	{r4, r5, r6, r7}
-  ntp->u.rdymsg = msg;
-  2021c6:	2600      	movs	r6, #0
-  thread_t *otp = currp;
-  2021c8:	699d      	ldr	r5, [r3, #24]
-void chSchWakeupS(thread_t *ntp, msg_t msg) {
-  2021ca:	4604      	mov	r4, r0
-  ntp->u.rdymsg = msg;
-  2021cc:	6246      	str	r6, [r0, #36]	; 0x24
-  if (ntp->prio <= otp->prio) {
-  2021ce:	68a8      	ldr	r0, [r5, #8]
-  2021d0:	4281      	cmp	r1, r0
-  2021d2:	d80c      	bhi.n	2021ee <chSchWakeupS.constprop.42+0x2e>
-  tp->state = CH_STATE_READY;
-  2021d4:	f884 6020 	strb.w	r6, [r4, #32]
-    cp = cp->queue.next;
-  2021d8:	681b      	ldr	r3, [r3, #0]
-  } while (cp->prio >= tp->prio);
-  2021da:	689a      	ldr	r2, [r3, #8]
-  2021dc:	4291      	cmp	r1, r2
-  2021de:	d9fb      	bls.n	2021d8 <chSchWakeupS.constprop.42+0x18>
-  tp->queue.prev             = cp->queue.prev;
-  2021e0:	685a      	ldr	r2, [r3, #4]
-  tp->queue.next             = cp;
-  2021e2:	6023      	str	r3, [r4, #0]
-  tp->queue.prev             = cp->queue.prev;
-  2021e4:	6062      	str	r2, [r4, #4]
-  tp->queue.prev->queue.next = tp;
-  2021e6:	6014      	str	r4, [r2, #0]
-  cp->queue.prev             = tp;
-  2021e8:	605c      	str	r4, [r3, #4]
-}
-  2021ea:	bcf0      	pop	{r4, r5, r6, r7}
-  2021ec:	4770      	bx	lr
-  cp = (thread_t *)&ch.rlist.queue;
-  2021ee:	461a      	mov	r2, r3
-  tp->state = CH_STATE_READY;
-  2021f0:	f885 6020 	strb.w	r6, [r5, #32]
-    cp = cp->queue.next;
-  2021f4:	6812      	ldr	r2, [r2, #0]
-  } while (cp->prio >= tp->prio);
-  2021f6:	6891      	ldr	r1, [r2, #8]
-  2021f8:	4288      	cmp	r0, r1
-  2021fa:	d9fb      	bls.n	2021f4 <chSchWakeupS.constprop.42+0x34>
-  tp->queue.prev             = cp->queue.prev;
-  2021fc:	6856      	ldr	r6, [r2, #4]
-    ntp->state = CH_STATE_CURRENT;
-  2021fe:	2701      	movs	r7, #1
-  tp->queue.next             = cp;
-  202200:	602a      	str	r2, [r5, #0]
-    chSysSwitch(ntp, otp);
-  202202:	4629      	mov	r1, r5
-  tp->queue.prev             = cp->queue.prev;
-  202204:	606e      	str	r6, [r5, #4]
-    chSysSwitch(ntp, otp);
-  202206:	4620      	mov	r0, r4
-  tp->queue.prev->queue.next = tp;
-  202208:	6035      	str	r5, [r6, #0]
-  cp->queue.prev             = tp;
-  20220a:	6055      	str	r5, [r2, #4]
-    ntp->state = CH_STATE_CURRENT;
-  20220c:	f884 7020 	strb.w	r7, [r4, #32]
-    currp = ntp;
-  202210:	619c      	str	r4, [r3, #24]
-}
-  202212:	bcf0      	pop	{r4, r5, r6, r7}
-    chSysSwitch(ntp, otp);
-  202214:	f7fe b85e 	b.w	2002d4 <_port_switch>
-  202218:	20000c98 	.word	0x20000c98
-  20221c:	00000000 	.word	0x00000000
-
-00202220 <chTMStartMeasurementX.constprop.38>:
+00202080 <chTMStartMeasurementX.constprop.38>:
   return DWT->CYCCNT;
-  202220:	4b01      	ldr	r3, [pc, #4]	; (202228 <chTMStartMeasurementX.constprop.38+0x8>)
-  202222:	685b      	ldr	r3, [r3, #4]
+  202080:	4b01      	ldr	r3, [pc, #4]	; (202088 <chTMStartMeasurementX.constprop.38+0x8>)
+  202082:	685b      	ldr	r3, [r3, #4]
   tmp->last = chSysGetRealtimeCounterX();
-  202224:	6083      	str	r3, [r0, #8]
-  202226:	4770      	bx	lr
-  202228:	e0001000 	.word	0xe0001000
-  20222c:	00000000 	.word	0x00000000
+  202084:	6083      	str	r3, [r0, #8]
+  202086:	4770      	bx	lr
+  202088:	e0001000 	.word	0xe0001000
+  20208c:	00000000 	.word	0x00000000
 
-00202230 <chThdDequeueNextI.constprop.35>:
+00202090 <chThdDequeueNextI.constprop.35>:
   return (bool)(tqp->next != (const thread_t *)tqp);
-  202230:	6802      	ldr	r2, [r0, #0]
+  202090:	6802      	ldr	r2, [r0, #0]
  *
  * @iclass
  */
 void chThdDequeueNextI(threads_queue_t *tqp, msg_t msg) {
 
   if (queue_notempty(tqp)) {
-  202232:	4290      	cmp	r0, r2
-  202234:	d00a      	beq.n	20224c <chThdDequeueNextI.constprop.35+0x1c>
-  202236:	4603      	mov	r3, r0
+  202092:	4290      	cmp	r0, r2
+  202094:	d00a      	beq.n	2020ac <chThdDequeueNextI.constprop.35+0x1c>
+  202096:	4603      	mov	r3, r0
   tqp->next             = tp->queue.next;
-  202238:	6811      	ldr	r1, [r2, #0]
+  202098:	6811      	ldr	r1, [r2, #0]
   tp = queue_fifo_remove(tqp);
 
   chDbgAssert(tp->state == CH_STATE_QUEUED, "invalid state");
 
   tp->u.rdymsg = msg;
   (void) chSchReadyI(tp);
-  20223a:	4610      	mov	r0, r2
+  20209a:	4610      	mov	r0, r2
 void chThdDequeueNextI(threads_queue_t *tqp, msg_t msg) {
-  20223c:	b410      	push	{r4}
+  20209c:	b410      	push	{r4}
   tp->u.rdymsg = msg;
-  20223e:	2400      	movs	r4, #0
-  202240:	6019      	str	r1, [r3, #0]
+  20209e:	2400      	movs	r4, #0
+  2020a0:	6019      	str	r1, [r3, #0]
   tqp->next->queue.prev = (thread_t *)tqp;
-  202242:	604b      	str	r3, [r1, #4]
-  202244:	6254      	str	r4, [r2, #36]	; 0x24
+  2020a2:	604b      	str	r3, [r1, #4]
+  2020a4:	6254      	str	r4, [r2, #36]	; 0x24
     chThdDoDequeueNextI(tqp, msg);
   }
 }
-  202246:	bc10      	pop	{r4}
+  2020a6:	bc10      	pop	{r4}
   (void) chSchReadyI(tp);
-  202248:	f7ff b8b2 	b.w	2013b0 <chSchReadyI>
-  20224c:	4770      	bx	lr
-  20224e:	bf00      	nop
+  2020a8:	f7ff b982 	b.w	2013b0 <chSchReadyI>
+  2020ac:	4770      	bx	lr
+  2020ae:	bf00      	nop
 
-00202250 <chEvtBroadcastFlagsI.constprop.34>:
+002020b0 <chEvtBroadcastFlagsI.constprop.34>:
  * @param[in] esp       pointer to the @p event_source_t structure
  * @param[in] flags     the flags set to be added to the listener flags mask
  *
  * @iclass
  */
 void chEvtBroadcastFlagsI(event_source_t *esp, eventflags_t flags) {
-  202250:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+  2020b0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
   event_listener_t *elp;
 
   chDbgCheckClassI();
   chDbgCheck(esp != NULL);
 
   elp = esp->next;
-  202252:	4f17      	ldr	r7, [pc, #92]	; (2022b0 <chEvtBroadcastFlagsI.constprop.34+0x60>)
-  202254:	f857 4f04 	ldr.w	r4, [r7, #4]!
+  2020b2:	4f17      	ldr	r7, [pc, #92]	; (202110 <chEvtBroadcastFlagsI.constprop.34+0x60>)
+  2020b4:	f857 4f04 	ldr.w	r4, [r7, #4]!
   /*lint -save -e9087 -e740 [11.3, 1.3] Cast required by list handling.*/
   while (elp != (event_listener_t *)esp) {
-  202258:	42bc      	cmp	r4, r7
-  20225a:	d021      	beq.n	2022a0 <chEvtBroadcastFlagsI.constprop.34+0x50>
-  20225c:	4605      	mov	r5, r0
+  2020b8:	42bc      	cmp	r4, r7
+  2020ba:	d021      	beq.n	202100 <chEvtBroadcastFlagsI.constprop.34+0x50>
+  2020bc:	4605      	mov	r5, r0
   /* Test on the AND/OR conditions wait states.*/
   if (((tp->state == CH_STATE_WTOREVT) &&
        ((tp->epending & tp->u.ewmask) != (eventmask_t)0)) ||
       ((tp->state == CH_STATE_WTANDEVT) &&
        ((tp->epending & tp->u.ewmask) == tp->u.ewmask))) {
     tp->u.rdymsg = MSG_OK;
-  20225e:	2600      	movs	r6, #0
-  202260:	e002      	b.n	202268 <chEvtBroadcastFlagsI.constprop.34+0x18>
+  2020be:	2600      	movs	r6, #0
+  2020c0:	e002      	b.n	2020c8 <chEvtBroadcastFlagsI.constprop.34+0x18>
     elp = elp->next;
-  202262:	6824      	ldr	r4, [r4, #0]
+  2020c2:	6824      	ldr	r4, [r4, #0]
   while (elp != (event_listener_t *)esp) {
-  202264:	42bc      	cmp	r4, r7
-  202266:	d01b      	beq.n	2022a0 <chEvtBroadcastFlagsI.constprop.34+0x50>
+  2020c4:	42bc      	cmp	r4, r7
+  2020c6:	d01b      	beq.n	202100 <chEvtBroadcastFlagsI.constprop.34+0x50>
     elp->flags |= flags;
-  202268:	68e3      	ldr	r3, [r4, #12]
-  20226a:	432b      	orrs	r3, r5
-  20226c:	60e3      	str	r3, [r4, #12]
+  2020c8:	68e3      	ldr	r3, [r4, #12]
+  2020ca:	432b      	orrs	r3, r5
+  2020cc:	60e3      	str	r3, [r4, #12]
     if ((flags == (eventflags_t)0) ||
-  20226e:	b115      	cbz	r5, 202276 <chEvtBroadcastFlagsI.constprop.34+0x26>
+  2020ce:	b115      	cbz	r5, 2020d6 <chEvtBroadcastFlagsI.constprop.34+0x26>
         ((elp->flags & elp->wflags) != (eventflags_t)0)) {
-  202270:	6922      	ldr	r2, [r4, #16]
+  2020d0:	6922      	ldr	r2, [r4, #16]
     if ((flags == (eventflags_t)0) ||
-  202272:	4213      	tst	r3, r2
-  202274:	d0f5      	beq.n	202262 <chEvtBroadcastFlagsI.constprop.34+0x12>
+  2020d2:	4213      	tst	r3, r2
+  2020d4:	d0f5      	beq.n	2020c2 <chEvtBroadcastFlagsI.constprop.34+0x12>
       chEvtSignalI(elp->listener, elp->events);
-  202276:	6860      	ldr	r0, [r4, #4]
+  2020d6:	6860      	ldr	r0, [r4, #4]
   tp->epending |= events;
-  202278:	68a3      	ldr	r3, [r4, #8]
-  20227a:	6b41      	ldr	r1, [r0, #52]	; 0x34
+  2020d8:	68a3      	ldr	r3, [r4, #8]
+  2020da:	6b41      	ldr	r1, [r0, #52]	; 0x34
   if (((tp->state == CH_STATE_WTOREVT) &&
-  20227c:	f890 2020 	ldrb.w	r2, [r0, #32]
+  2020dc:	f890 2020 	ldrb.w	r2, [r0, #32]
   tp->epending |= events;
-  202280:	430b      	orrs	r3, r1
+  2020e0:	430b      	orrs	r3, r1
   if (((tp->state == CH_STATE_WTOREVT) &&
-  202282:	2a0a      	cmp	r2, #10
+  2020e2:	2a0a      	cmp	r2, #10
   tp->epending |= events;
-  202284:	6343      	str	r3, [r0, #52]	; 0x34
+  2020e4:	6343      	str	r3, [r0, #52]	; 0x34
   if (((tp->state == CH_STATE_WTOREVT) &&
-  202286:	d00c      	beq.n	2022a2 <chEvtBroadcastFlagsI.constprop.34+0x52>
+  2020e6:	d00c      	beq.n	202102 <chEvtBroadcastFlagsI.constprop.34+0x52>
        ((tp->epending & tp->u.ewmask) != (eventmask_t)0)) ||
-  202288:	2a0b      	cmp	r2, #11
-  20228a:	d1ea      	bne.n	202262 <chEvtBroadcastFlagsI.constprop.34+0x12>
+  2020e8:	2a0b      	cmp	r2, #11
+  2020ea:	d1ea      	bne.n	2020c2 <chEvtBroadcastFlagsI.constprop.34+0x12>
        ((tp->epending & tp->u.ewmask) == tp->u.ewmask))) {
-  20228c:	6a42      	ldr	r2, [r0, #36]	; 0x24
+  2020ec:	6a42      	ldr	r2, [r0, #36]	; 0x24
       ((tp->state == CH_STATE_WTANDEVT) &&
-  20228e:	ea32 0303 	bics.w	r3, r2, r3
-  202292:	d1e6      	bne.n	202262 <chEvtBroadcastFlagsI.constprop.34+0x12>
+  2020ee:	ea32 0303 	bics.w	r3, r2, r3
+  2020f2:	d1e6      	bne.n	2020c2 <chEvtBroadcastFlagsI.constprop.34+0x12>
     tp->u.rdymsg = MSG_OK;
-  202294:	6246      	str	r6, [r0, #36]	; 0x24
+  2020f4:	6246      	str	r6, [r0, #36]	; 0x24
     (void) chSchReadyI(tp);
-  202296:	f7ff f88b 	bl	2013b0 <chSchReadyI>
+  2020f6:	f7ff f95b 	bl	2013b0 <chSchReadyI>
     elp = elp->next;
-  20229a:	6824      	ldr	r4, [r4, #0]
+  2020fa:	6824      	ldr	r4, [r4, #0]
   while (elp != (event_listener_t *)esp) {
-  20229c:	42bc      	cmp	r4, r7
-  20229e:	d1e3      	bne.n	202268 <chEvtBroadcastFlagsI.constprop.34+0x18>
-  2022a0:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+  2020fc:	42bc      	cmp	r4, r7
+  2020fe:	d1e3      	bne.n	2020c8 <chEvtBroadcastFlagsI.constprop.34+0x18>
+  202100:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
        ((tp->epending & tp->u.ewmask) != (eventmask_t)0)) ||
-  2022a2:	6a42      	ldr	r2, [r0, #36]	; 0x24
+  202102:	6a42      	ldr	r2, [r0, #36]	; 0x24
   if (((tp->state == CH_STATE_WTOREVT) &&
-  2022a4:	4213      	tst	r3, r2
-  2022a6:	d0dc      	beq.n	202262 <chEvtBroadcastFlagsI.constprop.34+0x12>
+  202104:	4213      	tst	r3, r2
+  202106:	d0dc      	beq.n	2020c2 <chEvtBroadcastFlagsI.constprop.34+0x12>
     tp->u.rdymsg = MSG_OK;
-  2022a8:	6246      	str	r6, [r0, #36]	; 0x24
+  202108:	6246      	str	r6, [r0, #36]	; 0x24
     (void) chSchReadyI(tp);
-  2022aa:	f7ff f881 	bl	2013b0 <chSchReadyI>
-  2022ae:	e7f4      	b.n	20229a <chEvtBroadcastFlagsI.constprop.34+0x4a>
-  2022b0:	20000c38 	.word	0x20000c38
+  20210a:	f7ff f951 	bl	2013b0 <chSchReadyI>
+  20210e:	e7f4      	b.n	2020fa <chEvtBroadcastFlagsI.constprop.34+0x4a>
+  202110:	20000b60 	.word	0x20000b60
 	...
 
-002022c0 <chMBPostI.constprop.31>:
+00202120 <chMBPostI.constprop.31>:
 msg_t chMBPostI(mailbox_t *mbp, msg_t msg) {
-  2022c0:	b538      	push	{r3, r4, r5, lr}
+  202120:	b538      	push	{r3, r4, r5, lr}
   if (mbp->reset) {
-  2022c2:	4b10      	ldr	r3, [pc, #64]	; (202304 <chMBPostI.constprop.31+0x44>)
-  2022c4:	7d1a      	ldrb	r2, [r3, #20]
-  2022c6:	b9ba      	cbnz	r2, 2022f8 <chMBPostI.constprop.31+0x38>
-  2022c8:	681d      	ldr	r5, [r3, #0]
-  2022ca:	6859      	ldr	r1, [r3, #4]
+  202122:	4b10      	ldr	r3, [pc, #64]	; (202164 <chMBPostI.constprop.31+0x44>)
+  202124:	7d1a      	ldrb	r2, [r3, #20]
+  202126:	b9ba      	cbnz	r2, 202158 <chMBPostI.constprop.31+0x38>
+  202128:	681d      	ldr	r5, [r3, #0]
+  20212a:	6859      	ldr	r1, [r3, #4]
  */
 static inline cnt_t chMBGetFreeCountI(const mailbox_t *mbp) {
 
   chDbgCheckClassI();
 
   return chMBGetSizeI(mbp) - chMBGetUsedCountI(mbp);
-  2022cc:	691a      	ldr	r2, [r3, #16]
+  20212c:	691a      	ldr	r2, [r3, #16]
   return (cnt_t)(mbp->top - mbp->buffer);
-  2022ce:	1b4c      	subs	r4, r1, r5
+  20212e:	1b4c      	subs	r4, r1, r5
   return chMBGetSizeI(mbp) - chMBGetUsedCountI(mbp);
-  2022d0:	ebc2 02a4 	rsb	r2, r2, r4, asr #2
+  202130:	ebc2 02a4 	rsb	r2, r2, r4, asr #2
   if (chMBGetFreeCountI(mbp) > (cnt_t)0) {
-  2022d4:	2a00      	cmp	r2, #0
-  2022d6:	dd12      	ble.n	2022fe <chMBPostI.constprop.31+0x3e>
+  202134:	2a00      	cmp	r2, #0
+  202136:	dd12      	ble.n	20215e <chMBPostI.constprop.31+0x3e>
     *mbp->wrptr++ = msg;
-  2022d8:	689c      	ldr	r4, [r3, #8]
-  2022da:	1d22      	adds	r2, r4, #4
-  2022dc:	609a      	str	r2, [r3, #8]
+  202138:	689c      	ldr	r4, [r3, #8]
+  20213a:	1d22      	adds	r2, r4, #4
+  20213c:	609a      	str	r2, [r3, #8]
     if (mbp->wrptr >= mbp->top) {
-  2022de:	4291      	cmp	r1, r2
+  20213e:	4291      	cmp	r1, r2
     *mbp->wrptr++ = msg;
-  2022e0:	6020      	str	r0, [r4, #0]
+  202140:	6020      	str	r0, [r4, #0]
     mbp->cnt++;
-  2022e2:	691a      	ldr	r2, [r3, #16]
+  202142:	691a      	ldr	r2, [r3, #16]
     chThdDequeueNextI(&mbp->qr, MSG_OK);
-  2022e4:	4808      	ldr	r0, [pc, #32]	; (202308 <chMBPostI.constprop.31+0x48>)
+  202144:	4808      	ldr	r0, [pc, #32]	; (202168 <chMBPostI.constprop.31+0x48>)
     mbp->cnt++;
-  2022e6:	f102 0201 	add.w	r2, r2, #1
+  202146:	f102 0201 	add.w	r2, r2, #1
       mbp->wrptr = mbp->buffer;
-  2022ea:	bf98      	it	ls
-  2022ec:	609d      	strls	r5, [r3, #8]
+  20214a:	bf98      	it	ls
+  20214c:	609d      	strls	r5, [r3, #8]
     mbp->cnt++;
-  2022ee:	611a      	str	r2, [r3, #16]
+  20214e:	611a      	str	r2, [r3, #16]
     chThdDequeueNextI(&mbp->qr, MSG_OK);
-  2022f0:	f7ff ff9e 	bl	202230 <chThdDequeueNextI.constprop.35>
+  202150:	f7ff ff9e 	bl	202090 <chThdDequeueNextI.constprop.35>
     return MSG_OK;
-  2022f4:	2000      	movs	r0, #0
-  2022f6:	bd38      	pop	{r3, r4, r5, pc}
+  202154:	2000      	movs	r0, #0
+  202156:	bd38      	pop	{r3, r4, r5, pc}
     return MSG_RESET;
-  2022f8:	f06f 0001 	mvn.w	r0, #1
-  2022fc:	bd38      	pop	{r3, r4, r5, pc}
+  202158:	f06f 0001 	mvn.w	r0, #1
+  20215c:	bd38      	pop	{r3, r4, r5, pc}
   return MSG_TIMEOUT;
-  2022fe:	f04f 30ff 	mov.w	r0, #4294967295
+  20215e:	f04f 30ff 	mov.w	r0, #4294967295
 }
-  202302:	bd38      	pop	{r3, r4, r5, pc}
-  202304:	20000d0c 	.word	0x20000d0c
-  202308:	20000d2c 	.word	0x20000d2c
-  20230c:	00000000 	.word	0x00000000
+  202162:	bd38      	pop	{r3, r4, r5, pc}
+  202164:	20000bc0 	.word	0x20000bc0
+  202168:	20000be0 	.word	0x20000be0
+  20216c:	00000000 	.word	0x00000000
 
-00202310 <chprintf.constprop.0>:
+00202170 <chprintf.constprop.0>:
  * @param[in] chp       pointer to a @p BaseSequentialStream implementing object
  * @param[in] fmt       formatting string
  *
  * @api
  */
 int chprintf(BaseSequentialStream *chp, const char *fmt, ...) {
-  202310:	b40e      	push	{r1, r2, r3}
-  202312:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
-  202316:	b086      	sub	sp, #24
+  202170:	b40e      	push	{r1, r2, r3}
+  202172:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  202176:	b086      	sub	sp, #24
   int n = 0;
-  202318:	2300      	movs	r3, #0
+  202178:	2300      	movs	r3, #0
     c = *fmt++;
-  20231a:	f04f 0941 	mov.w	r9, #65	; 0x41
-  20231e:	f8df a280 	ldr.w	sl, [pc, #640]	; 2025a0 <chprintf.constprop.0+0x290>
+  20217a:	f04f 0941 	mov.w	r9, #65	; 0x41
+  20217e:	f8df a280 	ldr.w	sl, [pc, #640]	; 202400 <chprintf.constprop.0+0x290>
   va_list ap;
   int formatted_bytes;
 
   va_start(ap, fmt);
-  202322:	ad10      	add	r5, sp, #64	; 0x40
+  202182:	ad10      	add	r5, sp, #64	; 0x40
     c = *fmt++;
-  202324:	4c9d      	ldr	r4, [pc, #628]	; (20259c <chprintf.constprop.0+0x28c>)
+  202184:	4c9d      	ldr	r4, [pc, #628]	; (2023fc <chprintf.constprop.0+0x28c>)
   int n = 0;
-  202326:	9300      	str	r3, [sp, #0]
+  202186:	9300      	str	r3, [sp, #0]
   va_start(ap, fmt);
-  202328:	9502      	str	r5, [sp, #8]
-  20232a:	f8cd 9004 	str.w	r9, [sp, #4]
+  202188:	9502      	str	r5, [sp, #8]
+  20218a:	f8cd 9004 	str.w	r9, [sp, #4]
       n++;
-  20232e:	9a00      	ldr	r2, [sp, #0]
-  202330:	4626      	mov	r6, r4
+  20218e:	9a00      	ldr	r2, [sp, #0]
+  202190:	4626      	mov	r6, r4
       streamPut(chp, (uint8_t)c);
-  202332:	f8da 3000 	ldr.w	r3, [sl]
+  202192:	f8da 3000 	ldr.w	r3, [sl]
       n++;
-  202336:	3201      	adds	r2, #1
+  202196:	3201      	adds	r2, #1
       streamPut(chp, (uint8_t)c);
-  202338:	9901      	ldr	r1, [sp, #4]
-  20233a:	689b      	ldr	r3, [r3, #8]
-  20233c:	4898      	ldr	r0, [pc, #608]	; (2025a0 <chprintf.constprop.0+0x290>)
+  202198:	9901      	ldr	r1, [sp, #4]
+  20219a:	689b      	ldr	r3, [r3, #8]
+  20219c:	4898      	ldr	r0, [pc, #608]	; (202400 <chprintf.constprop.0+0x290>)
       n++;
-  20233e:	9200      	str	r2, [sp, #0]
+  20219e:	9200      	str	r2, [sp, #0]
       streamPut(chp, (uint8_t)c);
-  202340:	4798      	blx	r3
-  202342:	7823      	ldrb	r3, [r4, #0]
-  202344:	9301      	str	r3, [sp, #4]
+  2021a0:	4798      	blx	r3
+  2021a2:	7823      	ldrb	r3, [r4, #0]
+  2021a4:	9301      	str	r3, [sp, #4]
     if (c == 0)
-  202346:	9b01      	ldr	r3, [sp, #4]
+  2021a6:	9b01      	ldr	r3, [sp, #4]
     c = *fmt++;
-  202348:	1c74      	adds	r4, r6, #1
+  2021a8:	1c74      	adds	r4, r6, #1
     if (c == 0)
-  20234a:	2b00      	cmp	r3, #0
-  20234c:	f000 8120 	beq.w	202590 <chprintf.constprop.0+0x280>
+  2021aa:	2b00      	cmp	r3, #0
+  2021ac:	f000 8120 	beq.w	2023f0 <chprintf.constprop.0+0x280>
     if (c != '%') {
-  202350:	2b25      	cmp	r3, #37	; 0x25
-  202352:	d1ec      	bne.n	20232e <chprintf.constprop.0+0x1e>
+  2021b0:	2b25      	cmp	r3, #37	; 0x25
+  2021b2:	d1ec      	bne.n	20218e <chprintf.constprop.0+0x1e>
     if (*fmt == '-') {
-  202354:	7871      	ldrb	r1, [r6, #1]
-  202356:	292d      	cmp	r1, #45	; 0x2d
-  202358:	f000 814b 	beq.w	2025f2 <chprintf.constprop.0+0x2e2>
+  2021b4:	7871      	ldrb	r1, [r6, #1]
+  2021b6:	292d      	cmp	r1, #45	; 0x2d
+  2021b8:	f000 814b 	beq.w	202452 <chprintf.constprop.0+0x2e2>
     left_align = FALSE;
-  20235c:	f04f 0c00 	mov.w	ip, #0
+  2021bc:	f04f 0c00 	mov.w	ip, #0
     if (*fmt == '0') {
-  202360:	2930      	cmp	r1, #48	; 0x30
-  202362:	f000 8141 	beq.w	2025e8 <chprintf.constprop.0+0x2d8>
+  2021c0:	2930      	cmp	r1, #48	; 0x30
+  2021c2:	f000 8141 	beq.w	202448 <chprintf.constprop.0+0x2d8>
     filler = ' ';
-  202366:	f04f 0820 	mov.w	r8, #32
-  20236a:	1c62      	adds	r2, r4, #1
+  2021c6:	f04f 0820 	mov.w	r8, #32
+  2021ca:	1c62      	adds	r2, r4, #1
     width = 0;
-  20236c:	2400      	movs	r4, #0
-  20236e:	e005      	b.n	20237c <chprintf.constprop.0+0x6c>
+  2021cc:	2400      	movs	r4, #0
+  2021ce:	e005      	b.n	2021dc <chprintf.constprop.0+0x6c>
         c = va_arg(ap, int);
-  202370:	782b      	ldrb	r3, [r5, #0]
-  202372:	3504      	adds	r5, #4
-  202374:	f812 1b01 	ldrb.w	r1, [r2], #1
+  2021d0:	782b      	ldrb	r3, [r5, #0]
+  2021d2:	3504      	adds	r5, #4
+  2021d4:	f812 1b01 	ldrb.w	r1, [r2], #1
       width = width * 10 + c;
-  202378:	eb03 0440 	add.w	r4, r3, r0, lsl #1
+  2021d8:	eb03 0440 	add.w	r4, r3, r0, lsl #1
       if (c >= '0' && c <= '9')
-  20237c:	f1a1 0330 	sub.w	r3, r1, #48	; 0x30
+  2021dc:	f1a1 0330 	sub.w	r3, r1, #48	; 0x30
       c = *fmt++;
-  202380:	4616      	mov	r6, r2
+  2021e0:	4616      	mov	r6, r2
       width = width * 10 + c;
-  202382:	eb04 0084 	add.w	r0, r4, r4, lsl #2
+  2021e2:	eb04 0084 	add.w	r0, r4, r4, lsl #2
       if (c >= '0' && c <= '9')
-  202386:	b2db      	uxtb	r3, r3
-  202388:	2b09      	cmp	r3, #9
-  20238a:	d9f3      	bls.n	202374 <chprintf.constprop.0+0x64>
+  2021e6:	b2db      	uxtb	r3, r3
+  2021e8:	2b09      	cmp	r3, #9
+  2021ea:	d9f3      	bls.n	2021d4 <chprintf.constprop.0+0x64>
       else if (c == '*')
-  20238c:	292a      	cmp	r1, #42	; 0x2a
-  20238e:	d0ef      	beq.n	202370 <chprintf.constprop.0+0x60>
+  2021ec:	292a      	cmp	r1, #42	; 0x2a
+  2021ee:	d0ef      	beq.n	2021d0 <chprintf.constprop.0+0x60>
     if (c == '.') {
-  202390:	292e      	cmp	r1, #46	; 0x2e
-  202392:	f04f 0200 	mov.w	r2, #0
-  202396:	d04a      	beq.n	20242e <chprintf.constprop.0+0x11e>
+  2021f0:	292e      	cmp	r1, #46	; 0x2e
+  2021f2:	f04f 0200 	mov.w	r2, #0
+  2021f6:	d04a      	beq.n	20228e <chprintf.constprop.0+0x11e>
     if (c == 'l' || c == 'L') {
-  202398:	f001 03df 	and.w	r3, r1, #223	; 0xdf
-  20239c:	2b4c      	cmp	r3, #76	; 0x4c
-  20239e:	d155      	bne.n	20244c <chprintf.constprop.0+0x13c>
+  2021f8:	f001 03df 	and.w	r3, r1, #223	; 0xdf
+  2021fc:	2b4c      	cmp	r3, #76	; 0x4c
+  2021fe:	d155      	bne.n	2022ac <chprintf.constprop.0+0x13c>
       if (*fmt)
-  2023a0:	7833      	ldrb	r3, [r6, #0]
-  2023a2:	9301      	str	r3, [sp, #4]
-  2023a4:	b11b      	cbz	r3, 2023ae <chprintf.constprop.0+0x9e>
+  202200:	7833      	ldrb	r3, [r6, #0]
+  202202:	9301      	str	r3, [sp, #4]
+  202204:	b11b      	cbz	r3, 20220e <chprintf.constprop.0+0x9e>
         c = *fmt++;
-  2023a6:	4619      	mov	r1, r3
-  2023a8:	3601      	adds	r6, #1
-  2023aa:	7833      	ldrb	r3, [r6, #0]
-  2023ac:	9301      	str	r3, [sp, #4]
+  202206:	4619      	mov	r1, r3
+  202208:	3601      	adds	r6, #1
+  20220a:	7833      	ldrb	r3, [r6, #0]
+  20220c:	9301      	str	r3, [sp, #4]
     switch (c) {
-  2023ae:	f1a1 0344 	sub.w	r3, r1, #68	; 0x44
-  2023b2:	2b34      	cmp	r3, #52	; 0x34
-  2023b4:	f200 810c 	bhi.w	2025d0 <chprintf.constprop.0+0x2c0>
-  2023b8:	e8df f013 	tbh	[pc, r3, lsl #1]
-  2023bc:	010a018f 	.word	0x010a018f
-  2023c0:	010a010a 	.word	0x010a010a
-  2023c4:	018f010a 	.word	0x018f010a
-  2023c8:	010a010a 	.word	0x010a010a
-  2023cc:	010a010a 	.word	0x010a010a
-  2023d0:	014d010a 	.word	0x014d010a
-  2023d4:	010a010a 	.word	0x010a010a
-  2023d8:	010a010a 	.word	0x010a010a
-  2023dc:	0152010a 	.word	0x0152010a
-  2023e0:	010a010a 	.word	0x010a010a
-  2023e4:	010a0187 	.word	0x010a0187
-  2023e8:	010a010a 	.word	0x010a010a
-  2023ec:	010a010a 	.word	0x010a010a
-  2023f0:	010a010a 	.word	0x010a010a
-  2023f4:	010a010a 	.word	0x010a010a
-  2023f8:	00f6010a 	.word	0x00f6010a
-  2023fc:	010a018f 	.word	0x010a018f
-  202400:	010a010a 	.word	0x010a010a
-  202404:	018f010a 	.word	0x018f010a
-  202408:	010a010a 	.word	0x010a010a
-  20240c:	010a010a 	.word	0x010a010a
-  202410:	014d010a 	.word	0x014d010a
-  202414:	010a010a 	.word	0x010a010a
-  202418:	0089010a 	.word	0x0089010a
-  20241c:	0152010a 	.word	0x0152010a
-  202420:	010a010a 	.word	0x010a010a
-  202424:	0187      	.short	0x0187
+  20220e:	f1a1 0344 	sub.w	r3, r1, #68	; 0x44
+  202212:	2b34      	cmp	r3, #52	; 0x34
+  202214:	f200 810c 	bhi.w	202430 <chprintf.constprop.0+0x2c0>
+  202218:	e8df f013 	tbh	[pc, r3, lsl #1]
+  20221c:	010a018f 	.word	0x010a018f
+  202220:	010a010a 	.word	0x010a010a
+  202224:	018f010a 	.word	0x018f010a
+  202228:	010a010a 	.word	0x010a010a
+  20222c:	010a010a 	.word	0x010a010a
+  202230:	014d010a 	.word	0x014d010a
+  202234:	010a010a 	.word	0x010a010a
+  202238:	010a010a 	.word	0x010a010a
+  20223c:	0152010a 	.word	0x0152010a
+  202240:	010a010a 	.word	0x010a010a
+  202244:	010a0187 	.word	0x010a0187
+  202248:	010a010a 	.word	0x010a010a
+  20224c:	010a010a 	.word	0x010a010a
+  202250:	010a010a 	.word	0x010a010a
+  202254:	010a010a 	.word	0x010a010a
+  202258:	00f6010a 	.word	0x00f6010a
+  20225c:	010a018f 	.word	0x010a018f
+  202260:	010a010a 	.word	0x010a010a
+  202264:	018f010a 	.word	0x018f010a
+  202268:	010a010a 	.word	0x010a010a
+  20226c:	010a010a 	.word	0x010a010a
+  202270:	014d010a 	.word	0x014d010a
+  202274:	010a010a 	.word	0x010a010a
+  202278:	0089010a 	.word	0x0089010a
+  20227c:	0152010a 	.word	0x0152010a
+  202280:	010a010a 	.word	0x010a010a
+  202284:	0187      	.short	0x0187
           c = va_arg(ap, int);
-  202426:	782b      	ldrb	r3, [r5, #0]
-  202428:	3504      	adds	r5, #4
+  202286:	782b      	ldrb	r3, [r5, #0]
+  202288:	3504      	adds	r5, #4
         precision += c;
-  20242a:	eb03 0240 	add.w	r2, r3, r0, lsl #1
+  20228a:	eb03 0240 	add.w	r2, r3, r0, lsl #1
         c = *fmt++;
-  20242e:	f816 1b01 	ldrb.w	r1, [r6], #1
+  20228e:	f816 1b01 	ldrb.w	r1, [r6], #1
         precision *= 10;
-  202432:	eb02 0082 	add.w	r0, r2, r2, lsl #2
+  202292:	eb02 0082 	add.w	r0, r2, r2, lsl #2
         if (c >= '0' && c <= '9')
-  202436:	f1a1 0330 	sub.w	r3, r1, #48	; 0x30
-  20243a:	b2db      	uxtb	r3, r3
-  20243c:	2b09      	cmp	r3, #9
-  20243e:	d9f4      	bls.n	20242a <chprintf.constprop.0+0x11a>
+  202296:	f1a1 0330 	sub.w	r3, r1, #48	; 0x30
+  20229a:	b2db      	uxtb	r3, r3
+  20229c:	2b09      	cmp	r3, #9
+  20229e:	d9f4      	bls.n	20228a <chprintf.constprop.0+0x11a>
         else if (c == '*')
-  202440:	292a      	cmp	r1, #42	; 0x2a
-  202442:	d0f0      	beq.n	202426 <chprintf.constprop.0+0x116>
+  2022a0:	292a      	cmp	r1, #42	; 0x2a
+  2022a2:	d0f0      	beq.n	202286 <chprintf.constprop.0+0x116>
     if (c == 'l' || c == 'L') {
-  202444:	f001 03df 	and.w	r3, r1, #223	; 0xdf
-  202448:	2b4c      	cmp	r3, #76	; 0x4c
-  20244a:	d0a9      	beq.n	2023a0 <chprintf.constprop.0+0x90>
+  2022a4:	f001 03df 	and.w	r3, r1, #223	; 0xdf
+  2022a8:	2b4c      	cmp	r3, #76	; 0x4c
+  2022aa:	d0a9      	beq.n	202200 <chprintf.constprop.0+0x90>
       is_long = (c >= 'A') && (c <= 'Z');
-  20244c:	f1a1 0341 	sub.w	r3, r1, #65	; 0x41
+  2022ac:	f1a1 0341 	sub.w	r3, r1, #65	; 0x41
     switch (c) {
-  202450:	f1a1 0044 	sub.w	r0, r1, #68	; 0x44
+  2022b0:	f1a1 0044 	sub.w	r0, r1, #68	; 0x44
       is_long = (c >= 'A') && (c <= 'Z');
-  202454:	b2db      	uxtb	r3, r3
+  2022b4:	b2db      	uxtb	r3, r3
     switch (c) {
-  202456:	2834      	cmp	r0, #52	; 0x34
-  202458:	f200 80b8 	bhi.w	2025cc <chprintf.constprop.0+0x2bc>
-  20245c:	e8df f010 	tbh	[pc, r0, lsl #1]
-  202460:	00b6010a 	.word	0x00b6010a
-  202464:	00b600b6 	.word	0x00b600b6
-  202468:	010a00b6 	.word	0x010a00b6
-  20246c:	00b600b6 	.word	0x00b600b6
-  202470:	00b600b6 	.word	0x00b600b6
-  202474:	010300b6 	.word	0x010300b6
-  202478:	00b600b6 	.word	0x00b600b6
-  20247c:	00b600b6 	.word	0x00b600b6
-  202480:	00ce00b6 	.word	0x00ce00b6
-  202484:	00b600b6 	.word	0x00b600b6
-  202488:	00b60138 	.word	0x00b60138
-  20248c:	00b600b6 	.word	0x00b600b6
-  202490:	00b600b6 	.word	0x00b600b6
-  202494:	00b600b6 	.word	0x00b600b6
-  202498:	00b600b6 	.word	0x00b600b6
-  20249c:	00a200b6 	.word	0x00a200b6
-  2024a0:	00b6010a 	.word	0x00b6010a
-  2024a4:	00b600b6 	.word	0x00b600b6
-  2024a8:	010a00b6 	.word	0x010a00b6
-  2024ac:	00b600b6 	.word	0x00b600b6
-  2024b0:	00b600b6 	.word	0x00b600b6
-  2024b4:	010300b6 	.word	0x010300b6
-  2024b8:	00b600b6 	.word	0x00b600b6
-  2024bc:	003500b6 	.word	0x003500b6
-  2024c0:	00ce00b6 	.word	0x00ce00b6
-  2024c4:	00b600b6 	.word	0x00b600b6
-  2024c8:	0138      	.short	0x0138
-  2024ca:	7833      	ldrb	r3, [r6, #0]
-  2024cc:	9301      	str	r3, [sp, #4]
+  2022b6:	2834      	cmp	r0, #52	; 0x34
+  2022b8:	f200 80b8 	bhi.w	20242c <chprintf.constprop.0+0x2bc>
+  2022bc:	e8df f010 	tbh	[pc, r0, lsl #1]
+  2022c0:	00b6010a 	.word	0x00b6010a
+  2022c4:	00b600b6 	.word	0x00b600b6
+  2022c8:	010a00b6 	.word	0x010a00b6
+  2022cc:	00b600b6 	.word	0x00b600b6
+  2022d0:	00b600b6 	.word	0x00b600b6
+  2022d4:	010300b6 	.word	0x010300b6
+  2022d8:	00b600b6 	.word	0x00b600b6
+  2022dc:	00b600b6 	.word	0x00b600b6
+  2022e0:	00ce00b6 	.word	0x00ce00b6
+  2022e4:	00b600b6 	.word	0x00b600b6
+  2022e8:	00b60138 	.word	0x00b60138
+  2022ec:	00b600b6 	.word	0x00b600b6
+  2022f0:	00b600b6 	.word	0x00b600b6
+  2022f4:	00b600b6 	.word	0x00b600b6
+  2022f8:	00b600b6 	.word	0x00b600b6
+  2022fc:	00a200b6 	.word	0x00a200b6
+  202300:	00b6010a 	.word	0x00b6010a
+  202304:	00b600b6 	.word	0x00b600b6
+  202308:	010a00b6 	.word	0x010a00b6
+  20230c:	00b600b6 	.word	0x00b600b6
+  202310:	00b600b6 	.word	0x00b600b6
+  202314:	010300b6 	.word	0x010300b6
+  202318:	00b600b6 	.word	0x00b600b6
+  20231c:	003500b6 	.word	0x003500b6
+  202320:	00ce00b6 	.word	0x00ce00b6
+  202324:	00b600b6 	.word	0x00b600b6
+  202328:	0138      	.short	0x0138
+  20232a:	7833      	ldrb	r3, [r6, #0]
+  20232c:	9301      	str	r3, [sp, #4]
       if ((s = va_arg(ap, char *)) == 0)
-  2024ce:	682f      	ldr	r7, [r5, #0]
-  2024d0:	3504      	adds	r5, #4
-  2024d2:	2f00      	cmp	r7, #0
-  2024d4:	f000 8111 	beq.w	2026fa <chprintf.constprop.0+0x3ea>
+  20232e:	682f      	ldr	r7, [r5, #0]
+  202330:	3504      	adds	r5, #4
+  202332:	2f00      	cmp	r7, #0
+  202334:	f000 8111 	beq.w	20255a <chprintf.constprop.0+0x3ea>
       for (p = s; *p && (--precision >= 0); p++)
-  2024d8:	783b      	ldrb	r3, [r7, #0]
+  202338:	783b      	ldrb	r3, [r7, #0]
       if (precision == 0)
-  2024da:	2a00      	cmp	r2, #0
-  2024dc:	f040 810a 	bne.w	2026f4 <chprintf.constprop.0+0x3e4>
+  20233a:	2a00      	cmp	r2, #0
+  20233c:	f040 810a 	bne.w	202554 <chprintf.constprop.0+0x3e4>
       for (p = s; *p && (--precision >= 0); p++)
-  2024e0:	2b00      	cmp	r3, #0
-  2024e2:	f000 811c 	beq.w	20271e <chprintf.constprop.0+0x40e>
-  2024e6:	f647 73fe 	movw	r3, #32766	; 0x7ffe
-  2024ea:	463a      	mov	r2, r7
-  2024ec:	e001      	b.n	2024f2 <chprintf.constprop.0+0x1e2>
-  2024ee:	3b01      	subs	r3, #1
-  2024f0:	d403      	bmi.n	2024fa <chprintf.constprop.0+0x1ea>
-  2024f2:	f812 1f01 	ldrb.w	r1, [r2, #1]!
-  2024f6:	2900      	cmp	r1, #0
-  2024f8:	d1f9      	bne.n	2024ee <chprintf.constprop.0+0x1de>
-  2024fa:	1bd2      	subs	r2, r2, r7
+  202340:	2b00      	cmp	r3, #0
+  202342:	f000 811c 	beq.w	20257e <chprintf.constprop.0+0x40e>
+  202346:	f647 73fe 	movw	r3, #32766	; 0x7ffe
+  20234a:	463a      	mov	r2, r7
+  20234c:	e001      	b.n	202352 <chprintf.constprop.0+0x1e2>
+  20234e:	3b01      	subs	r3, #1
+  202350:	d403      	bmi.n	20235a <chprintf.constprop.0+0x1ea>
+  202352:	f812 1f01 	ldrb.w	r1, [r2, #1]!
+  202356:	2900      	cmp	r1, #0
+  202358:	d1f9      	bne.n	20234e <chprintf.constprop.0+0x1de>
+  20235a:	1bd2      	subs	r2, r2, r7
       filler = ' ';
-  2024fc:	f04f 0820 	mov.w	r8, #32
+  20235c:	f04f 0820 	mov.w	r8, #32
     if ((width -= i) < 0)
-  202500:	1aa4      	subs	r4, r4, r2
-  202502:	f102 39ff 	add.w	r9, r2, #4294967295
-  202506:	d45b      	bmi.n	2025c0 <chprintf.constprop.0+0x2b0>
+  202360:	1aa4      	subs	r4, r4, r2
+  202362:	f102 39ff 	add.w	r9, r2, #4294967295
+  202366:	d45b      	bmi.n	202420 <chprintf.constprop.0+0x2b0>
     if (left_align == FALSE)
-  202508:	f1bc 0f00 	cmp.w	ip, #0
-  20250c:	d168      	bne.n	2025e0 <chprintf.constprop.0+0x2d0>
-  20250e:	f1c4 0b00 	rsb	fp, r4, #0
+  202368:	f1bc 0f00 	cmp.w	ip, #0
+  20236c:	d168      	bne.n	202440 <chprintf.constprop.0+0x2d0>
+  20236e:	f1c4 0b00 	rsb	fp, r4, #0
     if (width < 0) {
-  202512:	2c00      	cmp	r4, #0
-  202514:	d063      	beq.n	2025de <chprintf.constprop.0+0x2ce>
+  202372:	2c00      	cmp	r4, #0
+  202374:	d063      	beq.n	20243e <chprintf.constprop.0+0x2ce>
       if (*s == '-' && filler == '0') {
-  202516:	783b      	ldrb	r3, [r7, #0]
-  202518:	2b2d      	cmp	r3, #45	; 0x2d
-  20251a:	d103      	bne.n	202524 <chprintf.constprop.0+0x214>
-  20251c:	f1b8 0f30 	cmp.w	r8, #48	; 0x30
-  202520:	f000 80f0 	beq.w	202704 <chprintf.constprop.0+0x3f4>
+  202376:	783b      	ldrb	r3, [r7, #0]
+  202378:	2b2d      	cmp	r3, #45	; 0x2d
+  20237a:	d103      	bne.n	202384 <chprintf.constprop.0+0x214>
+  20237c:	f1b8 0f30 	cmp.w	r8, #48	; 0x30
+  202380:	f000 80f0 	beq.w	202564 <chprintf.constprop.0+0x3f4>
         streamPut(chp, (uint8_t)filler);
-  202524:	f8da 3000 	ldr.w	r3, [sl]
-  202528:	4641      	mov	r1, r8
-  20252a:	4650      	mov	r0, sl
-  20252c:	689b      	ldr	r3, [r3, #8]
-  20252e:	4798      	blx	r3
+  202384:	f8da 3000 	ldr.w	r3, [sl]
+  202388:	4641      	mov	r1, r8
+  20238a:	4650      	mov	r0, sl
+  20238c:	689b      	ldr	r3, [r3, #8]
+  20238e:	4798      	blx	r3
       } while (++width != 0);
-  202530:	f11b 0b01 	adds.w	fp, fp, #1
-  202534:	d1f6      	bne.n	202524 <chprintf.constprop.0+0x214>
-  202536:	9b00      	ldr	r3, [sp, #0]
+  202390:	f11b 0b01 	adds.w	fp, fp, #1
+  202394:	d1f6      	bne.n	202384 <chprintf.constprop.0+0x214>
+  202396:	9b00      	ldr	r3, [sp, #0]
     while (--i >= 0) {
-  202538:	f1b9 0f00 	cmp.w	r9, #0
-  20253c:	4423      	add	r3, r4
-  20253e:	9300      	str	r3, [sp, #0]
-  202540:	f6ff af01 	blt.w	202346 <chprintf.constprop.0+0x36>
-  202544:	465c      	mov	r4, fp
-  202546:	46cb      	mov	fp, r9
+  202398:	f1b9 0f00 	cmp.w	r9, #0
+  20239c:	4423      	add	r3, r4
+  20239e:	9300      	str	r3, [sp, #0]
+  2023a0:	f6ff af01 	blt.w	2021a6 <chprintf.constprop.0+0x36>
+  2023a4:	465c      	mov	r4, fp
+  2023a6:	46cb      	mov	fp, r9
       streamPut(chp, (uint8_t)*s++);
-  202548:	f8da 3000 	ldr.w	r3, [sl]
+  2023a8:	f8da 3000 	ldr.w	r3, [sl]
     while (--i >= 0) {
-  20254c:	f10b 3bff 	add.w	fp, fp, #4294967295
+  2023ac:	f10b 3bff 	add.w	fp, fp, #4294967295
       streamPut(chp, (uint8_t)*s++);
-  202550:	f817 1b01 	ldrb.w	r1, [r7], #1
-  202554:	4650      	mov	r0, sl
-  202556:	689b      	ldr	r3, [r3, #8]
-  202558:	4798      	blx	r3
+  2023b0:	f817 1b01 	ldrb.w	r1, [r7], #1
+  2023b4:	4650      	mov	r0, sl
+  2023b6:	689b      	ldr	r3, [r3, #8]
+  2023b8:	4798      	blx	r3
     while (--i >= 0) {
-  20255a:	f1bb 3fff 	cmp.w	fp, #4294967295
-  20255e:	d1f3      	bne.n	202548 <chprintf.constprop.0+0x238>
-  202560:	9b00      	ldr	r3, [sp, #0]
-  202562:	3301      	adds	r3, #1
-  202564:	444b      	add	r3, r9
-  202566:	9300      	str	r3, [sp, #0]
+  2023ba:	f1bb 3fff 	cmp.w	fp, #4294967295
+  2023be:	d1f3      	bne.n	2023a8 <chprintf.constprop.0+0x238>
+  2023c0:	9b00      	ldr	r3, [sp, #0]
+  2023c2:	3301      	adds	r3, #1
+  2023c4:	444b      	add	r3, r9
+  2023c6:	9300      	str	r3, [sp, #0]
     while (width) {
-  202568:	2c00      	cmp	r4, #0
-  20256a:	f43f aeec 	beq.w	202346 <chprintf.constprop.0+0x36>
-  20256e:	4627      	mov	r7, r4
+  2023c8:	2c00      	cmp	r4, #0
+  2023ca:	f43f aeec 	beq.w	2021a6 <chprintf.constprop.0+0x36>
+  2023ce:	4627      	mov	r7, r4
       streamPut(chp, (uint8_t)filler);
-  202570:	f8da 3000 	ldr.w	r3, [sl]
-  202574:	4641      	mov	r1, r8
-  202576:	4650      	mov	r0, sl
-  202578:	689b      	ldr	r3, [r3, #8]
-  20257a:	4798      	blx	r3
+  2023d0:	f8da 3000 	ldr.w	r3, [sl]
+  2023d4:	4641      	mov	r1, r8
+  2023d6:	4650      	mov	r0, sl
+  2023d8:	689b      	ldr	r3, [r3, #8]
+  2023da:	4798      	blx	r3
     while (width) {
-  20257c:	3f01      	subs	r7, #1
-  20257e:	d1f7      	bne.n	202570 <chprintf.constprop.0+0x260>
-  202580:	9b00      	ldr	r3, [sp, #0]
-  202582:	4423      	add	r3, r4
+  2023dc:	3f01      	subs	r7, #1
+  2023de:	d1f7      	bne.n	2023d0 <chprintf.constprop.0+0x260>
+  2023e0:	9b00      	ldr	r3, [sp, #0]
+  2023e2:	4423      	add	r3, r4
     c = *fmt++;
-  202584:	1c74      	adds	r4, r6, #1
-  202586:	9300      	str	r3, [sp, #0]
+  2023e4:	1c74      	adds	r4, r6, #1
+  2023e6:	9300      	str	r3, [sp, #0]
     if (c == 0)
-  202588:	9b01      	ldr	r3, [sp, #4]
-  20258a:	2b00      	cmp	r3, #0
-  20258c:	f47f aee0 	bne.w	202350 <chprintf.constprop.0+0x40>
+  2023e8:	9b01      	ldr	r3, [sp, #4]
+  2023ea:	2b00      	cmp	r3, #0
+  2023ec:	f47f aee0 	bne.w	2021b0 <chprintf.constprop.0+0x40>
   formatted_bytes = chvprintf(chp, fmt, ap);
   va_end(ap);
 
   return formatted_bytes;
 }
-  202590:	9800      	ldr	r0, [sp, #0]
-  202592:	b006      	add	sp, #24
-  202594:	e8bd 4ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
-  202598:	b003      	add	sp, #12
-  20259a:	4770      	bx	lr
-  20259c:	080028d1 	.word	0x080028d1
-  2025a0:	20000c38 	.word	0x20000c38
-  2025a4:	7833      	ldrb	r3, [r6, #0]
-  2025a6:	9301      	str	r3, [sp, #4]
+  2023f0:	9800      	ldr	r0, [sp, #0]
+  2023f2:	b006      	add	sp, #24
+  2023f4:	e8bd 4ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  2023f8:	b003      	add	sp, #12
+  2023fa:	4770      	bx	lr
+  2023fc:	08002729 	.word	0x08002729
+  202400:	20000b60 	.word	0x20000b60
+  202404:	7833      	ldrb	r3, [r6, #0]
+  202406:	9301      	str	r3, [sp, #4]
       *p++ = va_arg(ap, int);
-  2025a8:	682b      	ldr	r3, [r5, #0]
-  2025aa:	af06      	add	r7, sp, #24
-  2025ac:	3504      	adds	r5, #4
-  2025ae:	f04f 0900 	mov.w	r9, #0
-  2025b2:	2201      	movs	r2, #1
+  202408:	682b      	ldr	r3, [r5, #0]
+  20240a:	af06      	add	r7, sp, #24
+  20240c:	3504      	adds	r5, #4
+  20240e:	f04f 0900 	mov.w	r9, #0
+  202412:	2201      	movs	r2, #1
       filler = ' ';
-  2025b4:	f04f 0820 	mov.w	r8, #32
+  202414:	f04f 0820 	mov.w	r8, #32
       *p++ = va_arg(ap, int);
-  2025b8:	f807 3d0c 	strb.w	r3, [r7, #-12]!
+  202418:	f807 3d0c 	strb.w	r3, [r7, #-12]!
     if ((width -= i) < 0)
-  2025bc:	1aa4      	subs	r4, r4, r2
-  2025be:	d5a3      	bpl.n	202508 <chprintf.constprop.0+0x1f8>
+  20241c:	1aa4      	subs	r4, r4, r2
+  20241e:	d5a3      	bpl.n	202368 <chprintf.constprop.0+0x1f8>
     while (--i >= 0) {
-  2025c0:	f1b9 0f00 	cmp.w	r9, #0
-  2025c4:	f6ff aebf 	blt.w	202346 <chprintf.constprop.0+0x36>
+  202420:	f1b9 0f00 	cmp.w	r9, #0
+  202424:	f6ff aebf 	blt.w	2021a6 <chprintf.constprop.0+0x36>
       width = 0;
-  2025c8:	2400      	movs	r4, #0
-  2025ca:	e7bc      	b.n	202546 <chprintf.constprop.0+0x236>
-  2025cc:	7833      	ldrb	r3, [r6, #0]
-  2025ce:	9301      	str	r3, [sp, #4]
+  202428:	2400      	movs	r4, #0
+  20242a:	e7bc      	b.n	2023a6 <chprintf.constprop.0+0x236>
+  20242c:	7833      	ldrb	r3, [r6, #0]
+  20242e:	9301      	str	r3, [sp, #4]
       *p++ = c;
-  2025d0:	af06      	add	r7, sp, #24
-  2025d2:	f04f 0900 	mov.w	r9, #0
-  2025d6:	2201      	movs	r2, #1
-  2025d8:	f807 1d0c 	strb.w	r1, [r7, #-12]!
-  2025dc:	e7ee      	b.n	2025bc <chprintf.constprop.0+0x2ac>
+  202430:	af06      	add	r7, sp, #24
+  202432:	f04f 0900 	mov.w	r9, #0
+  202436:	2201      	movs	r2, #1
+  202438:	f807 1d0c 	strb.w	r1, [r7, #-12]!
+  20243c:	e7ee      	b.n	20241c <chprintf.constprop.0+0x2ac>
     if (width < 0) {
-  2025de:	465c      	mov	r4, fp
+  20243e:	465c      	mov	r4, fp
     while (--i >= 0) {
-  2025e0:	f1b9 0f00 	cmp.w	r9, #0
-  2025e4:	daaf      	bge.n	202546 <chprintf.constprop.0+0x236>
-  2025e6:	e7bf      	b.n	202568 <chprintf.constprop.0+0x258>
-  2025e8:	7861      	ldrb	r1, [r4, #1]
+  202440:	f1b9 0f00 	cmp.w	r9, #0
+  202444:	daaf      	bge.n	2023a6 <chprintf.constprop.0+0x236>
+  202446:	e7bf      	b.n	2023c8 <chprintf.constprop.0+0x258>
+  202448:	7861      	ldrb	r1, [r4, #1]
       filler = '0';
-  2025ea:	f04f 0830 	mov.w	r8, #48	; 0x30
+  20244a:	f04f 0830 	mov.w	r8, #48	; 0x30
       fmt++;
-  2025ee:	3401      	adds	r4, #1
-  2025f0:	e6bb      	b.n	20236a <chprintf.constprop.0+0x5a>
+  20244e:	3401      	adds	r4, #1
+  202450:	e6bb      	b.n	2021ca <chprintf.constprop.0+0x5a>
       fmt++;
-  2025f2:	1cb4      	adds	r4, r6, #2
-  2025f4:	78b1      	ldrb	r1, [r6, #2]
+  202452:	1cb4      	adds	r4, r6, #2
+  202454:	78b1      	ldrb	r1, [r6, #2]
       left_align = TRUE;
-  2025f6:	f04f 0c01 	mov.w	ip, #1
-  2025fa:	e6b1      	b.n	202360 <chprintf.constprop.0+0x50>
+  202456:	f04f 0c01 	mov.w	ip, #1
+  20245a:	e6b1      	b.n	2021c0 <chprintf.constprop.0+0x50>
     switch (c) {
-  2025fc:	f04f 0e0a 	mov.w	lr, #10
+  20245c:	f04f 0e0a 	mov.w	lr, #10
       if (is_long)
-  202600:	2b19      	cmp	r3, #25
-  202602:	d934      	bls.n	20266e <chprintf.constprop.0+0x35e>
+  202460:	2b19      	cmp	r3, #25
+  202462:	d934      	bls.n	2024ce <chprintf.constprop.0+0x35e>
         l = va_arg(ap, unsigned int);
-  202604:	682f      	ldr	r7, [r5, #0]
-  202606:	3504      	adds	r5, #4
-  202608:	7833      	ldrb	r3, [r6, #0]
-  20260a:	9301      	str	r3, [sp, #4]
+  202464:	682f      	ldr	r7, [r5, #0]
+  202466:	3504      	adds	r5, #4
+  202468:	7833      	ldrb	r3, [r6, #0]
+  20246a:	9301      	str	r3, [sp, #4]
   q = p + MAX_FILLER;
-  20260c:	f10d 0117 	add.w	r1, sp, #23
-  202610:	e000      	b.n	202614 <chprintf.constprop.0+0x304>
+  20246c:	f10d 0117 	add.w	r1, sp, #23
+  202470:	e000      	b.n	202474 <chprintf.constprop.0+0x304>
   } while ((ll /= radix) != 0);
-  202612:	4601      	mov	r1, r0
+  202472:	4601      	mov	r1, r0
     *--q = i;
-  202614:	1e48      	subs	r0, r1, #1
+  202474:	1e48      	subs	r0, r1, #1
     i = (int)(l % radix);
-  202616:	fbb7 f2fe 	udiv	r2, r7, lr
-  20261a:	fb0e 7912 	mls	r9, lr, r2, r7
+  202476:	fbb7 f2fe 	udiv	r2, r7, lr
+  20247a:	fb0e 7912 	mls	r9, lr, r2, r7
     l /= radix;
-  20261e:	4617      	mov	r7, r2
+  20247e:	4617      	mov	r7, r2
     i += '0';
-  202620:	f109 0330 	add.w	r3, r9, #48	; 0x30
+  202480:	f109 0330 	add.w	r3, r9, #48	; 0x30
     if (i > '9')
-  202624:	2b39      	cmp	r3, #57	; 0x39
+  202484:	2b39      	cmp	r3, #57	; 0x39
       i += 'A' - '0' - 10;
-  202626:	bfc8      	it	gt
-  202628:	f109 0337 	addgt.w	r3, r9, #55	; 0x37
+  202486:	bfc8      	it	gt
+  202488:	f109 0337 	addgt.w	r3, r9, #55	; 0x37
     *--q = i;
-  20262c:	b2db      	uxtb	r3, r3
-  20262e:	f801 3c01 	strb.w	r3, [r1, #-1]
+  20248c:	b2db      	uxtb	r3, r3
+  20248e:	f801 3c01 	strb.w	r3, [r1, #-1]
   } while ((ll /= radix) != 0);
-  202632:	2a00      	cmp	r2, #0
-  202634:	d1ed      	bne.n	202612 <chprintf.constprop.0+0x302>
+  202492:	2a00      	cmp	r2, #0
+  202494:	d1ed      	bne.n	202472 <chprintf.constprop.0+0x302>
   i = (int)(p + MAX_FILLER - q);
-  202636:	f10d 0217 	add.w	r2, sp, #23
-  20263a:	af03      	add	r7, sp, #12
-  20263c:	1a12      	subs	r2, r2, r0
-  20263e:	46be      	mov	lr, r7
-  202640:	4410      	add	r0, r2
-  202642:	e001      	b.n	202648 <chprintf.constprop.0+0x338>
-  202644:	f811 3b01 	ldrb.w	r3, [r1], #1
+  202496:	f10d 0217 	add.w	r2, sp, #23
+  20249a:	af03      	add	r7, sp, #12
+  20249c:	1a12      	subs	r2, r2, r0
+  20249e:	46be      	mov	lr, r7
+  2024a0:	4410      	add	r0, r2
+  2024a2:	e001      	b.n	2024a8 <chprintf.constprop.0+0x338>
+  2024a4:	f811 3b01 	ldrb.w	r3, [r1], #1
   while (--i);
-  202648:	4288      	cmp	r0, r1
+  2024a8:	4288      	cmp	r0, r1
     *p++ = *q++;
-  20264a:	f80e 3b01 	strb.w	r3, [lr], #1
+  2024aa:	f80e 3b01 	strb.w	r3, [lr], #1
   while (--i);
-  20264e:	d1f9      	bne.n	202644 <chprintf.constprop.0+0x334>
-  202650:	f102 39ff 	add.w	r9, r2, #4294967295
-  202654:	e7b2      	b.n	2025bc <chprintf.constprop.0+0x2ac>
+  2024ae:	d1f9      	bne.n	2024a4 <chprintf.constprop.0+0x334>
+  2024b0:	f102 39ff 	add.w	r9, r2, #4294967295
+  2024b4:	e7b2      	b.n	20241c <chprintf.constprop.0+0x2ac>
     switch (c) {
-  202656:	f04f 0e08 	mov.w	lr, #8
+  2024b6:	f04f 0e08 	mov.w	lr, #8
         l = va_arg(ap, unsigned long);
-  20265a:	682f      	ldr	r7, [r5, #0]
-  20265c:	3504      	adds	r5, #4
-  20265e:	e7d5      	b.n	20260c <chprintf.constprop.0+0x2fc>
+  2024ba:	682f      	ldr	r7, [r5, #0]
+  2024bc:	3504      	adds	r5, #4
+  2024be:	e7d5      	b.n	20246c <chprintf.constprop.0+0x2fc>
     switch (c) {
-  202660:	f04f 0e0a 	mov.w	lr, #10
-  202664:	e7f9      	b.n	20265a <chprintf.constprop.0+0x34a>
+  2024c0:	f04f 0e0a 	mov.w	lr, #10
+  2024c4:	e7f9      	b.n	2024ba <chprintf.constprop.0+0x34a>
       if (is_long)
-  202666:	2b19      	cmp	r3, #25
+  2024c6:	2b19      	cmp	r3, #25
     switch (c) {
-  202668:	f04f 0e08 	mov.w	lr, #8
+  2024c8:	f04f 0e08 	mov.w	lr, #8
       if (is_long)
-  20266c:	d8ca      	bhi.n	202604 <chprintf.constprop.0+0x2f4>
-  20266e:	7833      	ldrb	r3, [r6, #0]
-  202670:	9301      	str	r3, [sp, #4]
-  202672:	e7f2      	b.n	20265a <chprintf.constprop.0+0x34a>
+  2024cc:	d8ca      	bhi.n	202464 <chprintf.constprop.0+0x2f4>
+  2024ce:	7833      	ldrb	r3, [r6, #0]
+  2024d0:	9301      	str	r3, [sp, #4]
+  2024d2:	e7f2      	b.n	2024ba <chprintf.constprop.0+0x34a>
       if (is_long)
-  202674:	2b19      	cmp	r3, #25
-  202676:	d92e      	bls.n	2026d6 <chprintf.constprop.0+0x3c6>
+  2024d4:	2b19      	cmp	r3, #25
+  2024d6:	d92e      	bls.n	202536 <chprintf.constprop.0+0x3c6>
         l = va_arg(ap, int);
-  202678:	6829      	ldr	r1, [r5, #0]
-  20267a:	3504      	adds	r5, #4
-  20267c:	7833      	ldrb	r3, [r6, #0]
+  2024d8:	6829      	ldr	r1, [r5, #0]
+  2024da:	3504      	adds	r5, #4
+  2024dc:	7833      	ldrb	r3, [r6, #0]
       if (l < 0) {
-  20267e:	2900      	cmp	r1, #0
-  202680:	9301      	str	r3, [sp, #4]
-  202682:	db2e      	blt.n	2026e2 <chprintf.constprop.0+0x3d2>
+  2024de:	2900      	cmp	r1, #0
+  2024e0:	9301      	str	r3, [sp, #4]
+  2024e2:	db2e      	blt.n	202542 <chprintf.constprop.0+0x3d2>
     p = tmpbuf;
-  202684:	af03      	add	r7, sp, #12
-  202686:	463a      	mov	r2, r7
+  2024e4:	af03      	add	r7, sp, #12
+  2024e6:	463a      	mov	r2, r7
   q = p + MAX_FILLER;
-  202688:	f102 0b0b 	add.w	fp, r2, #11
-  20268c:	4658      	mov	r0, fp
+  2024e8:	f102 0b0b 	add.w	fp, r2, #11
+  2024ec:	4658      	mov	r0, fp
     i = (int)(l % radix);
-  20268e:	4b26      	ldr	r3, [pc, #152]	; (202728 <chprintf.constprop.0+0x418>)
-  202690:	fba3 e301 	umull	lr, r3, r3, r1
-  202694:	08db      	lsrs	r3, r3, #3
-  202696:	eb03 0983 	add.w	r9, r3, r3, lsl #2
-  20269a:	469e      	mov	lr, r3
-  20269c:	eba1 0349 	sub.w	r3, r1, r9, lsl #1
+  2024ee:	4b26      	ldr	r3, [pc, #152]	; (202588 <chprintf.constprop.0+0x418>)
+  2024f0:	fba3 e301 	umull	lr, r3, r3, r1
+  2024f4:	08db      	lsrs	r3, r3, #3
+  2024f6:	eb03 0983 	add.w	r9, r3, r3, lsl #2
+  2024fa:	469e      	mov	lr, r3
+  2024fc:	eba1 0349 	sub.w	r3, r1, r9, lsl #1
   } while ((ll /= radix) != 0);
-  2026a0:	4671      	mov	r1, lr
+  202500:	4671      	mov	r1, lr
     i += '0';
-  2026a2:	3330      	adds	r3, #48	; 0x30
+  202502:	3330      	adds	r3, #48	; 0x30
     *--q = i;
-  2026a4:	b2db      	uxtb	r3, r3
-  2026a6:	f800 3d01 	strb.w	r3, [r0, #-1]!
+  202504:	b2db      	uxtb	r3, r3
+  202506:	f800 3d01 	strb.w	r3, [r0, #-1]!
   } while ((ll /= radix) != 0);
-  2026aa:	2900      	cmp	r1, #0
-  2026ac:	d1ef      	bne.n	20268e <chprintf.constprop.0+0x37e>
+  20250a:	2900      	cmp	r1, #0
+  20250c:	d1ef      	bne.n	2024ee <chprintf.constprop.0+0x37e>
   i = (int)(p + MAX_FILLER - q);
-  2026ae:	ebab 0100 	sub.w	r1, fp, r0
-  2026b2:	4411      	add	r1, r2
-  2026b4:	e001      	b.n	2026ba <chprintf.constprop.0+0x3aa>
-  2026b6:	f810 3f01 	ldrb.w	r3, [r0, #1]!
+  20250e:	ebab 0100 	sub.w	r1, fp, r0
+  202512:	4411      	add	r1, r2
+  202514:	e001      	b.n	20251a <chprintf.constprop.0+0x3aa>
+  202516:	f810 3f01 	ldrb.w	r3, [r0, #1]!
     *p++ = *q++;
-  2026ba:	f802 3b01 	strb.w	r3, [r2], #1
+  20251a:	f802 3b01 	strb.w	r3, [r2], #1
   while (--i);
-  2026be:	428a      	cmp	r2, r1
-  2026c0:	d1f9      	bne.n	2026b6 <chprintf.constprop.0+0x3a6>
-  2026c2:	1bd2      	subs	r2, r2, r7
-  2026c4:	f102 39ff 	add.w	r9, r2, #4294967295
-  2026c8:	e778      	b.n	2025bc <chprintf.constprop.0+0x2ac>
+  20251e:	428a      	cmp	r2, r1
+  202520:	d1f9      	bne.n	202516 <chprintf.constprop.0+0x3a6>
+  202522:	1bd2      	subs	r2, r2, r7
+  202524:	f102 39ff 	add.w	r9, r2, #4294967295
+  202528:	e778      	b.n	20241c <chprintf.constprop.0+0x2ac>
     switch (c) {
-  2026ca:	f04f 0e10 	mov.w	lr, #16
-  2026ce:	e7c4      	b.n	20265a <chprintf.constprop.0+0x34a>
-  2026d0:	f04f 0e10 	mov.w	lr, #16
-  2026d4:	e794      	b.n	202600 <chprintf.constprop.0+0x2f0>
-  2026d6:	7833      	ldrb	r3, [r6, #0]
-  2026d8:	9301      	str	r3, [sp, #4]
+  20252a:	f04f 0e10 	mov.w	lr, #16
+  20252e:	e7c4      	b.n	2024ba <chprintf.constprop.0+0x34a>
+  202530:	f04f 0e10 	mov.w	lr, #16
+  202534:	e794      	b.n	202460 <chprintf.constprop.0+0x2f0>
+  202536:	7833      	ldrb	r3, [r6, #0]
+  202538:	9301      	str	r3, [sp, #4]
         l = va_arg(ap, long);
-  2026da:	6829      	ldr	r1, [r5, #0]
-  2026dc:	3504      	adds	r5, #4
+  20253a:	6829      	ldr	r1, [r5, #0]
+  20253c:	3504      	adds	r5, #4
       if (l < 0) {
-  2026de:	2900      	cmp	r1, #0
-  2026e0:	dad0      	bge.n	202684 <chprintf.constprop.0+0x374>
+  20253e:	2900      	cmp	r1, #0
+  202540:	dad0      	bge.n	2024e4 <chprintf.constprop.0+0x374>
         *p++ = '-';
-  2026e2:	f04f 032d 	mov.w	r3, #45	; 0x2d
+  202542:	f04f 032d 	mov.w	r3, #45	; 0x2d
         l = -l;
-  2026e6:	4249      	negs	r1, r1
+  202546:	4249      	negs	r1, r1
         *p++ = '-';
-  2026e8:	f10d 020d 	add.w	r2, sp, #13
-  2026ec:	af03      	add	r7, sp, #12
-  2026ee:	f88d 300c 	strb.w	r3, [sp, #12]
-  2026f2:	e7c9      	b.n	202688 <chprintf.constprop.0+0x378>
+  202548:	f10d 020d 	add.w	r2, sp, #13
+  20254c:	af03      	add	r7, sp, #12
+  20254e:	f88d 300c 	strb.w	r3, [sp, #12]
+  202552:	e7c9      	b.n	2024e8 <chprintf.constprop.0+0x378>
       for (p = s; *p && (--precision >= 0); p++)
-  2026f4:	b19b      	cbz	r3, 20271e <chprintf.constprop.0+0x40e>
-  2026f6:	1e53      	subs	r3, r2, #1
-  2026f8:	e6f7      	b.n	2024ea <chprintf.constprop.0+0x1da>
+  202554:	b19b      	cbz	r3, 20257e <chprintf.constprop.0+0x40e>
+  202556:	1e53      	subs	r3, r2, #1
+  202558:	e6f7      	b.n	20234a <chprintf.constprop.0+0x1da>
       if (precision == 0)
-  2026fa:	b90a      	cbnz	r2, 202700 <chprintf.constprop.0+0x3f0>
+  20255a:	b90a      	cbnz	r2, 202560 <chprintf.constprop.0+0x3f0>
         precision = 32767;
-  2026fc:	f647 72ff 	movw	r2, #32767	; 0x7fff
+  20255c:	f647 72ff 	movw	r2, #32767	; 0x7fff
         s = "(null)";
-  202700:	4f0a      	ldr	r7, [pc, #40]	; (20272c <chprintf.constprop.0+0x41c>)
-  202702:	e7f8      	b.n	2026f6 <chprintf.constprop.0+0x3e6>
+  202560:	4f0a      	ldr	r7, [pc, #40]	; (20258c <chprintf.constprop.0+0x41c>)
+  202562:	e7f8      	b.n	202556 <chprintf.constprop.0+0x3e6>
         n++;
-  202704:	9a00      	ldr	r2, [sp, #0]
+  202564:	9a00      	ldr	r2, [sp, #0]
         streamPut(chp, (uint8_t)*s++);
-  202706:	212d      	movs	r1, #45	; 0x2d
-  202708:	f8da 3000 	ldr.w	r3, [sl]
-  20270c:	4650      	mov	r0, sl
+  202566:	212d      	movs	r1, #45	; 0x2d
+  202568:	f8da 3000 	ldr.w	r3, [sl]
+  20256c:	4650      	mov	r0, sl
         n++;
-  20270e:	3201      	adds	r2, #1
+  20256e:	3201      	adds	r2, #1
         streamPut(chp, (uint8_t)*s++);
-  202710:	3701      	adds	r7, #1
-  202712:	689b      	ldr	r3, [r3, #8]
-  202714:	f109 39ff 	add.w	r9, r9, #4294967295
+  202570:	3701      	adds	r7, #1
+  202572:	689b      	ldr	r3, [r3, #8]
+  202574:	f109 39ff 	add.w	r9, r9, #4294967295
         n++;
-  202718:	9200      	str	r2, [sp, #0]
+  202578:	9200      	str	r2, [sp, #0]
         streamPut(chp, (uint8_t)*s++);
-  20271a:	4798      	blx	r3
-  20271c:	e702      	b.n	202524 <chprintf.constprop.0+0x214>
+  20257a:	4798      	blx	r3
+  20257c:	e702      	b.n	202384 <chprintf.constprop.0+0x214>
       for (p = s; *p && (--precision >= 0); p++)
-  20271e:	f04f 39ff 	mov.w	r9, #4294967295
-  202722:	f04f 0820 	mov.w	r8, #32
-  202726:	e6ef      	b.n	202508 <chprintf.constprop.0+0x1f8>
-  202728:	cccccccd 	.word	0xcccccccd
-  20272c:	08002904 	.word	0x08002904
+  20257e:	f04f 39ff 	mov.w	r9, #4294967295
+  202582:	f04f 0820 	mov.w	r8, #32
+  202586:	e6ef      	b.n	202368 <chprintf.constprop.0+0x1f8>
+  202588:	cccccccd 	.word	0xcccccccd
+  20258c:	0800275c 	.word	0x0800275c
