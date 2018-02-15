@@ -7,6 +7,7 @@
 /* Serial driver related.                                                    */
 /*===========================================================================*/
 
+// UART settings
 static const SerialConfig sdcfg = {
   .speed = 460800,
   .cr1 = 0,
@@ -88,7 +89,7 @@ static const ADCConversionGroup adcgrpcfg1 = {
   /* Don`t forget about depth of buffer */
   .error_cb     = adcerrorcallback,         // in case of errors, this func will be called
   .cr1          = 0,                        // just because it has to be 0
-  /* Cause we don`t need to write sonething to the register */
+  /* Cause we don`t need to write something to the register */
   .cr2          = ADC_CR2_EXTEN_RISING | ADC_CR2_EXTSEL_SRC(12),  // Commutated from GPT
   /* 12 means 0b1100, and from RM (p.449) it is GPT4 */
   /* ADC_CR2_EXTEN_RISING - means to react on the rising signal (front) */
@@ -117,7 +118,7 @@ int main(void)
     palSetPadMode( GPIOE, 7, PAL_MODE_ALTERNATE(8) );    // RX
 
     // Mailbox init
-    chMBObjectInit(&test_mb, buffer_test_mb, MAILBOX_SIZE);  // For external interrupt
+    chMBObjectInit(&test_mb, buffer_test_mb, MAILBOX_SIZE);
 
     // GPT driver
     gptStart(&GPTD4, &gpt4cfg1);
@@ -126,8 +127,9 @@ int main(void)
      * Fixed an errata on the STM32F7xx, the DAC clock is required for ADC
      * triggering.
      */
-    rccEnableDAC1(false);       // ???
-    /* This enables DAC clock that is required for ADC triggering, it`s errata feature (not bug but not so pleased thing) =) */
+    rccEnableDAC1(false);
+    /* This enables DAC clock that is required for ADC triggering,
+     * it`s errata feature (not bug but not so pleased thing) =) */
 
     // ADC driver
     adcStart(&ADCD1, NULL);
