@@ -45,7 +45,7 @@ static void extcb1(EXTDriver *extp, expchannel_t channel) {
  (void)extp;
  (void)channel;
 
- int32_t resHall;
+ msg_t resHall = 0;
 
  if(palReadPad( GPIOD , 3 ))
    resHall |= 0b001;
@@ -77,9 +77,9 @@ static const EXTConfig extcfg = {
     {EXT_CH_MODE_DISABLED, NULL},
     {EXT_CH_MODE_DISABLED, NULL},
     {EXT_CH_MODE_DISABLED, NULL},
-    {EXT_CH_MODE_RISING_EDGE | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOD , extcb1}, // PD3
-    {EXT_CH_MODE_RISING_EDGE | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOD , extcb1}, // PD4
-    {EXT_CH_MODE_RISING_EDGE | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOD , extcb1}, // PD5
+    {EXT_CH_MODE_BOTH_EDGES | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOD , extcb1}, // PD3
+    {EXT_CH_MODE_BOTH_EDGES | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOD , extcb1}, // PD4
+    {EXT_CH_MODE_BOTH_EDGES | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOD , extcb1}, // PD5
     {EXT_CH_MODE_DISABLED, NULL},
     {EXT_CH_MODE_DISABLED, NULL},
     {EXT_CH_MODE_DISABLED, NULL},
@@ -125,7 +125,7 @@ int main(void)
     while (true)
     {
       if ( chMBFetch(&hall_1, &msg, TIME_IMMEDIATE) == MSG_OK )
-        chprintf(((BaseSequentialStream *)&SD7), "Counter: %d \n \r ", msg);
+        chprintf(((BaseSequentialStream *)&SD7), "Hall: %d \n \r ", msg);
 /*
       if ( chMBFetch(&hall_2, &msg, TIME_IMMEDIATE) == MSG_OK )
               chprintf(((BaseSequentialStream *)&SD7), "Hall 2: %d ", msg);
