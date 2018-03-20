@@ -28,7 +28,7 @@ static const GPTConfig gpt4cfg1 = { // Timer 4 is used
   .frequency =  100000,
   .callback  =  NULL,
   .cr2       =  TIM_CR2_MMS_1,  /* MMS = 010 = TRGO on Update Event.        */
-  .dier      =  0U          // ????
+  .dier      =  0U          //
   /* .dier field is direct setup of register, we don`t need to set anything here until now */
 };
 
@@ -49,10 +49,10 @@ static msg_t buffer_test_mb[MAILBOX_SIZE];
 /* ADC driver related.                                                       */
 /*===========================================================================*/
 
-#define ADC_GRP1_NUM_CHANNELS   2
-#define ADC_GRP1_BUF_DEPTH      1
+#define ADC1_NUM_CHANNELS   2
+#define ADC1_BUF_DEPTH      1
 
-static adcsample_t samples1[ADC_GRP1_NUM_CHANNELS * ADC_GRP1_BUF_DEPTH];
+static adcsample_t samples1[ADC1_NUM_CHANNELS * ADC1_BUF_DEPTH];
 
 /*
  * ADC streaming callback.
@@ -84,7 +84,7 @@ static void adcerrorcallback(ADCDriver *adcp, adcerror_t err) {
 static const ADCConversionGroup adcgrpcfg1 = {
   .circular     = true,                     // working mode = looped
   /* Buffer will continue writing to the beginning when it come to the end */
-  .num_channels = ADC_GRP1_NUM_CHANNELS,    // number of channels
+  .num_channels = ADC1_NUM_CHANNELS,    // number of channels
   .end_cb       = adccallback,              // after ADC conversion ends - call this func
   /* Don`t forget about depth of buffer */
   .error_cb     = adcerrorcallback,         // in case of errors, this func will be called
@@ -95,7 +95,7 @@ static const ADCConversionGroup adcgrpcfg1 = {
   /* ADC_CR2_EXTEN_RISING - means to react on the rising signal (front) */
   .smpr1        = ADC_SMPR1_SMP_AN10(ADC_SAMPLE_144),       // for AN10 - 144 samples
   .smpr2        = ADC_SMPR2_SMP_AN3(ADC_SAMPLE_144),        // for AN3  - 144 samples
-  .sqr1         = ADC_SQR1_NUM_CH(ADC_GRP1_NUM_CHANNELS),   //
+  .sqr1         = ADC_SQR1_NUM_CH(ADC1_NUM_CHANNELS),   //
   /* Usually this field is set to 0 as config already know the number of channels (.num_channels) */
   .sqr2         = 0,
   .sqr3         = ADC_SQR3_SQ1_N(ADC_CHANNEL_IN3) |         // sequence of channels
@@ -136,8 +136,8 @@ int main(void)
     palSetLineMode( LINE_ADC123_IN10, PAL_MODE_INPUT_ANALOG );  // PC0
     palSetLineMode( LINE_ADC123_IN3, PAL_MODE_INPUT_ANALOG );   // PA3
 
-    adcStartConversion(&ADCD1, &adcgrpcfg1, samples1, ADC_GRP1_BUF_DEPTH);
-    gptStartContinuous(&GPTD4, gpt4cfg1.frequency/10);          // how often we need ADC value
+    adcStartConversion(&ADCD1, &adcgrpcfg1, samples1, ADC1_BUF_DEPTH);
+    gptStartContinuous(&GPTD4, gpt4cfg1.frequency/1000);          // how often we need ADC value
     /* Just set the limit (interval) of timer counter, you can use this function
        not only for ADC triggering, but start infinite counting of timer for callback processing */
 
@@ -155,6 +155,6 @@ int main(void)
              as we use Serial driver that has functions required for BaseSequentialStream, than we can use 
              chprintf */
         }
-        chThdSleepMilliseconds( 10 );
+        chThdSleepMilliseconds( 1 );
      }
 }

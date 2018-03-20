@@ -36,10 +36,12 @@ GPTConfig gpt3conf = {
 
 
 PWMConfig pwm4conf = {
-    .frequency = 4000000, // частота тиков таймера
-    .period    = 54400, /*1/100 s = 10 ms*/  // кол-во тиков  на 1 период шим этого таймера (с исп. frequency)
-    .callback  = NULL, // PWM period = period/frequency [s]
-    .channels  = {     // в конце каждого периода ШИМ (callback)
+    .frequency = 4000000,   // frequency of timer ticks
+    .period    = 54400,     /* 1/100 s = 10 ms
+                             * tick number for 1 PWM period of this timer
+                             * PWM period = period/frequency [s] */
+    .callback  = NULL,      // in the end of each PWM period (callback)
+    .channels  = {
                   {.mode = PWM_OUTPUT_ACTIVE_HIGH,  .callback = NULL},      // PD12 => Driving wheels
                   {.mode = PWM_OUTPUT_ACTIVE_HIGH,  .callback = NULL},   // PD13 => Steering wheels
                   {.mode = PWM_OUTPUT_DISABLED,     .callback = NULL},
