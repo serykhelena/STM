@@ -55,20 +55,31 @@ static const EXTConfig extcfg = {
 uint8_t mode = 0;                       //  1 => enable, 2 = > disable
 uint8_t red_mode = 0;                   //  3 => red toggle, another value => turn off
 uint8_t counter = 0;                    // counter of button pressed
+msg_t double_button;                    // to detect double button press
+
+static THD_WORKING_AREA(waChecker, 128);// 128 - stack size
+static THD_FUNCTION(Checker, arg)       // to detect double press
+{
+  arg = arg;
+  if( mode == 1 )
+  {
+    chSysLock();
+    double_button = chThdSuspendTimeoutS(&trp_button, MS2ST(1000));
+    chSysUnlock();
+  }
+}
+
 static THD_WORKING_AREA(waButton, 128); // 128 - stack size
 static THD_FUNCTION(Button, arg)
 {
   arg = arg;                            // just to avoid warnings
-
   msg_t msg_button;                     // to detect button press
-  msg_t double_button;                  // to detect double button press
 
   while( true )
   {
     /* Waiting for the IRQ to happen */
     chSysLock();
     msg_button = chThdSuspendTimeoutS(&trp_button, MS2ST(5000));
-    double_button = chThdSuspendTimeoutS(&trp_button, MS2ST(1000));
     chSysUnlock();
 
     if( msg_button == MSG_OK )
@@ -85,11 +96,6 @@ static THD_FUNCTION(Button, arg)
           {
             red_mode = 3;               // red toggle
           }
-        }
-        if( double_button == MSG_TIMEOUT )
-        {
-          counter = 0;                  // reset counter of button press
-          red_mode = 0;                 // turn off RED LED
         }
       }
     }
@@ -122,7 +128,7 @@ static THD_FUNCTION(Blinker, arg)
       }
       else
       {
-        palSetLine( LINE_LED2 );
+        palClearLine( LINE_LED2 );
         chThdSleepMilliseconds( 1 );            // to avoid hanging of prog
       }
     }
@@ -157,8 +163,9 @@ int main(void)
     chThdCreateStatic(waButton, sizeof(waButton), NORMALPRIO, Button, NULL);
     chThdCreateStatic(waBlinker, sizeof(waBlinker), NORMALPRIO - 1, Blinker, NULL);
     chThdCreateStatic(waRedWarning, sizeof(waRedWarning), NORMALPRIO - 1, RedWarning, NULL);
+    chThdCreateStatic(waChecker, sizeof(waChecker), NORMALPRIO, Checker, NULL);
     while (true)
     {
-      chThdSleepMilliseconds( 10 );
+      chThdSleepMilliseconds( 500 );
     }
 }
